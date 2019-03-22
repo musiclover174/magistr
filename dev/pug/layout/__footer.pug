@@ -1,0 +1,25 @@
+include ../bemto/bemto.pug
+include ../mixins/index
+
++b('footer').footer
+  section.container
+    section.h-wrapper
+      .h-col3
+        +e.info
+          +e('p').copy © ООО «Строительная компания «Магистр», 2019
+        +e.info
+          +e('p').address 454092, г. Челябинск, ул.&nbsp;Воровского, 15 Г, 3 этаж
+      .h-col3
+        +e('p').title Отдел продаж
+        +e.contact
+          +e.phone(href="tel:+73512814242") +7 (351) 281 42 42
+          +e.mail(href="mailto:op@magistrchel.ru") op@magistrchel.ru
+      .h-col3
+        +e('p').title Приемная
+        +e.contact
+          +e.phone(href="tel:+73512814202") +7 (351) 281 42 02
+          +e.mail(href="mailto:mail@magistrchel.ru") mail@magistrchel.ru
+      .h-col3
+        +e.dextra(href="https://www.dextra.ru/", target="_blank")
+          span dextra
+          | Разработка<br>сайта

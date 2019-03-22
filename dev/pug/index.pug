@@ -1,0 +1,231 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body.index
+    include layout/__header
+    include layout/__loader
+  
+    +b('main').main
+
+      +b('section').banner.js-banner
+        +e('span').bg(style="background-image: url('img/banner.jpg')")
+        section.container
+          .h-wrapper.h-wrapper_rel
+            .h-col1
+            .h-col11
+              +e.vertical
+                +e.vertical-inner
+                  +e('span').circle.js-circle
+                  +e('p').title Живи в&nbsp;центре!
+                  +e('p').subtitle Все квартиры готовы – заезжай и живи.
+
+      +b('section').projects
+        +e('aside').bg
+        section.container
+          .h-wrapper
+            .h-col5.h-col_rel
+              span.decor
+                i
+              p.common__title Наши <br>проекты
+              .common__subtitle 
+                p Жилые дома со встроенными объектами инфраструктуры. Дома сданы записывайтесь на экскурсию.
+              a(href="#").common__toall Все проекты
+            .h-col6
+              +e('figure').item
+                +e.item-href(href="#")
+                  +e.item-img(src="img/gk1.jpg")
+                  +e('figcaption').item-name ЖК «Три Кита»
+            .h-col6
+              +e('figure').item
+                +e.item-href(href="#")
+                  +e.item-img(src="img/gk2.jpg")
+                  +e('figcaption').item-name ЖК «Яблочкина 10»
+            .h-col6
+              +e('figure').item
+                +e.item-href(href="#")
+                  +e.item-img(src="img/gk3.jpg")
+                  +e('figcaption').item-name ЖК «Престиж»
+
+      +b('section').about
+        section.container
+          .h-wrapper
+            .h-col4
+              p.common__title О компании
+              .common__subtitle 
+                p Строительная компания «МАГИСТР» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и&nbsp;материалов.
+                p Компания основана 17 мая 1999 года. 
+              a(href="#").common__toall Читать подробнее о Магистре
+            .h-col4.h-col_rel
+              +e('span').line._line1
+              +e('span').line._line2
+              +e('span').line._line3
+              +e('span').line._line4
+              +e('span').line._line5
+              +e('span').line._line6
+              //- +e('video').bg(preload="", autoplay, muted, loop, poster="img/about-bg.jpg")
+              //-   source(src="video/about.mp4" type="video/mp4")
+              +e.bg(src="img/about-bg.jpg")
+            .h-col4.h-col_rel
+              +e.info
+                +e('p').info-title >20
+                  span лет
+                +e('p').info-value осуществляем строительство
+              +e.info
+                +e('p').info-title 15
+                +e('p').info-value построенных объектов
+              +e.history(type="button", data-popup, data-src="#history") История проектов
+                span
+          
+      +b('section').features.h-anim
+        section.container
+          +e.wrapper
+            +e('aside').side
+              p.common__title.common__title_white.common__title_small Преимущества
+              .common__subtitle.common__subtitle_white
+                p Фундаментальные преимущества, которыми гордится компания.
+              +e('ul').list
+                +e.item
+                  +e('p').item-title(data-type="reliability") Надежность
+                +e.item
+                  +e('p').item-title(data-type="quality") Качество
+                +e.item
+                  +e('p').item-title(data-type="reputation") Репутация
+            +e('aside').slices
+              +e.slice
+                +e.slice-img(src="img/slice1.png")
+              +e.slice
+                +e.slice-img(src="img/slice2.png")
+              +e.slice
+                +e.slice-img(src="img/slice3.png")
+
+      +b('section').types
+        section.container
+          +e('ul').list
+            +e.item
+              +e.item-href(href="#")
+                +e.item-wrapper
+                  +e.item-img(src="img/type1.jpg")
+                +e.item-name 
+                  span 
+                    i Коммерческая недвижимость
+            +e.item
+              +e.item-href(href="#")
+                +e.item-wrapper
+                  +e.item-img(src="img/type2.jpg")
+                +e.item-name 
+                  span 
+                    i Продажа<br>квартир
+            +e.item
+              +e.item-href(href="#")
+                +e.item-wrapper
+                  +e.item-img(src="img/type3.jpg")
+                +e.item-name 
+                  span 
+                    i Аренда
+
+      +b('section').objects
+        +e('span').bg(style="background-image: url('img/objects.jpg')")
+        section.container
+          .h-wrapper
+            .h-col8
+              +e('p').middle Наши объекты расположены в центре города, в месте концентрации деловой активности
+            .h-col1
+            .h-col3
+              +e('p').title В ближайшей доступности
+              +e('span').spacer
+              +e('ul').feats
+                +e.feat-item
+                  +e('span').feat-icon(style="background-image: url('img/object-feat1.png')")
+                  | Администрация Челябинской области, мэрия Челябинска
+                +e.feat-item 
+                  +e('span').feat-icon(style="background-image: url('img/object-feat2.png')")
+                  | Торговые центры
+                +e.feat-item 
+                  +e('span').feat-icon(style="background-image: url('img/object-feat3.png')")
+                  | Рестораны, бары
+                +e.feat-item
+                  +e('span').feat-icon(style="background-image: url('img/object-feat4.png')")
+                  | Банки
+                +e.feat-item 
+                  +e('span').feat-icon(style="background-image: url('img/object-feat5.png')")
+                  | Парки
+
+      +b('section').news
+        section.container
+          +e.titleover
+            p.common__title Новости
+            a(href="#").common__toall Все новости
+          +e.carover
+            +e.car.swiper-container.js-news
+              .swiper-wrapper
+                .swiper-slide
+                  +e('article').item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/news1.jpg")
+                    +e('p').item-date 19 / 02 / 2019
+                    +e.item-href(href="#") График работы
+                    +e('p').item-dsc График работы в праздничные дни
+                .swiper-slide
+                  +e('article').item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/news2.jpg")
+                    +e('p').item-date 20 / 02 / 2019
+                    +e.item-href(href="#") Ипотечная суббота с Банком ВТБ 16 февраля!
+                    +e('p').item-dsc 16 февраля с 10:00 до 15:00 в Офисе продаж ЖК «Три Кита» специалисты Отдела ипотеки дадут консультацию любому желающему
+                .swiper-slide
+                  +e('article').item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/news3.jpg")
+                    +e('p').item-date 21 / 02 / 2019
+                    +e.item-href(href="#") Старт продаж дома 20.6!
+                    +e('p').item-dsc Друзья, с радостью сообщаем о старте продаж дома 20.6! 
+                .swiper-slide
+                  +e('article').item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/news2.jpg")
+                    +e('p').item-date 20 / 02 / 2019
+                    +e.item-href(href="#") Ипотечная суббота с Банком ВТБ 16 февраля!
+                    +e('p').item-dsc 16 февраля с 10:00 до 15:00 в Офисе продаж ЖК «Три Кита» специалисты Отдела ипотеки дадут консультацию любому желающему
+            .swiper-buttons
+              .swiper-button-prev.js-news-prev
+              .swiper-button-next.js-news-next
+      
+      +b('section').contacts
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        +e.scheme-map#map.js-contacts-map(data-office="55.154419:61.393750", data-center="55.147363:61.390008" data-locations="55.144871:61.380814, 55.144027:61.381623, 55.144212:61.381344, 55.132062:61.370457, 55.153745:61.409569, 55.152917:61.397873, 55.157104:61.418885, 55.157593:61.418301")
+        section.container
+          .h-wrapper
+            .h-col9
+            .h-col3
+              +e('p').title Расположение <br>возведенных объектов
+              +e('span').spacer
+              +e('ul').list
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144871:61.380814") Воровского 61 Б
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144027:61.381623") Яблочкина 10
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144212:61.381344") Яблочкина 10 А
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.132062:61.370457") Блюхера 53
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.153745:61.409569") Цвиллинга 47 В
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.152917:61.397873") Елькина 84
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.157104:61.418885") Российская 271
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.157593:61.418301") Российская 269
+                +e.item._title
+                  +e('p').subtitle Центральный офис
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.154419:61.393750") Воровского, 15 Г
+    
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

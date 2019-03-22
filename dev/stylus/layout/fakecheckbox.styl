@@ -1,0 +1,47 @@
+.fakecheckbox
+  ib()
+  pos relative
+  &__label
+    ib()
+    c $dark
+    fontify 16px 400 24px
+    pos relative
+    pl 27px
+    pt 2px
+    &:before 
+      content ""
+      pos absolute
+      l 0px
+      t 3px
+      size 19px
+      border 1px solid #e3e3e3
+      cursor pointer
+      transition .7s border
+    &:after
+      content ""
+      pos absolute
+      size 11px 9px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAMAAADTuiYfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///+/okeeAAAAFHRSTlMAILwd37veHgiSFpPUNhXT3dwcuUr5jKcAAAABYktHRBXl2PmjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEXDCAG2Vf96QAAADVJREFUCNdjYIACRiZmOJNFhBXBZGNHYXJwcsFFuUV4eGEK+PhFREQEoGr5BOFMBgYhYSgTAFSJAfXKQ3X+AAAAAElFTkSuQmCC') no-repeat center
+      l 6px
+      t 9px
+      opacity 0
+      cursor pointer
+      transition .7s opacity
+    a
+      color inherit
+      border-bottom 1px solid alpha($dark, .3)
+      transition .7s border
+      &:hover
+        border-color transparent
+  &__truecheck
+    pos absolute
+    l 0
+    t 0
+    w 0
+    h 0
+    border 0
+    opacity 0
+    &:checked + ^[0]__label:after
+      opacity 1
+    &.warning + ^[0]__label:before 
+      border-color #ff0f37

@@ -1,0 +1,30 @@
+.h-wrapper
+  df()
+  flex-wrap wrap
+  mr -18px
+  ml -18px
+  &_rel
+    pos relative
+  &_full
+    h 100%
+  @media $lDesktopSmall
+    ml -16px
+    mr -16px
+
+[class*="h-col"]
+  padding 0 18px
+  @media $lDesktopSmall
+    padding 0 16px
+
+.h-col
+  &_rel
+    pos relative
+
+for i in range(1, 12, 1)
+  .h-col{i}
+    flex 0 0 percentage(i / 12)
+    max-width percentage(i / 12)
+    @media $LandscapeMax
+      &.h-col_desktop
+        max-width none
+        flex 0 0 auto

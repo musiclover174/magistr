@@ -1,0 +1,90 @@
+.about
+  padding 90px 0 64px
+  .common__title
+    mt -12px
+  .h-wrapper
+    align-items stretch
+  .h-col4:nth-child(2)
+    pr 0
+    mt -35px
+  .h-col4:last-child
+    dfv(flex-start, flex-end)
+  &__bg
+    w 100%
+    mb -113px
+  &__info
+    & + &
+      mt 50px
+    &-title
+      c $red
+      fontify 80px 700 58px
+      h 58px
+      mb 16px
+      span
+        font-size 30px
+    &-value
+      c $dark
+      fontify 20px 500 26px
+      max-width 160px
+  &__line
+    pos absolute
+    bgc white
+    &_line1
+      size 10px 185px
+      t 117px
+      r 60px
+    &_line2
+      size 2px 185px
+      t 35px
+      r 79px
+    &_line3
+      size calc(100% - 30px) 36px
+      t 0
+      l 0
+    &_line4
+      size 30px calc(100% + 64px)
+      t 0
+      r 30px
+    &_line5
+      size 60px 49px
+      bgc $dark
+      t calc(100% + 64px)
+      r 0
+    &_line6
+      size 30px calc(100% - 161px)
+      t 225px
+      r 0px
+  &__history
+    pos absolute
+    border-radius 50%
+    size 157px
+    r 0
+    t 0
+    c white
+    fontify 16px 400 20px
+    df(center, center)
+    padding 0 34px
+    r 18px
+    &:before,
+    &:after
+      content ""
+      pos absolute
+      l 41px
+      size 76px 11px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAALCAQAAAB/w6N0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYIOCxFgjC/AAAAqklEQVQ4y83UsQrCMBCA4T9W0Ga0LyI4CBndfVr3bhY6CD5JxrQFSzuIXASXejf0tgvJ5ePIxU38H0OeeI48SbKwU1SGjep0zgpUBLxRPSOYJ1AyUtrRLGBvVqQm2tH0sA+rpae1o7npumj/LU8GgEDFSE0PwJ4LBZH7j8e/6Cannkrp2IstZw50NCTtVOphQntwEtYaYDKVhbDW8Y8lGrpvljZsOgbmP/8MHrc1J5dLk8gAAAAASUVORK5CYII=') no-repeat center
+    &:before
+      t 42px
+    &:after
+      b 41px
+    span
+      pos absolute
+      z-index -1
+      bgc $red
+      size 157px
+      t 50%
+      l 50%
+      border-radius 50%
+      transform translate(-50%, -50%)
+      transition .7s width, .7s height
+    &:hover span
+      size 181px

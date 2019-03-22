@@ -1,0 +1,53 @@
+.news
+  padding 78px 0 84px
+  &__titleover
+    df(flex-end, flex-start)
+    mb 25px
+    .common__title
+      mb 0
+      mr 52px
+    .common__toall
+      mb 4px
+  &__carover
+    pos relative
+    .swiper-container
+      overflow visible
+    .swiper-buttons
+      pos absolute
+      r 0
+      t -67px
+  &__item
+    w 100%
+    &-imgover
+      pos relative
+      db()
+      pt 63%
+      overflow hidden
+      mb 25px
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      font-family 'object-fit: cover;'
+      transition .7s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)
+    &-date
+      c $red
+      fontify 14px 400 21px
+    &-href
+      color $dark
+      fontify 30px 500 36px
+      border-bottom 1px solid alpha($dark, .2)
+      transition .7s border
+      &:hover
+        border-color transparent
+    &-dsc
+      color $dark
+      fontify 16px 500 24px
+      mt 13px

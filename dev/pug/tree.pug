@@ -1,0 +1,25 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').content
+      .container
+        +b('section').text
+          h1 Разводящая
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          +e.content
+            ul
+              li
+                a(href="index") Главная
+              li
+                a(href="text") Типовая текстовая
+       
+    include layout/__footer
+    include layout/__scripts

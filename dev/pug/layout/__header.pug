@@ -1,0 +1,54 @@
+include ../bemto/bemto.pug
+include ../mixins/index
+
++b('header').header.js-header
+  +e.logo(href="#")
+    +e.logo-img(src="img/logo.png")
+  +b('nav').menu
+    +e('ul').list
+      +e.item
+        +e.href._havesub._active(href="#") О компании
+          span
+        +e('ul').sublist
+          +e.sublist-item
+            +e.sublist-href(href="#") Строительная компания «Магистр»
+          +e.sublist-item
+            +e.sublist-href(href="#") Новости
+          +e.sublist-item
+            +e.sublist-href(href="#") Акции
+          +e.sublist-item
+            +e.sublist-href(href="#") Фотогалерея
+          +e.sublist-item
+            +e.sublist-href(href="#") FAQ
+          +e.sublist-item
+            +e.sublist-href(href="#") Наши партнеры
+          +e.sublist-item
+            +e.sublist-href(href="#") Социально-образовательные программы
+      +e.item
+        +e.href(href="#") Продажа квартир
+          span
+      +e.item
+        +e.href(href="#") Коммерческая недвижимость
+          span
+      +e.item
+        +e.href(href="#") Условия продажи
+          span
+      +e.item
+        +e.href(href="#") Аренда
+          span
+      +e.item
+        +e.href(href="#") Финансовые документы
+          span
+      +e.item
+        +e.href(href="#") Контакты
+          span
+      +e.item._tablet
+        +btn('Заказать звонок', true, '#call')(class="header__btn btn")
+  +e.bottom
+    +e.phone(href="tel:+73512814242") +7 (351) 
+      span 281-42-42
+    +btn('Заказать звонок', true, '#call')(class="header__btn btn")
+  +b.burger
+    +e(type="button", aria-label="открыть мобильное меню").button.js-burger
+      +e('span').button-meat
+    +e('span').shadow

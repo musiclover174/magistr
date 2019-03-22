@@ -1,0 +1,149 @@
+html,
+body
+  font-family $os
+body
+  overflow-x hidden
+  overflow-y scroll
+  bgc white
+
+.container
+  w 100%
+  max-width 1540px
+  padding 0 50px
+  margin 0 auto
+  &_full
+    h 100%
+  @media $LandscapeMin
+    ml 0
+    mr 0
+    padding 0 15px
+  &_rel
+    pos relative
+
+.common
+  &__title
+    c $dark
+    fontify 60px 500 64px
+    mb 18px
+    @media $desktopMedium
+      fontify 50px 500 50px
+    @media $PortraitMedium
+      fontify 40px 500 40px
+    &_white
+      c white
+    &_small
+      fontify 48px 500 42px
+      mb 27px
+  &__subtitle
+    c $dark
+    fontify 16px 400 24px
+    mb 30px
+    max-width 340px
+    &_white
+      c white
+  &__toall
+    pos relative
+    c $dark
+    fontify 16px 500 21px
+    border-bottom 1px solid #cecece
+    transition .7s border-color, .7s color
+    &:after
+      content ""
+      pos absolute
+      l calc(100% + 10px)
+      b 8px
+      size 30px 2px
+      bgc $red
+      transition .7s width
+    &:hover
+      c $red
+      border-color transparent
+      &:after
+        w 40px
+  &__back
+    ib()
+    c black
+    fontify 16px 700 20px
+    border-bottom 1px solid
+    transition .7s border
+    &:hover
+      border-color transparent
+  &__label
+    db()
+    c #aeaeb2
+    fontify 14px 400 18px
+    mb 6px
+    span 
+      c $red
+  &__input
+    w 100%
+    h 44px
+    padding 0 20px
+    border 1px solid #efefef
+    bgc transparent
+    color black
+    font-family $os
+    font-size 16px
+    line-height 500
+    transition .7s border
+    &:focus
+      border-color $dark
+    &.warning + ^[0]__inperror
+      db()
+  &__inperror
+    dn()
+    c $red
+    fontify 12px 400 16px
+  &__sbm
+    cursor pointer
+    font-family $os
+    mt 5px
+    border-radius 5px
+  &__select
+    h 36px
+    bgc #fff
+    border 2px solid #b6b6b6
+    w auto
+    cursor pointer
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+  &__placeholder
+    pos absolute
+    z-index -1
+    l 0 
+    t 0
+    color alpha(white, .5)
+    fontify 13px 400 35px
+    letter-spacing .1em
+    text-transform uppercase
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    max-width 100%
+    transition .7s top, .7s line-height
+  &__row
+    & + &
+      mt 17px
+  &__submit
+    pos relative
+    mt 10px
+      
+input.warning,
+textarea.warning
+  border-color $red
+
+input::-webkit-input-placeholder
+  color alpha(black, .5)
+input::-moz-placeholder
+  color alpha(black, .5)
+input:-ms-input-placeholder
+  color alpha(black, .5)
+    
+div[class\^="table-scroller"]
+  overflow auto
+  pos relative
+  pl 1px
+  margin -4px 0 33px
+  @media $desktopMax
+    w 100%

@@ -1,0 +1,5 @@
+mixin btn(text, fancy=false, src='#')
+  if fancy
+    button(class!=attributes.class, data-popup, data-src=src, type="button", arial-label=text)= text
+  else
+    button(class!=attributes.class type="button", arial-label=text)= text

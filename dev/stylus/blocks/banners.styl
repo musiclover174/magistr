@@ -1,0 +1,47 @@
+.banner
+  pos relative
+  z-index 1
+  h 100vh
+  @media $LandscapeMin
+    h auto
+    pt 220px
+    pb 200px
+  &__vertical
+    h 100vh
+    dfv(flex-start, center)
+  &__circle
+    pos absolute
+    z-index -1
+    size 456px
+    border-radius 50%
+    l 18px
+    t 50%
+    mt -228px
+    bgc $red
+  &__title
+    max-width 380px
+    c white
+    fontify 80px 500 84px
+    mb 29px
+    ml -4px
+    @media $lDesktopSmall
+      fontify 60px 700 64px
+    @media $dekstop1142
+      fontify 48px 700 52px
+    @media $LandscapeMin
+      fontify 38px 700 42px
+    @media $PortraitMin
+      fontify 34px 700 38px
+  &__subtitle
+    c white
+    fontify 24px 500 32px
+    max-width 290px
+  &__bg
+    pos absolute
+    l 0
+    t 0
+    z-index -1
+    size 100%
+    background-position left center
+    background-repeat no-repeat
+    background-size cover

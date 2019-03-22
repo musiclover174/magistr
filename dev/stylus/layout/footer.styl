@@ -1,0 +1,94 @@
+.footer
+  padding 46px 0 43px
+  bgc #333644
+  &__info
+    & + &
+      mt 19px
+      @media $lDesktopSmall
+        mt 6px
+  &__copy
+    c alpha(white, .5)
+    fontify 16px 400 24px
+    mt -2px
+    @media $lDesktopSmall
+      fontify 14px 500 19px
+    @media $PortraitMin
+      mb 10px
+  &__address
+    pos relative
+    c white
+    fontify 14px 400 24px
+    pl 24px
+    max-width 220px
+    &:before
+      content ""
+      pos absolute
+      l 1px
+      t 3px
+      size 10px 16px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAQAAACFdibLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxUJKjbTY3zPAAAAmElEQVQY02XLu04CURSG0XUO8wQEC8AQWwqiFJTwADw2UoClGqcBChkI4dIRLMeCW45+xS5W/h1KePLiATufZoSSnq57uddMMyHaNplnsDMSDNTQiepg7GBvDKpRBZIbohMYaGnpg59QDj1K+45W/raO5v9wER0VCS0dI94T/CCisL7RRnFG3m444YpbOfiyheyymGoorx+/zhoni0+6Zl4AAAAASUVORK5CYII=') no-repeat center
+  &__title
+    c white
+    fontify 20px 500 21px
+    mb 22px
+  &__contact
+    dfv(flex-start, flex-start)
+  &__phone
+    pos relative
+    l 25px
+    c white
+    fontify 16px 400 16px
+    mb 13px
+    &:before
+      content ""
+      pos absolute
+      l -24px
+      t 2px
+      size 12px 12px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxUJLwv2fMSbAAAAgklEQVQY023MPQ7BcADG4edPYtJYbEiwm+w+NhIHMDmYC7iBOIhRdOhqqEgjMaihHbT8pjd5kjfkO2Pc7WW+ahiCjjFVuJXrB+JytepwBqljHRIJIu06cJJr2lYp5DC3ROrgae3l6lJAsDHFWyYCjwIIZhZC/aqoZ2XwD6BvYqQr/gBlux2jheWHlwAAAABJRU5ErkJggg==') no-repeat center
+  &__mail
+    ib()
+    pos relative
+    l 25px
+    c white
+    fontify 16px 400 16px
+    border-bottom 1px solid alpha(white, .3)
+    transition .7s border-color
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -24px
+      t 5px
+      size 14px 9px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAQAAACoRNXiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxUJMBXBKfdmAAAAgklEQVQY03XMMQ7BYACA0deG5J+6GEwiHQ0GDmERPYIL9BLO0YkrEItI0xNYzUaDXUJTgzCQfutLvqgZWOr672ETNUFPpv9DV1u3WC5RKD2/8FQqJPKoWeFsL1gY4mLnbm5EB4ykDtamOJmYCXyQIDN2xFL6+b+3LcXqVqtjVQvXqhfwnR8iF+JbzQAAAABJRU5ErkJggg==') no-repeat center
+  &__dextra
+    ib()
+    pos relative
+    color silver
+    font-family Arial
+    fontify 9px 400 14px
+    text-transform uppercase
+    letter-spacing 0.18em
+    l 82px
+    @media $PortraitMin
+      ml 82px
+      l 0
+    span
+      pos absolute
+      t 3px
+      r calc(100% + 11px)
+      bgc $red
+      color white
+      font-family Arial
+      fontify 12px 900 21px
+      text-transform uppercase
+      letter-spacing 0.1em
+      padding 0 4px
+      transition 0.7s background
+      @media $PortraitMin
+        w 72px
+        text-align center
+    &:hover span
+      background-color alpha($red, .8)

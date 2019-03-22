@@ -1,0 +1,28 @@
+.hidden-block
+  .popup__over
+    span.popup__bg.js-popbg
+    +b.popup#call
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title Заказать обратный звонок
+      +e('p').hint Обратите внимание – все поля обязательны для заполнеия.
+      +e('form').form
+        .common__row
+          label.common__label ФИО
+          input.common__input(type="text", data-req="req")
+        .common__row
+          label.common__label Телефон
+          input.common__input.js-phone(type="text", data-req="req")
+        .common__row
+          .fakecheckbox
+            input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+            label(for="agreement").fakecheckbox__label Даю согласие на обработку 
+              a(href="#") персональных&nbsp;данных
+        .common__row
+          img(src="img/captcha.png", style="max-width: 100%;")
+        .common__row
+          button.common__submit.btn(type="submit") Отправить
+    +b.popup#text
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title Заявка отправлена
+      +e('p').subtitle Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
+      +btn('Закрыть', false)(class="popup__close-btn btn")

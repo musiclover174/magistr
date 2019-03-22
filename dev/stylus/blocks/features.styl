@@ -1,0 +1,93 @@
+.features
+  bgc $dark
+  padding 133px 0 30px
+  &__wrapper
+    df(flex-start, space-between)
+    background url('../i/about-pattern.png') no-repeat center
+    pr 167px
+  &__side
+    w 420px
+  &__list
+    db()
+    w 173px
+    mr 0
+    ml auto
+    mt 59px
+  &__item
+    & + &
+      mt 59px
+    &-title
+      pos relative
+      c white
+      fontify 14px 500 21px
+      text-transform uppercase
+      letter-spacing .3em
+      &:before
+        pos absolute
+        content ""
+        w 49px
+        l -68px
+        t 50%
+      &[data-type="reliability"]:before
+        h 42px
+        mt -21px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAqCAMAAAAtU0N2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAADPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISf////////////////////////////////////////////////PISfPISfPISfPISf////////////////////////////////////////////////////////////////////////////////////PISfPISf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////PISfPISf////////////////////////////////////////PISf////////////PISf////////////////////////////////////PISfPISf////////////////////PISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISf////PISf///9jg7cWAAAAoXRSTlMAcBCPsNO1TanQ5VtYDiAC4Akw5r8fWXd7YzABTMbhcAYPUOrJCqjmfzQTKGjI0iMJwYshTVYx8+smjG6bZDbFXy/u1ziYVfroLM2SUX6s8hT3zAPCBfajHeUCXkFCTvE1HnNARxJ2V4gDIGCQFZqwxLrTv87dFoSc4NDR1uJ1YwxA3MRkzNjRuKjL1JT+EcV/eIc8973AYCvHgRtzQVoKpr8GgH0AAAABYktHRBXl2PmjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wMWCg8xtQcoPAAAAdtJREFUSMdjYEAGjAuZGEgDpOpgZmFdyMbCToIODk6uhayc3DR1FU4djDw4dfDy8WMTFmAhyV5BISFhESEhAqpExcQlJKWkwWyhhWCAV72M7CIwkJNXAPIUlZSUVZSU8KhXVVukrqGppaqto7tIT58IfxgYLjIyYDA2MTWTlhYzt7AEiVlZ49Nhs8iWwc4e7CgHBkcnZwNCIeOyyJXBzd1D3M7TwWuRN4PPIl9COvz8AywDgwJAzGDXRZIMIRah+DUohIUzhAdGQDjBQZFR0YtiMFXFxiHYjkBj48NhPIdFCYmLkjB1sHAi2MmLUlIXpcF4movSQxdloKtnYmJjZWLKhOtIzlokD5OTWpTNsCgHXQckDQiRoIORkZWLkTGXBB1I/sjLzy9YVFC4qCgfCooXleQvKgUyylB1lFdAGZXxVdU11dU1RVVQUF2jVwXk1S7KwhEZlfnYxbPhOurqSdXByUKSjobGxqbmxkYSdGDJjEg6WlrbrARJsaNlYXvHwk5S/NHVncnQ09tHQli19zMwTFiYi6EDd3xMXDhp8pSpDCToyGyaNn3hDFJ0MHACdfCRpGNm+6yFs0nSMWfhQhUGknQwzJ03n0QdyGCAdRTJYwULcOtYhAsg6wAAmnjG8Vbv8TUAAAAASUVORK5CYII=') no-repeat center
+      &[data-type="quality"]:before
+        h 39px
+        mt -20px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAMAAABKdvqKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB1FBMVEUAAADPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISfPISf////////////PISfPISfPISfPISfPISf////////////PISfPISf////////////////////////////////////////////////////////////////////////////PISfPISf////////////////////PISfPISfPISfPISf////////////////PISf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////PISfPISf////////////PISfPISfPISf////////////////////////////////////////////////////////////////////////////////////PISf////OdCUcAAAAmnRSTlMAsNAPdAFvFZYsNIGEl4h4pQOf8R4QYy4U67IEK7v8cyQG+aC1fRltA7L9LVBFFfeTlAvGvIeQDOywv8Qb4fA8gUDVry1G+66GAWrTEkgKWcvBGJCkz5ySnsrlaOa4xZVNBNlOgIdXgxaFwMIv1wdx+o8FZODHCHDaBr7cuRwNtoqELvzb9aUhAjzyqtIjp/6rDjms0ConeRcwiMOHQQAAAAFiS0dEFeXY+aMAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYKEQLelnb1AAABuUlEQVQ4y2NgwAkYmRiIA1RTyMzCiqaQjR2rQpZZHBAGJxeE5p7Fg1UhK+8sPmQ+/ywBQex2swoJiwApUTFxEE9CUkoalysFZUCk7Gw5eRCtoEjA00rKKrNViQgctdnqGppa2oQV6szWZdDTNyCs0FDJiIHB2ASXtKmZmZkCiGFuYQkkraxBbBugoBmaQls7Ozt7EMNhtiOQdHIGsV2AgnY4THZ1cwcZK+eB332eXkrePkDad7YvPmV+/gGzA4NArGA3c4RwMASEhIaBqPDQiEj92VHRGiApjZhYJP2z0YBFXHxCIqpEUjKYnwJWnzo7DUSlzIabkAIEDiAiNclNHJ9CBAjSSidOYYZWJiGFzllAkB0ll0NIoRvEN7l5RFmdlz9bjDg3MhQUEqWwSH12MSGFJRA3lpYRUlgenJVVMVuzkoEoq6uqGYhTWIOhsLYOM8DrG9xnN6IpbGpuwRbgrcGVWBW2tSOr7Ojs6oYyUa1On11QYIiitL4HUyHYM719/XITfCdCZT0ndU1GV5ilDARTgG6cGtaKnOKnwRRmgVJxStbsmBIwAIn5JUxPgYLyGTA3wLXOZMALABYmv9H5zEqqAAAAAElFTkSuQmCC') no-repeat center
+      &[data-type="reputation"]:before
+        h 34px
+        mt -17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAMAAAAuwqolAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC3FBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////PISf////////////////////////////////////////////PISfPISf////////////////////////PISfPISfPISf////////////PISfPISfPISf////////////////////////PISfPISfPISfPISf////////////////////////////////PISfPISfPISfPISfPISfPISfPISfPISfPISf////////////////////////PISfPISfPISfPISfPISfPISfPISfPISf////////////////PISfPISfPISfPISfPISfPISfPISfPISfPISf////////////////PISfPISf////////PISf////////PISfPISfPISfPISf////////////////////PISfPISfPISfPISfPISfPISfPISf////////PISfPISfPISfPISfPISfPISfPISfPISf////PISfPISfPISfPISfPISfPISfPISf////PISf////////////////////////////////////////////////////////////////////////////////////////////PISfZbnwoAAAA8nRSTlMAFM4tj+ghBe6txQHnqkI0UE45a/0E1Kdv+ZXaGiVLit614AMNiywL8Zm31cP342CXbX9V8urHfWSzO7QmB8n++1oWueUe6fRMFfpcGcrwJFtYEr8udEBS7zoE4r4RiAy41/zznhsvf6UGZ14dMKjwDjGScCj+eHik5h+2AqDsrgoTo2n2yDXt6x1BbPx6KpxOBqjskbHTGAi09eAQn9w0QV/EdiTkVw8FK9b9Ya8ik8CnW3dXiNE/0Hv0AbKbeiAKzKUUj7lQINx7AvbT8vflxUvBIh5ydbKElRAHTaLNRNmmn9/MgOHkRYmcF42ORytlKZbVC7YAAAABYktHRAH/Ai3eAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wMWChEZVPO/GQAAA+tJREFUOMt9lPlfVFUYxl/EwYkBEbxz8Y4IIwiCehk1ccFlAJ0ZZoShQUBsQgWxELByy0TFEhFLKiHGLbdRqIxES9N2ad832k3FFCUyTJ/7D3Tv7NOH8fxw3/M+53vec+57znmJHC1oUDDdtQUPCvLzB0MWcjc+RIbBvv4Q+T2yUEVgXhEaFi4f4iMMRcQwRAaeEInIKAz1EYYzSmKjA0+IZknJDPcRRnAKUo2MGTUwPipmpIoU3AgfKRbBFKceHZ9AY5T+sHIMJcSPVidSEmJ95LHJKTRuPFQTeCBV49U1qQA/QYXx42hi8li3OkncyWTmXm5KGqZOmz4D6d4J6ZgxfdpUpE3hhjGTxb1NckQHZs6aPQdabUYmUZZsru+O5s4TzyuT02oxZ/asmYC0ig7hekO2kTVhPlFOrjnPd0KeOTeH6D6YWGO2ISwaOlHLgiV/AV9QiNSihYny4kUu9H6nWVQsT1xYZEVhAf9AiQVZkiZfTEvUS0vLACwrX+7iH3zI1VlevkwcKCtdql5Ci+UOqcK6giqBquqVOm9OH37kUU9mdSurq4BKWmGtcAirmNVUDW0+UcQaN7R2nfCYu78mgihfi2pazaxyKuvxuBEbqGYjuE0uaHPtltonnN1NHDbW0AY8uRXr3THq+G2o396wIxqOS//U0zsbn3l23XO71jaJXhCan2/YXg8DX+fNXk0LY9PvzrFgD+3dt18QhBcO0MFGQWg8dJj2wBKzW29jWmqc7BG7JluMaz5q0NExLoGota3xxZekkZePv9L+KlECd4x0hqNmca1sjf0IWcWkMSc6GgwniUJPSWBrW1urZJtea39dsqdCiU4aGjpOMCJqpTg+JOm0vjgMZygTFnLOOCSZN5w8WZBJZxBWrD+dlMfFkY5PEU/7LIdz8zmb65VuflP6vvX2Ow5P8a5Jcw7cWfGU3+PFu1GI9xV0PgOlsHW6cvDBhx99/MnhT4XPnG6nDZ8jI4QUX6BQCtCC+rqoBUizu6vAl199/c233wnfCz+4BIU9DV1RdfVocSKRueLfoMuT5B+F9oM/7f25VvjFI3VJRK63TASlF6lMOre369fjkjnw2+9uRWdSFaX7VzK6YPZUjSZ35w93p8J8wZdVXrx0mQ0vD1yYYlEezl6+dNF1mbuvIP7PqywM5gDV8rzcAPZqxTVc6Xbcxh5cl36++4Y21TgQb1Rre/+ScnUdPY7bbOzJ6BMfWt7fYNibA/Asg4kd4tP7p6zHFbCz34ReGbiUW8k3Cv7P/3st+VYKB1kvTP2dHvXm7f6+qhKiO2pe48/bt6nvEJVU9fXfHmB1caS50l+obC7xF/4D7INeslfEAooAAAAASUVORK5CYII=') no-repeat center
+  &__slices
+    w 317px
+    mt 5px
+  &__slice
+    pos relative
+    transition .7s margin
+    &:nth-child(1)
+      z-index 3
+      &:before
+        b 51px
+      &:after
+        b 54px
+    &:nth-child(2)
+      z-index 2
+      &:before
+        b 56px
+      &:after
+        b 59px
+    &:nth-child(3)
+      z-index 1
+      &:before
+        b 61px
+      &:after
+        b 64px
+    &:before
+      content ""
+      pos absolute
+      l 20px
+      size 6px
+      border-radius 50%
+      bgc white
+    &:after
+      content ""
+      pos absolute
+      bgc alpha($grey, .1)
+      w calc(100vw - 1346px)
+      h 1px
+      r calc(100% - 20px)
+    & + &
+      mt -185px
+    &-img
+      max-width 100%
+      transition .7s margin
+  &[visible] 
+    & ^[0]__slice 
+      & + ^[0]__slice 
+        mt -151px
+      &:nth-child(1) ^[0]__slice-img
+        ml -3px
+      &:nth-child(2) ^[0]__slice-img
+        ml -16px

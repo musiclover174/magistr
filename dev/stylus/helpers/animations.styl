@@ -1,0 +1,68 @@
+@media $LandscapeMaxFrom
+  .main,
+  .header,
+  .footer
+    opacity 0
+  .banner
+    w 0
+    &__vertical
+      opacity 0
+    &__title
+      pos relative
+      l -20px
+      opacity 0
+    &__subtitle
+      pos relative
+      l -20px
+      opacity 0
+  .main
+    h 100vh
+
+  body
+    overflow-y scroll
+    &.load-end
+      .main
+        height auto
+    &.load
+      pl 240px
+      transition 1.3s 3.5s padding-left
+      .main
+      .header,
+      .footer
+        opacity 1
+      .banner
+        w 100%
+        transition 1.3s 3.5s width
+        &__vertical
+          opacity 1
+          transition 0s 4.8s opacity
+        &__title
+          l 0
+          opacity 1
+          transition .7s 4.8s opacity, .7s 4.8s left
+        &__subtitle
+          l 0
+          opacity 1
+          transition .7s 5s opacity, .7s 5s left
+      .main
+        transition 0s 3.5s opacity
+      .header,
+      .footer
+        transition .7s 4.8s opacity
+      .loader
+        visibility hidden
+        opacity 0
+        z-index -1
+        transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
+
+.h-anim
+  pos relative
+  opacity .1
+  b -20px
+  transition 1s opacity, 1s bottom
+  &[visible]
+    b 0
+    opacity 1
+    .common__title:before
+      l 10px
+      t 10px

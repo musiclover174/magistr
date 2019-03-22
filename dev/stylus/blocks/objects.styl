@@ -1,0 +1,52 @@
+.objects
+  pos relative
+  z-index 1
+  bgc $dark
+  padding 80px 0 86px
+  &__bg
+    pos absolute
+    l 0
+    t 0
+    z-index -1
+    size 65% 100%
+    background-size cover
+    background-repeat no-repeat
+    background-position center
+    opacity .8
+  &__middle
+    c white
+    fontify 30px 500 36px
+    max-width 450px
+  .h-col3
+    text-align center
+  &__title
+    c white
+    fontify 20px 500 30px
+    mb 12px
+  &__spacer
+    db()
+    margin 0 auto 39px
+    size 196px 11px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAALCAQAAACKEeqBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYLGBGKKOZVAAAAvUlEQVRYw+2XMQrCQBBFX4yg2dJcRLAQtrT3tPbpDKQQPMmWmwQMSSFxI1iIAZcvvm62+stjmJmkR492Whi2XPHhYRU73kcsYgeYicGSYzGxg8xFW4TBktGR6atQFnHX4Chw+ip0RYwaKhoqfRVJf4wd4S1O06IFsOR0FDQArDmQ4ji/GNYSP0xkt6bQETeW7NlQU+JVtyZdEUHFhV3Q8BfxRR53xLg1pUGDqgjdYQ3gKamfNaii3RHwM5f1AOyDNSdWMlcyAAAAAElFTkSuQmCC') no-repeat center
+  &__feats
+    max-width 290px
+    margin 0 auto
+  &__feat
+    &-item
+      pos relative
+      df(center, flex-start)
+      c alpha(white, .5)
+      fontify 16px 400 24px
+      text-align left
+      pl 110px
+      min-height 70px
+      & + &
+        mt 22px
+    &-icon
+      pos absolute
+      l 0
+      t 0
+      width 90px
+      h 100%
+      background-repeat no-repeat
+      background-position center

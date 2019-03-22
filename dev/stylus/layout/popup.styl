@@ -1,0 +1,88 @@
+.hidden-block
+  height 0
+
+.popup
+  font-family $os
+  pos absolute
+  z-index 1
+  width 90%
+  max-width 522px
+  bgc white
+  padding 52px 49px 60px
+  opacity 0
+  visibility hidden
+  transform scale(.9)
+  will-change transform
+  transition .7s .7s transform, .7s .7s opacity
+  &.show
+    pos relative
+    opacity 1
+    visibility visible
+    transform scale(1)
+  &__over
+    dfv(center, center)
+    padding 30px 0
+    t 0
+    l 0
+    r 0
+    b 0
+    pos fixed
+    overflow hidden
+    z-index -1
+  &__bg
+    pos fixed
+    z-index 0
+    l 0
+    t 0
+    b 0
+    w 0
+    bgc $dark
+    opacity 0
+    transition .7s opacity, .7s width
+  &-show
+    oh()
+    & ^[0]__bg
+      w 100%
+      opacity .85
+    & ^[0]__over
+      overflow-y scroll
+      z-index 1000
+  &__title
+    pos relative
+    z-index 1
+    c $dark
+    fontify 48px 500 52px
+    mb 27px
+  &__subtitle
+    c $dark
+    fontify 16px 400 24px
+  &__hint
+    c $dark
+    fontify 16px 400 24px
+  &__close
+    pos absolute
+    t 40px
+    r 40px
+    size 23px 23px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXBAMAAAASBMmTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXX2NrX2NrX2NrX2NrX2NrX2NrX2NrX2Nr///8iinRjAAAAB3RSTlMAKb8Y1zD+f3iUTgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYOGjIcsjdOAAAAYElEQVQY02MQMmCAAiMBBnVnKJvZXYHBpAQqBWIwuztDJZyhInAKIgRTABaDaQUJwiTAonAzgcKucAmgVBlcgoGBNT2VAasMih5k01DsQXYBituQXY3iHxSfooQBcugAAJttHGzEXMXxAAAAAElFTkSuQmCC') no-repeat center
+    transition .7s background-image
+    &:hover
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXBAMAAAASBMmTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXOAAzOAAzOAAzOAAzOAAzOAAzOAAzOAAz///80kJFDAAAAB3RSTlMAKb8Y1zD+f3iUTgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYOGwtarI4HAAAAYElEQVQY02MQMmCAAiMBBnVnKJvZXYHBpAQqBWIwuztDJZyhInAKIgRTABaDaQUJwiTAonAzgcKucAmgVBlcgoGBNT2VAasMih5k01DsQXYBituQXY3iHxSfooQBcugAAJttHGzEXMXxAAAAAElFTkSuQmCC')
+    &-btn
+      mt 23px
+  &__form
+    mt 19px
+    &_search
+      pos relative
+    &-sbm
+      pos absolute
+      z-index 1
+      t 0
+      r 0
+      size 40px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcNGBwyaNJfAAAA30lEQVQoz32QPU4CcRBHH2TPQNDELNnGzhtgbSI2HoBGQ8P2FhyB1hL1EtYUhoRiEztsSIhgAa4HMFbPgvyB1c3+ppnJvPmsCQAJN5zTIOeFBxbsVAcgJSNiwBUDIjLSPYCYOrMlO4ud2Q8Rxn4V0lskN976dXo88U5RSx7phRFT23/qEdtOQ4cmH/zXJ81wxYaTEqDBJgBjOiXAJeOww8HGZVeEP8SF9JtpiCLgHnhlxDNrjuhwyw/Z4ScRE4dOnDtxaOKFuWf7EWV27drTKgC7rmxVAdh37nFNKnTH9y9AkMAQtzyvuQAAAABJRU5ErkJggg==') no-repeat center $red
+      transition .7s background-color
+
+
+.no-touchevents .popup-show
+  mr 17px

@@ -1,0 +1,68 @@
+.projects
+  pos relative
+  z-index 1
+  padding 90px 0 54px
+  .common__title
+    mt -12px
+  &__bg
+    pos absolute
+    z-index -1
+    r 0
+    t 0
+    b 0
+    bgc $grey
+    w 35%
+  &__item
+    pos relative
+    w 100%
+    pt 64%
+    mb 36px
+    bgc $dark
+    oh()
+    &-href
+      pos absolute 
+      z-index 3
+      full()
+      &:before
+        content ""
+        pos absolute
+        z-index 1
+        background linear-gradient(to bottom, rgba(55,58,72,0.4) 0%,rgba(0,0,0,0) 100%)
+        size 100%
+        t 0
+        l 0
+        opacity 0
+        transition 1s opacity
+      ^[-1]:hover &:before
+        opacity 1
+    &-img
+      pos absolute
+      z-index 0
+      size 100%
+      t 0
+      l 0
+      object-fit cover
+      will-change transform
+    &-name
+      pos absolute
+      z-index 2
+      l 20px
+      b 20px
+      c white
+      bgc $dark
+      padding 0 9px 0 19px
+      fontify 18px 500 33px
+      transition .7s background-color
+      &:after
+        content ""
+        display inline-block
+        vertical-align top
+        mt 16px
+        bgc white
+        size 0 2px
+        ml 10px
+        transition .7s width
+      ^[-1]:hover &
+        bgc $red
+        &:after
+          w 30px

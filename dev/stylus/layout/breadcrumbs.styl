@@ -1,0 +1,25 @@
+.breadcrumbs
+  text-align center
+  pl 18px
+  color darkgrey
+  mb 10px
+  ml -10px
+  w calc(100% + 10px)
+  &__href
+    color darkgrey
+    fontify 10px 400 14px
+    text-transform uppercase
+    letter-spacing .1em
+    border-bottom 1px solid
+    transition .7s border
+    &:hover
+      border-color transparent
+  &__delim
+    display inline-block
+    vertical-align top
+    margin 5px 10px 0
+    size 7px 11px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAQAAAAZmV8jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARwNLCBxLNouAAAAT0lEQVQI103MIRZAUBRF0f1flBiRYkZMQzIKY5BkzURIsmD9t9y2T7hlbSwmFxAet01XyWivIfiHjxnKKnc4IzErxkj0Bnf88V0lCI22ghetuxYFLfnalAAAAABJRU5ErkJggg==') no-repeat center
+
+  & + h1:not([class])
+    mt 0

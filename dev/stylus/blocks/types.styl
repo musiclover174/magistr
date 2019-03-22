@@ -1,0 +1,49 @@
+.types
+  padding 90px 0
+  bgc $grey
+  &__list
+    df()
+  &__item
+    pos relative
+    w calc(100% / 3)
+    &:hover
+      z-index 1
+    &-href
+      pos relative
+      db()
+      pt 100%
+    &-wrapper
+      pos absolute
+      t 0
+      l 0
+      bgc $dark
+      size 100%
+      oh()
+      transition .2s height linear, .2s width linear, .2s top linear, .2s left linear
+      ^[-1]:hover &
+        size calc(100% + 20px)
+        t -10px
+        l -10px
+    &-img
+      object-fit cover
+      opacity .6
+      size 100%
+    &-name
+      pos absolute
+      c white
+      fontify 30px 500 34px
+      t 50%
+      l 50%
+      text-align center
+      transform translate(-50%, -50%)
+      span
+        pos relative
+        t -4px
+        border-bottom 1px solid transparent
+        transition .7s border-color
+        ^[-2]:hover &
+          border-color white
+      i
+        pos relative
+        t 4px
+        font-style normal

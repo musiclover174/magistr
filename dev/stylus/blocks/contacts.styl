@@ -1,0 +1,53 @@
+.contacts
+  pos relative
+  bgc $dark
+  padding 83px 0 133px
+  .h-wrapper
+    align-items stretch
+  &__scheme
+    &-map
+      pos absolute
+      l 0
+      t 0
+      z-index 1
+      size 65% 100%
+      oh()
+  &__title
+    c white
+    fontify 20px 500 30px
+    mb 12px
+    text-align center
+  &__spacer
+    db()
+    margin 0 auto 42px
+    size 196px 11px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAALCAQAAACKEeqBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYLGBGKKOZVAAAAvUlEQVRYw+2XMQrCQBBFX4yg2dJcRLAQtrT3tPbpDKQQPMmWmwQMSSFxI1iIAZcvvm62+stjmJmkR492Whi2XPHhYRU73kcsYgeYicGSYzGxg8xFW4TBktGR6atQFnHX4Chw+ip0RYwaKhoqfRVJf4wd4S1O06IFsOR0FDQArDmQ4ji/GNYSP0xkt6bQETeW7NlQU+JVtyZdEUHFhV3Q8BfxRR53xLg1pUGDqgjdYQ3gKamfNaii3RHwM5f1AOyDNSdWMlcyAAAAAElFTkSuQmCC') no-repeat center
+  &__list
+    max-width 160px
+    margin 0 auto
+  &__item
+    pos relative
+    &:not(&_title)
+      pl 26px
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 50%
+        size 15px 2px
+        bgc alpha(white, .3)
+    & + &
+      mt 19px
+    &-address
+      c alpha(white, .5)
+      fontify 16px 400 18px
+      border-bottom 1px dotted
+      transition .7s border-color, .7s color
+      &:hover
+        c white
+        border-color transparent
+  &__subtitle
+    text-align center
+    c white
+    fontify 16px 400 18px
+    mt 38px

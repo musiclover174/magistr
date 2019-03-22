@@ -1,0 +1,93 @@
+.main
+  oh()
+  h1:not([class])
+    color $dark
+    fontify 60px 900 66px
+    margin 63px 0 48px
+    text-align center
+    @media $desktopMedium
+      fontify 50px 700 50px
+    @media $PortraitMax
+      fontify 36px 700 40px
+  h2:not([class])
+    color $dark
+    fontify 44px 700 50px
+    margin 54px 0 -3px
+    @media $desktopMedium
+      fontify 40px 700 44px
+    @media $PortraitMax
+      fontify 30px 700 34px
+  h3:not([class])
+    color $dark
+    fontify 32px 700 38px
+    margin 56px 0 -2px
+    @media $PortraitMax
+      fontify 24px 700 30px
+  h4:not([class])
+    color $dark
+    fontify 24px 700 30px
+    margin 56px 0 20px
+  iframe:not([class]),
+  img:not([class])
+    margin 7px 0
+    max-width 100%
+  ul:not([class])
+    list-style  none
+    margin -10px 0 20px
+  ul:not([class]) li
+    pl 32px
+    pos relative
+  ul:not([class]) li + li
+    mt 15px
+  ul:not([class]) > li:before
+    content ""
+    pos absolute
+    l 0
+    t 9px
+    size 7px
+    bgc $red
+  ol:not([class])
+    list-style none
+    margin -11px 0 20px
+    counter-reset myCounter
+  ol:not([class]) li
+    pl 32px
+    pos relative
+  ol:not([class]) li + li
+    mt 15px
+  ol:not([class]) > li:before
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    pos absolute
+    l 0
+    t 0
+    w 32px
+    pr 9px
+    color $red
+  p:not([class])
+    margin 18px 0
+  a:not([class])
+    c $red
+    border-bottom 1px solid alpha($red, .4)
+    transition .5s border
+    &:hover
+      border-color transparent
+ 
+  *:not([class]):not(span):first-child
+    margin-top 0 !important
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+  table
+    tbody
+      border-top 0
+    th
+      c white
+      fontify 16px 700 26px
+      padding 17px 24px
+      text-align left
+    td
+      c black
+      padding 12px 24px
+      fontify 16px 400 26px
+      text-align center
