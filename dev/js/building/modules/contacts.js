@@ -32,7 +32,7 @@ export default class Contacts {
         [parseFloat(coords[0]), parseFloat(coords[1])], {}, {
           iconLayout: 'default#image',
           iconImageSize: [31, 34],
-          iconImageHref: '/img/pin.png',
+          iconImageHref: './img/pin.png',
           iconImageOffset: [-32, -42],
         },
       );
@@ -43,7 +43,7 @@ export default class Contacts {
       [parseFloat(officeCoord[0]), parseFloat(officeCoord[1])], {}, {
         iconLayout: 'default#image',
         iconImageSize: [31, 34],
-        iconImageHref: '/img/office-pin.png',
+        iconImageHref: './img/office-pin.png',
         iconImageOffset: [-32, -42],
       },
     );
