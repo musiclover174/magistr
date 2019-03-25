@@ -23,29 +23,29 @@ html
                   +e('p').title Живи в&nbsp;центре!
                   +e('p').subtitle Все квартиры готовы – заезжай и живи.
 
-      +b('section').projects
+      +b('section').projects.h-anim
         .decor.decor_dec2.js-decor(data-type="white", data-height="140", style="width: 30px; height: 140px;")
         +e('aside').bg
         section.container
           .h-wrapper
-            .h-col5.h-col_rel
+            .h-col5.h-col_rel.h-anim(data-delay="1")
               .decor.decor_dec1.js-decor(data-type="red", data-height="108", style="width: 28px; height: 108px;")
               p.common__title Наши <br>проекты
               .common__subtitle 
                 p Жилые дома со встроенными объектами инфраструктуры. Дома сданы записывайтесь на экскурсию.
               a(href="#").common__toall Все проекты
             .h-col6
-              +e('figure').item
+              +e('figure').item.h-anim(data-delay="2")
                 +e.item-href(href="#")
                   +e.item-img(src="img/gk1.jpg")
                   +e('figcaption').item-name ЖК «Три Кита»
             .h-col6
-              +e('figure').item
+              +e('figure').item.h-anim
                 +e.item-href(href="#")
                   +e.item-img(src="img/gk2.jpg")
                   +e('figcaption').item-name ЖК «Яблочкина 10»
             .h-col6
-              +e('figure').item
+              +e('figure').item.h-anim
                 +e.item-href(href="#")
                   +e.item-img(src="img/gk3.jpg")
                   +e('figcaption').item-name ЖК «Престиж»
@@ -53,14 +53,14 @@ html
       +b('section').about
         section.container
           .h-wrapper
-            .h-col4.h-col_rel
+            .h-col4.h-col_rel.h-anim
               .decor.js-decor(data-type="red", data-height="117", style="width: 30px; height: 117px;")
               p.common__title О компании
               .common__subtitle 
                 p Строительная компания «МАГИСТР» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и&nbsp;материалов.
                 p Компания основана 17 мая 1999 года. 
               a(href="#").common__toall Читать подробнее о Магистре
-            .h-col4.h-col_rel
+            .h-col4.h-col_rel.h-anim(data-delay="1")
               +e('span').line._line1
               +e('span').line._line2
               +e('span').line._line3
@@ -70,7 +70,7 @@ html
               //- +e('video').bg(preload="", autoplay, muted, loop, poster="img/about-bg.jpg")
               //-   source(src="video/about.mp4" type="video/mp4")
               +e.bg(src="img/about-bg.jpg")
-            .h-col4.h-col_rel
+            .h-col4.h-col_rel.h-anim(data-delay="2")
               +e.info
                 +e('p').info-title >20
                   span лет
@@ -107,21 +107,21 @@ html
       +b('section').types
         section.container
           +e('ul').list
-            +e.item
+            +e.item.h-anim
               +e.item-href(href="#")
                 +e.item-wrapper
                   +e.item-img(src="img/type1.jpg")
                 +e.item-name 
                   span 
                     i Коммерческая недвижимость
-            +e.item
+            +e.item.h-anim(data-delay="1")
               +e.item-href(href="#")
                 +e.item-wrapper
                   +e.item-img(src="img/type2.jpg")
                 +e.item-name 
                   span 
                     i Продажа<br>квартир
-            +e.item
+            +e.item.h-anim(data-delay="2")
               +e.item-href(href="#")
                 +e.item-wrapper
                   +e.item-img(src="img/type3.jpg")
@@ -134,10 +134,10 @@ html
         +e('span').bg(style="background-image: url('img/objects.jpg')")
         section.container
           .h-wrapper
-            .h-col8
+            .h-col8.h-anim(data-delay="1")
               +e('p').middle Наши объекты расположены в центре города, в месте концентрации деловой активности
             .h-col1
-            .h-col3
+            .h-col3.h-anim
               +e('p').title В ближайшей доступности
               +e('span').spacer
               +e('ul').feats
@@ -157,7 +157,7 @@ html
                   +e('span').feat-icon(style="background-image: url('img/object-feat5.png')")
                   | Парки
 
-      +b('section').news
+      +b('section').news.h-anim
         .decor.js-decor(data-type="red", data-height="134", style="width: 43px; height: 134px;")
         section.container
           +e.titleover
@@ -200,11 +200,11 @@ html
       
       +b('section').contacts
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
-        +e.scheme-map#map.js-contacts-map(data-office="55.154419:61.393750", data-center="55.147363:61.390008" data-locations="55.144871:61.380814, 55.144027:61.381623, 55.144212:61.381344, 55.132062:61.370457, 55.153745:61.409569, 55.152917:61.397873, 55.157104:61.418885, 55.157593:61.418301")
+        +e.scheme-map#map.js-contacts-map.h-anim(data-delay="1", data-office="55.154419:61.393750", data-center="55.147363:61.390008" data-locations="55.144871:61.380814, 55.144027:61.381623, 55.144212:61.381344, 55.132062:61.370457, 55.153745:61.409569, 55.152917:61.397873, 55.157104:61.418885, 55.157593:61.418301")
         section.container
           .h-wrapper
             .h-col9
-            .h-col3
+            .h-col3.h-anim
               +e('p').title Расположение <br>возведенных объектов
               +e('span').spacer
               +e('ul').list

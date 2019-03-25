@@ -17,7 +17,10 @@
     t 0
     b 0
     bgc $grey
-    w 35%
+    w 0
+    transition .7s width
+    ^[0][visible] &
+      w 35%
   &__item
     pos relative
     w 100%

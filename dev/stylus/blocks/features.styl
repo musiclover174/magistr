@@ -22,10 +22,13 @@
       mt 59px
     &-title
       pos relative
+      r 20px
+      opacity 0
       c white
       fontify 14px 500 21px
       text-transform uppercase
       letter-spacing .3em
+      transition .7s 2.5s opacity, .7s 2.5s right
       &:before
         pos absolute
         content ""
@@ -49,7 +52,7 @@
     mt 5px
   &__slice
     pos relative
-    transition .7s margin
+    transition .7s .7s margin
     &:nth-child(1)
       z-index 3
       &:before
@@ -75,23 +78,36 @@
       size 6px
       border-radius 50%
       bgc white
+      transform scale(0)
+      will-change transform
+      transition .7s 2s transform
     &:after
       content ""
       pos absolute
       bgc alpha($grey, .1)
-      w calc(100vw - 1346px)
+      w 0
       h 1px
       r calc(100% - 20px)
+      transition .7s 2.2s width
     & + &
       mt -185px
     &-img
       max-width 100%
-      transition .7s margin
+      transition .7s 1.4s margin
   &[visible] 
+    & ^[0]__item-title
+      r 0
+      opacity 1
     & ^[0]__slice 
+      &:before
+        transform scale(1)
+      &:after
+        w calc(100vw - 1346px)
       & + ^[0]__slice 
         mt -151px
       &:nth-child(1) ^[0]__slice-img
         ml -3px
       &:nth-child(2) ^[0]__slice-img
-        ml -16px
+        ml -15px
+      &:nth-child(3) ^[0]__slice-img
+        ml -30px

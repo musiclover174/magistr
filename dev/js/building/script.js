@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (qs('.js-contacts-map')) {
         const contacts = new Contacts('.js-contacts-map', '.js-contacts-btn');
       }
-    }, 5000);
+    }, 5700);
   };
 
   let eventScroll;
