@@ -24,12 +24,12 @@ html
                   +e('p').subtitle Все квартиры готовы – заезжай и живи.
 
       +b('section').projects
+        .decor.decor_dec2.js-decor(data-type="white", data-height="140", style="width: 30px; height: 140px;")
         +e('aside').bg
         section.container
           .h-wrapper
             .h-col5.h-col_rel
-              span.decor
-                i
+              .decor.decor_dec1.js-decor(data-type="red", data-height="108", style="width: 28px; height: 108px;")
               p.common__title Наши <br>проекты
               .common__subtitle 
                 p Жилые дома со встроенными объектами инфраструктуры. Дома сданы записывайтесь на экскурсию.
@@ -53,7 +53,8 @@ html
       +b('section').about
         section.container
           .h-wrapper
-            .h-col4
+            .h-col4.h-col_rel
+              .decor.js-decor(data-type="red", data-height="117", style="width: 30px; height: 117px;")
               p.common__title О компании
               .common__subtitle 
                 p Строительная компания «МАГИСТР» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и&nbsp;материалов.
@@ -81,6 +82,7 @@ html
                 span
           
       +b('section').features.h-anim
+        .decor.js-decor(data-type="red", data-height="148", style="width: 32px; height: 148px;")
         section.container
           +e.wrapper
             +e('aside').side
@@ -128,6 +130,7 @@ html
                     i Аренда
 
       +b('section').objects
+        .decor.js-decor(data-type="red", data-height="234", style="width: 33px; height: 234px;")
         +e('span').bg(style="background-image: url('img/objects.jpg')")
         section.container
           .h-wrapper
@@ -155,6 +158,7 @@ html
                   | Парки
 
       +b('section').news
+        .decor.js-decor(data-type="red", data-height="134", style="width: 43px; height: 134px;")
         section.container
           +e.titleover
             p.common__title Новости

@@ -6,6 +6,14 @@ function qsAll(query, root = document) {
   return root.querySelectorAll(query);
 }
 
+function compareRandom(a, b) {
+  return Math.random() - 0.5;
+}
+
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 function fadeIn(elem, ms, cb, d = 'block') {
   if (!elem) return;
 
@@ -129,4 +137,6 @@ export {
   scrollToInit,
   qs,
   qsAll,
+  compareRandom,
+  getRandomArbitrary,
 };

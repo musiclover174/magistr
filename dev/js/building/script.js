@@ -9,6 +9,8 @@ import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import News from './modules/news';
+import History from './modules/history';
+import Decor from './modules/decor';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -25,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const news = new News('.js-news');
   }
 
+  if (qs('.js-news')) {
+    const history = new History('.js-popup-history');
+  }
+
   if (qs('form')) {
     const forms = new Forms();
   }
@@ -33,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightBox = GLightbox({
       selector: 'glightbox',
     });
+  }
+
+  if (qs('.js-decor')) {
+    const decors = new Decor();
   }
 
   window.onload = () => {

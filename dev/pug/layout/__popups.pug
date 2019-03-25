@@ -1,6 +1,58 @@
 .hidden-block
   .popup__over
     span.popup__bg.js-popbg
+    +b.popup._history#history
+      +e.close.js-popclose(type="button", title="Закрыть")
+      .decor.js-decor(data-type="red", data-height="134", style="width: 30px; height: 134px;")
+      +e('p').title История объектов
+      +b('section').history._popup
+        +e.carover
+          +e.car.swiper-container.js-popup-history
+            .swiper-wrapper
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>ул. Котина – ул. Горького
+                  +e('p').item-area 16,5 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house1.png")
+                  +e('p').item-year 2005 г
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>«31 МИКРОРАЙОН» 
+                  +e('p').item-area 38,8 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house2.png")
+                  +e.item-year 2006 г
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>«ТРИ КИТА»
+                  +e('p').item-area 45,6 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house3.png")
+                  +e.item-year 2007 г
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>ул. Котина – ул. Горького
+                  +e('p').item-area 72,4 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house4.png")
+                  +e.item-year 2008 г
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>«31 МИКРОРАЙОН» 
+                  +e('p').item-area 98,4 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house2.png")
+                  +e.item-year 2009 г
+              .swiper-slide
+                +e.item
+                  +e('p').item-title Жилой квартал <br>«ТРИ КИТА»
+                  +e('p').item-area 130,6 тыс. м²
+                +e.item-bottom
+                  +e.item-img(src="img/house3.png")
+                  +e.item-year 2010 г
+          .swiper-scrollbar.js-history-scrollbar
+
     +b.popup#call
       +e.close.js-popclose(type="button", title="Закрыть")
       +e('p').title Заказать обратный звонок
@@ -21,6 +73,7 @@
           img(src="img/captcha.png", style="max-width: 100%;")
         .common__row
           button.common__submit.btn(type="submit") Отправить
+
     +b.popup#text
       +e.close.js-popclose(type="button", title="Закрыть")
       +e('p').title Заявка отправлена

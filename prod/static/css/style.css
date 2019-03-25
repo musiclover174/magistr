@@ -797,35 +797,27 @@ button.swiper-pagination-bullet {
   display: none;
 }
 .swiper-scrollbar {
-  border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
-  background: rgba(0,0,0,0.1);
-}
-.swiper-container-horizontal > .swiper-scrollbar {
+  background: rgba(55,58,72,0.2);
   position: absolute;
-  left: 1%;
-  bottom: 3px;
+  left: 50%;
+  bottom: 0px;
   z-index: 50;
-  height: 5px;
-  width: 98%;
-}
-.swiper-container-vertical > .swiper-scrollbar {
-  position: absolute;
-  right: 3px;
-  top: 1%;
-  z-index: 50;
-  width: 5px;
-  height: 98%;
+  height: 2px;
+  width: 100%;
+  max-width: 700px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .swiper-scrollbar-drag {
-  height: 100%;
+  height: 5px;
+  top: -3px;
   width: 100%;
   position: relative;
-  background: rgba(0,0,0,0.5);
-  border-radius: 10px;
+  background: #ce000c;
   left: 0;
-  top: 0;
+  cursor: pointer;
 }
 .swiper-scrollbar-cursor-drag {
   cursor: move;
@@ -2516,6 +2508,22 @@ div[class^="table-scroller"] {
   left: 10px;
   top: 10px;
 }
+@-webkit-keyframes line {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 8px;
+  }
+}
+@keyframes line {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 8px;
+  }
+}
 .loader {
   position: absolute;
   left: 240px;
@@ -2703,6 +2711,48 @@ div[class^="table-scroller"] {
     margin-top: -228px;
     margin-left: 0;
   }
+}
+.decor {
+  position: absolute;
+}
+.decor__elem {
+  position: absolute;
+  -webkit-animation: line 2s ease-in-out infinite;
+  animation: line 2s ease-in-out infinite;
+}
+.decor__elem:nth-child(2) {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.decor__elem:nth-child(3) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.decor__elem[data-type="red"] {
+  background-color: #ce000c;
+}
+.decor__elem[data-type="white"] {
+  background-color: #fff;
+}
+.decor__elem[data-size="small"] {
+  width: 2px;
+}
+.decor__elem[data-size="medium"] {
+  width: 4px;
+}
+.decor__elem[data-size="big"] {
+  width: 10px;
+}
+.decor__elem[data-position="left"] {
+  left: 0;
+}
+.decor__elem[data-position="right"] {
+  right: 0;
+}
+.decor__elem[data-position="middle"] {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .btn {
   position: relative;
@@ -3520,6 +3570,13 @@ body.burgeropen .menu {
   -webkit-transition: 0.7s 0.7s transform, 0.7s 0.7s opacity;
   transition: 0.7s 0.7s transform, 0.7s 0.7s opacity;
 }
+.popup_history {
+  max-width: none;
+}
+.popup_history .decor {
+  top: 3%;
+  left: 70%;
+}
 .popup.show {
   position: relative;
   opacity: 1;
@@ -3978,6 +4035,14 @@ body.burgeropen .menu {
   z-index: 1;
   padding: 90px 0 54px;
 }
+.projects .decor_dec1 {
+  left: 356px;
+  top: -60px;
+}
+.projects .decor_dec2 {
+  right: 23px;
+  bottom: 30px;
+}
 .projects .common__title {
   margin-top: -12px;
 }
@@ -4067,7 +4132,13 @@ body.burgeropen .menu {
   width: 30px;
 }
 .about {
+  position: relative;
+  z-index: 1;
   padding: 90px 0 64px;
+}
+.about .decor {
+  left: 25%;
+  bottom: -20%;
 }
 .about .common__title {
   margin-top: -12px;
@@ -4219,8 +4290,13 @@ body.burgeropen .menu {
   height: 181px;
 }
 .features {
+  position: relative;
   background-color: #373a48;
   padding: 133px 0 30px;
+}
+.features .decor {
+  right: 7%;
+  bottom: -60px;
 }
 .features__wrapper {
   display: -webkit-box;
@@ -4433,6 +4509,19 @@ body.burgeropen .menu {
   background-color: #373a48;
   padding: 80px 0 86px;
 }
+.objects:after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  bottom: -8%;
+  width: 40px;
+  height: 246px;
+  background: url("../i/objects-decor.png") no-repeat center;
+}
+.objects .decor {
+  left: 1%;
+  top: -13%;
+}
 .objects__bg {
   position: absolute;
   left: 0;
@@ -4505,7 +4594,13 @@ body.burgeropen .menu {
   background-position: center;
 }
 .news {
+  position: relative;
+  z-index: 2;
   padding: 78px 0 84px;
+}
+.news .decor {
+  left: 40%;
+  top: 93%;
 }
 .news__titleover {
   display: -webkit-box;
@@ -4670,4 +4765,62 @@ body.burgeropen .menu {
   font-weight: 400;
   line-height: 18px;
   margin-top: 38px;
+}
+.history__carover {
+  position: relative;
+  padding: 90px 0;
+}
+.history__carover .swiper-wrapper {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.history__carover .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 369px;
+  height: auto;
+}
+.history__item {
+  width: 100%;
+  text-align: center;
+}
+.history__item-title {
+  color: #373a48;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 3px;
+}
+.history__item-area {
+  color: #ce000c;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.history__item-bottom {
+  font-size: 0;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.history__item-year {
+  color: #373a48;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-top: 25px;
+  border-top: 2px solid #373a48;
 }
