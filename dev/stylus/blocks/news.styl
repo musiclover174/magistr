@@ -2,25 +2,49 @@
   pos relative
   z-index 2
   padding 78px 0 84px
+  @media $lDesktopSmall
+    padding 93px 0 113px
+  @media $LandscapeMedium
+    padding 60px 0 60px
+  @media $PortraitMax
+    padding 50px 0
   .decor
     l 40%
     t 93%
   &__titleover
     df(flex-end, flex-start)
     mb 25px
+    @media $lDesktopSmall
+      mb 34px
+    @media $PortraitMedium
+      justify-content space-between
     .common__title
       mb 0
       mr 52px
+      @media $lDesktopSmall
+        mr 54px
     .common__toall
       mb 4px
+      @media $lDesktopSmall
+        mb -1px
+      @media $desktopMedium
+        mb -3px
+      @media $PortraitMedium
+        &:after
+          dn()
   &__carover
     pos relative
     .swiper-container
       overflow visible
     .swiper-buttons
-      pos absolute
-      r 0
-      t -67px
+      @media $PortraitMediumFrom
+        pos absolute
+        r 0
+        t -67px
+      @media $PortraitMedium
+        margin 30px auto 0
+        h 34px
+        pos relative
   &__item
     w 100%
     &-imgover
@@ -45,14 +69,21 @@
     &-date
       c $red
       fontify 14px 400 21px
+      @media $lDesktopSmall
+        mb 4px
     &-href
       color $dark
       fontify 30px 500 36px
       border-bottom 1px solid alpha($dark, .2)
       transition .7s border
+      @media $lDesktopSmall
+        fontify 22px 500 28px
       &:hover
         border-color transparent
     &-dsc
       color $dark
       fontify 16px 500 24px
       mt 13px
+      @media $lDesktopSmall
+        fontify 14px 400 21px
+        mt 15px

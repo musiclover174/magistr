@@ -11,6 +11,8 @@ body
   max-width 1540px
   padding 0 50px
   margin 0 auto
+  @media $desktopMin
+    padding 0 30px
   &_full
     h 100%
   @media $LandscapeMin
@@ -25,20 +27,34 @@ body
     c $dark
     fontify 60px 500 64px
     mb 18px
+    @media $lDesktopSmall
+      fontify 48px 500 48px
+      mb 29px
     @media $desktopMedium
-      fontify 50px 500 50px
-    @media $PortraitMedium
       fontify 40px 500 40px
+    @media $PortraitMax
+      mb 20px
+      br
+        dn()
     &_white
       c white
     &_small
       fontify 48px 500 42px
       mb 27px
+      @media $lDesktopSmall
+        fontify 36px 500 42px
+      @media $desktopMinFrom
+        fontify 32px 500 36px
   &__subtitle
     c $dark
     fontify 16px 400 24px
     mb 30px
     max-width 340px
+    @media $lDesktopSmall
+      fontify 14px 400 22px
+    @media $PortraitMax
+      max-width inherit
+      mb 20px
     &_white
       c white
   &__toall
@@ -47,6 +63,8 @@ body
     fontify 16px 500 21px
     border-bottom 1px solid #cecece
     transition .7s border-color, .7s color
+    @media $lDesktopSmall
+      fontify 14px 500 21px
     &:after
       content ""
       pos absolute
@@ -73,6 +91,8 @@ body
     c #aeaeb2
     fontify 14px 400 18px
     mb 6px
+    @media $lDesktopSmall
+      fontify 12px 400 16px
     span 
       c $red
   &__input
@@ -86,6 +106,8 @@ body
     font-size 16px
     line-height 500
     transition .7s border
+    @media $lDesktopSmall
+      font-size 14px
     &:focus
       border-color $dark
     &.warning + ^[0]__inperror

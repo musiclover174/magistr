@@ -6,9 +6,27 @@
     h auto
     pt 220px
     pb 200px
+  @media $LandscapeMin
+    pt 170px
+    pb 180px
+  @media $PortraitMedium
+    pt 100px
+    pb 100px
+  @media $Mobile370
+    .h-col1
+      dn()
+    .h-col11
+      flex 0 0 100%
+      max-width 100%
   &__vertical
     h 100vh
     dfv(flex-start, center)
+    @media $desktopMin
+      pt 70px
+    @media $LandscapeMin
+      h auto
+    @media $Mobile370
+      pl 30px
   &__circle
     pos absolute
     z-index -1
@@ -18,6 +36,15 @@
     t 50%
     mt -228px
     bgc $red
+    @media $lDesktopSmall
+      size 353px
+      mt -176px
+    @media $desktopMin
+      mt -141px
+    @media $PortraitMedium
+      size 240px
+      mt -85px
+      l 15px
   &__title
     max-width 380px
     c white
@@ -25,17 +52,28 @@
     mb 29px
     ml -4px
     @media $lDesktopSmall
-      fontify 60px 700 64px
+      fontify 64px 500 64px
+      mb 21px
     @media $dekstop1142
-      fontify 48px 700 52px
+      fontify 48px 500 52px
+      max-width 320px
     @media $LandscapeMin
-      fontify 38px 700 42px
+      fontify 38px 500 42px
     @media $PortraitMin
-      fontify 34px 700 38px
+      fontify 34px 500 38px
+    @media $PortraitMedium
+      max-width 200px
+      pl 20px
   &__subtitle
     c white
     fontify 24px 500 32px
     max-width 290px
+    @media $lDesktopSmall
+      fontify 18px 500 24px
+    @media $PortraitMedium
+      fontify 16px 500 21px
+      pl 20px
+      max-width 220px
   &__bg
     pos absolute
     l 0

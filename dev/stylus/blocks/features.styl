@@ -2,6 +2,12 @@
   pos relative
   bgc $dark
   padding 133px 0 30px
+  @media $lDesktopSmall
+    padding 101px 0 97px
+  @media $LandscapeMin
+    padding 61px 0 47px
+  @media $PortraitMedium
+    padding 45px 0 20px
   .decor
     r 7%
     b -60px
@@ -9,26 +15,48 @@
     df(flex-start, space-between)
     background url('../i/about-pattern.png') no-repeat center
     pr 167px
+    @media $desktopMax
+      pr 0
   &__side
     w 420px
+    @media $LandscapeMin
+      w 100%
   &__list
     db()
     w 173px
     mr 0
     ml auto
     mt 59px
+    @media $lDesktopSmall
+      mt 62px
+    @media $LandscapeMax
+      ml 69px
+      mr auto
+    @media $LandscapeMin
+      df()
+      flex-wrap wrap
+      ml -15px
+      w calc(100% + 15px)
   &__item
-    & + &
-      mt 59px
+    @media $LandscapeMin
+      w calc(50% - 15px)
+      ml 15px
+      mb 45px
+      pl 68px
+    @media $PortraitMedium
+      w calc(100% - 15px)
     &-title
       pos relative
-      r 20px
-      opacity 0
       c white
       fontify 14px 500 21px
       text-transform uppercase
       letter-spacing .3em
       transition .7s 2.5s opacity, .7s 2.5s right
+      @media $lDesktopSmall
+        fontify 12px 500 21px
+      @media $PortraitMaxFrom
+        r 20px
+        opacity 0
       &:before
         pos absolute
         content ""
@@ -50,6 +78,8 @@
   &__slices
     w 317px
     mt 5px
+    @media $LandscapeMin
+      dn()
   &__slice
     pos relative
     transition .7s .7s margin
@@ -94,20 +124,29 @@
     &-img
       max-width 100%
       transition .7s 1.4s margin
-  &[visible] 
-    & ^[0]__item-title
-      r 0
-      opacity 1
-    & ^[0]__slice 
-      &:before
-        transform scale(1)
-      &:after
-        w calc(100vw - 1346px)
-      & + ^[0]__slice 
-        mt -151px
-      &:nth-child(1) ^[0]__slice-img
-        ml -3px
-      &:nth-child(2) ^[0]__slice-img
-        ml -15px
-      &:nth-child(3) ^[0]__slice-img
-        ml -30px
+  @media $PortraitMaxFrom
+    &[visible] 
+      & ^[0]__item-title
+        r 0
+        opacity 1
+      & ^[0]__slice 
+        &:before
+          transform scale(1)
+        &:after
+          w calc(100vw - 1346px)
+          @media $lDesktopSmall
+            w calc(100vw - 1216px)
+          @media $desktopMax
+            w calc(100vw - 1049px)
+          @media $desktopMin
+            w calc(100vw - 780px)
+          @media $LandscapeMax
+            w calc(100vw - 630px)
+        & + ^[0]__slice 
+          mt -151px
+        &:nth-child(1) ^[0]__slice-img
+          ml -3px
+        &:nth-child(2) ^[0]__slice-img
+          ml -15px
+        &:nth-child(3) ^[0]__slice-img
+          ml -30px

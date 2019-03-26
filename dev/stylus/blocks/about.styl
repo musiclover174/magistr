@@ -2,35 +2,83 @@
   pos relative
   z-index 1
   padding 90px 0 64px
+  @media $lDesktopSmall
+    padding 99px 0 74px
+  @media $LandscapeMedium
+    padding 0 0 70px
   .decor
     l 25%
     b -20%
   .common__title
     mt -12px
+    @media $lDesktopSmall
+      mt -8px
   .h-wrapper
     align-items stretch
+  .h-col4
+    @media $LandscapeMedium
+      flex 0 0 50%
+      max-width 50%
+    @media $PortraitMax
+      flex 0 0 100%
+      max-width 100%
   .h-col4:nth-child(2)
     pr 0
     mt -35px
+    @media $LandscapeMedium
+      dn()
   .h-col4:last-child
     dfv(flex-start, flex-end)
+    @media $desktopMax
+      pt 180px
+    @media $LandscapeMedium
+      pt 0
+    @media $PortraitMax
+      flex-direction row
+      justify-content space-between
+      pt 40px
   &__bg
     w 100%
     mb -113px
+    @media $lDesktopSmall
+      mb -126px
+    @media $desktopMax
+      mb 0
   &__info
+    @media $PortraitMax
+      w calc(50% - 15px)
     & + &
       mt 50px
+      @media $lDesktopSmall
+        mt 46px
+      @media $PortraitMax
+        mt 0
     &-title
       c $red
       fontify 80px 700 58px
       h 58px
       mb 16px
+      @media $lDesktopSmall
+        font-size 64px
+        mb 9px
+      @media $Mobile370
+        font-size 44px
+        line-height 44px
+        h 44px
       span
         font-size 30px
+        @media $lDesktopSmall
+          font-size 24px
+        @media $Mobile370
+          font-size 20px
     &-value
       c $dark
       fontify 20px 500 26px
       max-width 160px
+      @media $lDesktopSmall
+        fontify 18px 500 24px
+      @media $Mobile370
+        fontify 14px 500 21px
   &__line
     pos absolute
     bgc white
@@ -50,15 +98,24 @@
       size 30px calc(100% + 64px)
       t 0
       r 30px
+      @media $lDesktopSmall
+        size 30px calc(100% + 74px)
     &_line5
       size 60px 49px
       bgc $dark
       t calc(100% + 64px)
       r 0
+      @media $lDesktopSmall
+        h 50px
+        t calc(100% + 74px)
+      @media $desktopMax
+        dn()
     &_line6
       size 30px calc(100% - 161px)
       t 225px
       r 0px
+      @media $lDesktopSmall
+        size 30px calc(100% - 151px)
   &__history
     pos absolute
     border-radius 50%
@@ -70,6 +127,12 @@
     df(center, center)
     padding 0 34px
     r 18px
+    @media $lDesktopSmall
+      size 139px
+      fontify 14px 500 18px
+      r 15px
+    @media $LandscapeMin
+      dn()
     &:before,
     &:after
       content ""
@@ -77,10 +140,16 @@
       l 41px
       size 76px 11px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAALCAQAAAB/w6N0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYIOCxFgjC/AAAAqklEQVQ4y83UsQrCMBCA4T9W0Ga0LyI4CBndfVr3bhY6CD5JxrQFSzuIXASXejf0tgvJ5ePIxU38H0OeeI48SbKwU1SGjep0zgpUBLxRPSOYJ1AyUtrRLGBvVqQm2tH0sA+rpae1o7npumj/LU8GgEDFSE0PwJ4LBZH7j8e/6Cannkrp2IstZw50NCTtVOphQntwEtYaYDKVhbDW8Y8lGrpvljZsOgbmP/8MHrc1J5dLk8gAAAAASUVORK5CYII=') no-repeat center
+      @media $lDesktopSmall
+        l 32px
     &:before
       t 42px
+      @media $lDesktopSmall
+        t 35px
     &:after
       b 41px
+      @media $lDesktopSmall
+        b 35px
     span
       pos absolute
       z-index -1
@@ -91,5 +160,7 @@
       border-radius 50%
       transform translate(-50%, -50%)
       transition .7s width, .7s height
+      @media $lDesktopSmall
+        size 139px
     &:hover span
       size 181px

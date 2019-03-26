@@ -1,4 +1,4 @@
-@media $LandscapeMaxFrom
+@media $LandscapeMinFrom
   .main,
   .header,
   .footer
@@ -55,21 +55,28 @@
         z-index -1
         transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
 
-.h-anim
-  pos relative
-  opacity 0
-  b -20px
-  transition 1s opacity, 1s bottom
-  &[visible]
-    b 0
-    opacity 1
-    &[data-delay="1"]
-      transition-delay .7s
-    &[data-delay="2"]
-      transition-delay 1.4s
-    .common__title:before
-      l 10px
-      t 10px
+@media (min-width:1171px) and (max-width:1600px)
+  body.load
+    pl 198px
+
+@media (min-width:0px) and (max-width:1170px)
+  body.load
+    pl 0
+
+@media $PortraitMaxFrom
+  .h-anim
+    pos relative
+    opacity 0
+    b -20px
+    transition 1s opacity, 1s bottom
+    &[visible]
+      b 0
+      opacity 1
+      @media $LandscapeMinFrom
+        &[data-delay="1"]
+          transition-delay .7s
+        &[data-delay="2"]
+          transition-delay 1.4s
 
 @keyframes line {
   0%, 100% { 

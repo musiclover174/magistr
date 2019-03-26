@@ -7,17 +7,23 @@
     .swiper-slide
       dfv(flex-start, space-between)
       size 369px auto
+      @media $lDesktopSmall
+        w 300px
   &__item
     w 100%
     text-align center
     &-title
       c $dark
       fontify 16px 500 24px
-      mb 3px
+      mb 5px
+      @media $lDesktopSmall
+        fontify 14px 500 20px
     &-area
       c $red
       fontify 20px 700 26px
       mb 10px
+      $lDesktopSmall
+      fontify 16px 700 22px
     &-bottom
       font-size 0
       mt 20px
@@ -28,3 +34,5 @@
       fontify 20px 700 26px
       pt 25px
       border-top 2px solid $dark
+      @media $lDesktopSmall
+        fontify 16px 700 22px

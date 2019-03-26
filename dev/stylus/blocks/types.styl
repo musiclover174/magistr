@@ -1,17 +1,30 @@
 .types
   padding 90px 0
   bgc $grey
+  @media $lDesktopSmall
+    padding 120px 0
+  @media $LandscapeMedium
+    padding 70px 0
+  @media $PortraitMax
+    padding 15px 0
   &__list
     df()
+    flex-wrap wrap
   &__item
     pos relative
     w calc(100% / 3)
+    @media $PortraitMax
+      w 100%
     &:hover
       z-index 1
     &-href
       pos relative
       db()
       pt 100%
+      @media $PortraitMax
+        pt 35%
+      @media $PortraitMedium
+        pt 42%
     &-wrapper
       pos absolute
       t 0
@@ -36,14 +49,22 @@
       l 50%
       text-align center
       transform translate(-50%, -50%)
+      @media $lDesktopSmall
+        fontify 24px 500 30px
+      @media $LandscapeMedium
+        fontify 20px 500 24px
       span
         pos relative
         t -4px
         border-bottom 1px solid transparent
         transition .7s border-color
+        @media $lDesktopSmall
+          t -2px
         ^[-2]:hover &
           border-color white
       i
         pos relative
         t 4px
         font-style normal
+        @media $lDesktopSmall
+          t 2px

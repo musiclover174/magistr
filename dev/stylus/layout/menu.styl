@@ -2,17 +2,17 @@
   @media $desktopMin
     pos fixed
     z-index 11
-    l 0
+    t 0
     visibility hidden
-    t 100%
+    l -100%
     opacity 0
-    padding 34px 32px
+    padding 45px 15px
     w 100%
     h 100%
-    transition .7s visibility, .7s top, .7s opacity
+    transition .7s visibility, .7s left, .7s opacity
     overflow-y auto
   @media $PortraitMin
-    padding 40px 15px
+    padding 40px 30px
   &__list
     dfv(center, flex-start)
     w 100%
@@ -21,29 +21,31 @@
     w 100%
     text-align center
     padding 0 37px
+    @media $lDesktopSmall
+      padding 0 15px
+    @media $desktopMin
+      padding 0
     &_tablet
-      df(flex-start, space-between)
       w 100%
-      @media $desktopMinFrom
+      @media $PortraitMaxFrom
         dn()
-    &_mobile
-      @media $PortraitMediumFrom
-        dn()
-      @media $PortraitMin
-        .header__order
-          db()
-          ml 0
     & + &
       mt 30px
+      @media $lDesktopSmall
+        mt 20px
+      @media $desktopMin
+        mt 30px
   &__href
     pos relative
     z-index 1
     color $dark
     fontify 16px 400 19px
     @media $lDesktopSmall
-      fontify 14px 400 19px
+      fontify 14px 400 15px
     @media $desktopMin
+      transition .7s color
       fontify 24px 600 32px
+      c white
     span,
     &:before,
     &:after
@@ -80,6 +82,8 @@
         opacity 1
     &_active
       c $red
+      @media $desktopMin
+        c alpha(white, .5)
   &__sublist
     visibility hidden
     opacity 0
@@ -97,6 +101,7 @@
       pos relative
       t 0
       l 0
+      w 100%
       padding 0
       bgc transparent
       mt 14px
@@ -115,6 +120,8 @@
         opacity 1
         visibility visible
     &-item
+      @media $desktopMin
+        text-align center
       & + &
         @media $desktopMin
           mt 7px
@@ -125,8 +132,11 @@
       fontify 16px 400 24px
       padding 7px 28px 7px 30px
       transition .7s background
+      @media $lDesktopSmall
+        fontify 14px 400 15px
       @media $desktopMin
         fontify 18px 400 24px
+        c white
         padding 0
         bgc transparent
         transition .7s color
@@ -134,7 +144,8 @@
       &_active
         bgc white
         @media $desktopMin
-          c $red
+          c alpha(white, .5)
+          bgc transparent
   &__search
     size(14px, 14px)
     background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEX///+2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyq2Kyr////k0nLZAAAAM3RSTlMAPrTx+dBvBXH++sS8774KPdUlCZiVt/sBxRLyw2pMtlxU0u2cLW6ZAkbIBpfJvxRLUisl4p9rAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIFJREFUCNdlzesOwUAQhuFBHbrY0mVX2WpRZ63Dd//3xs4kIjF/3jyTTIaIWu1O1O31SWYQq+FoDJ2wJvE0JTIzzJnWpSGLzC1DV15ucqxDokJYYhOy3RlmhX3IAcfTJ2d14e1VI8vLSsHLJ3NzAGqPRkz3x/NFSfM1z581LP3a1m8JbArXGqRCrgAAAABJRU5ErkJggg==') no-repeat center
@@ -159,26 +170,27 @@
         opacity .75
 
 .burger
+  font-size 0
+  ml 30px
   @media $desktopMinFrom
     dn()
-  ml 30px
   @media $PortraitMedium
     ml 15px
   &__shadow
     pos fixed
     l 0
     t 0
-    transform translateY(100%)
-    transition 1s transform, .7s opacity
+    transform translateX(-100%)
+    transition 1s transform, .7s opacity, .7s background-color
     will-change transform
     opacity .2
-    bgc alpha(white, .95)
+    bgc alpha($dark, 1)
     size 100%
     z-index 10
   &__button
     cursor pointer
-    w 25px
-    h 25px
+    w 26px
+    h 26px
     pos relative
     z-index 11
     &:before
@@ -186,7 +198,7 @@
       pos absolute
       t 0
       r 0
-      w 25px
+      w 26px
       h 1px
       bgc $dark
       transition .5s width, .5s background, .5s transform, .5s top
@@ -195,7 +207,7 @@
       pos absolute
       b 0
       r 0
-      w 25px
+      w 26px
       h 1px
       bgc $dark
       transition .5s width, .5s background, .5s transform, .5s top  
@@ -204,20 +216,22 @@
       pos absolute
       t 50%
       r 0
-      w 25px
+      w 26px
       h 1px
       bgc $dark
       transition .5s width, .5s background, .5s transform, .5s top  
     &.open
       &:before
         animation burger-top 1s ease-in-out forwards
+        bgc white
       &:after
         animation burger-bottom 1s ease-in-out forwards
+        bgc white
       & ^[-1]-meat
         opacity 0
       & + ^[0]__shadow
         opacity 1
-        transform translateY(0)
+        transform translateX(0)
     &.open.remove
       &:before
         animation burger-top-invert 1s ease-in-out forwards
@@ -300,5 +314,5 @@ body.burgeropen
   .menu
     visibility visible
     opacity 1
-    t 0
+    l 0
     transition-delay .7s

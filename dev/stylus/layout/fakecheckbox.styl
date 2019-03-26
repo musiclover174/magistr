@@ -8,6 +8,8 @@
     pos relative
     pl 27px
     pt 2px
+    @media $lDesktopSmall
+      fontify 14px 400 21px
     &:before 
       content ""
       pos absolute
@@ -44,4 +46,4 @@
     &:checked + ^[0]__label:after
       opacity 1
     &.warning + ^[0]__label:before 
-      border-color #ff0f37
+      border-color $red

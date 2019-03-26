@@ -3,6 +3,10 @@
   z-index 1
   bgc $dark
   padding 80px 0 86px
+  @media $lDesktopSmall
+    padding 53px 0 63px
+  @media $PortraitMax
+    pb 53px
   &:after
     content ""
     pos absolute
@@ -10,9 +14,26 @@
     b -8%
     size 40px 246px
     background url('../i/objects-decor.png') no-repeat center
+    @media $LandscapeMedium
+      dn()
   .decor
     l 1%
     t -13%
+    @media $lDesktopSmall
+      t -21%
+    @media $desktopMax
+      dn()
+  @media $lDesktopSmall
+    .h-col1
+      dn()
+    .h-col3
+      flex 0 0 33.33333333333333%
+      max-width 33.33333333333333%
+  @media $PortraitMax
+    .h-col3,
+    .h-col8
+      flex 0 0 100%
+      max-width 100%
   &__bg
     pos absolute
     l 0
@@ -23,24 +44,53 @@
     background-repeat no-repeat
     background-position center
     opacity .8
+    @media $PortraitMax
+      opacity .2
+      w 100%
   &__middle
     c white
     fontify 30px 500 36px
     max-width 450px
+    @media $lDesktopSmall
+      fontify 24px 500 30px
+      mt -3px
+      max-width 350px
+    @media $PortraitMax
+      max-width inherit
+      fontify 18px 500 24px
   .h-col3
     text-align center
   &__title
     c white
     fontify 20px 500 30px
     mb 12px
+    @media $lDesktopSmall
+      fontify 18px 500 30px
+    @media $LandscapeMedium
+      max-width 175px
+      margin 0 auto 12px
+      line-height 22px
+    @media $PortraitMax
+      max-width inherit
+      text-align left
+      mt 50px
+      mb 30px
   &__spacer
     db()
     margin 0 auto 39px
     size 196px 11px
     background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAALCAQAAACKEeqBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYLGBGKKOZVAAAAvUlEQVRYw+2XMQrCQBBFX4yg2dJcRLAQtrT3tPbpDKQQPMmWmwQMSSFxI1iIAZcvvm62+stjmJmkR492Whi2XPHhYRU73kcsYgeYicGSYzGxg8xFW4TBktGR6atQFnHX4Chw+ip0RYwaKhoqfRVJf4wd4S1O06IFsOR0FDQArDmQ4ji/GNYSP0xkt6bQETeW7NlQU+JVtyZdEUHFhV3Q8BfxRR53xLg1pUGDqgjdYQ3gKamfNaii3RHwM5f1AOyDNSdWMlcyAAAAAElFTkSuQmCC') no-repeat center
+    @media $PortraitMax
+      dn()
   &__feats
     max-width 290px
     margin 0 auto
+    @media $lDesktopSmall
+      max-width 265px
+    @media $LandscapeMedium
+      max-width 175px
+    @media $PortraitMax
+      max-width inherit
   &__feat
     &-item
       pos relative
@@ -50,8 +100,25 @@
       text-align left
       pl 110px
       min-height 70px
+      @media $lDesktopSmall
+        fontify 14px 400 21px
+      @media $LandscapeMedium
+        min-height inherit
+        pl 0
+        text-align center
+        justify-content center
+      @media $PortraitMax
+        min-height 70px
+        pl 110px
+        text-align left
+        justify-content flex-start
+        max-width 450px
       & + &
         mt 22px
+        @media $lDesktopSmall
+          mt 31px
+        @media $PortraitMax
+          mt 18px
     &-icon
       pos absolute
       l 0
@@ -60,3 +127,7 @@
       h 100%
       background-repeat no-repeat
       background-position center
+      @media $LandscapeMedium
+        dn()
+      @media $PortraitMax
+        db()

@@ -9,19 +9,59 @@
   z-index 5
   padding 50px 0 40px
   transition .7s top
+  @media $lDesktopSmall
+    w 198px
+    padding 40px 0 33px
+  @media $desktopMin
+    df(center, space-between)
+    flex-direction row
+    w 100%
+    h 70px
+    bgc white
+    border-right 0
+    border-bottom 1px solid #f7f7f7
+    padding 0 30px
+  @media $LandscapeMin
+    padding 0 15px
   &__logo
     pos relative
     mb 33px
+    text-align center
+    @media $lDesktopSmall
+      mb 0
     &-img
-      max-width 100%
+      max-width 91%
   &__phone
     pos relative
     c $dark
     fontify 16px 500 18px
+    @media $lDesktopSmall
+      font-size 14px
+    @media $PortraitMax
+      c white
+      fontify 20px 500 20px
     span
       font-size 18px
       font-weight 700
+      @media $lDesktopSmall
+        font-size 16px
+      @media $PortraitMax
+        font-size 24px
   &__bottom
     text-align center
+    @media $desktopMin
+      df(center, flex-start)
+    @media $PortraitMax
+      & > ^[0]__phone,
+      & > ^[0]__btn
+        dn()
   &__btn
     mt 27px
+    @media $lDesktopSmall
+      mt 16px
+    @media $desktopMin
+      mt 0
+      ml 15px
+    @media $PortraitMax
+      font-size 18px
+      line-height 44px

@@ -13,5 +13,9 @@ export default class History {
         draggable: true,
       },
     });
+
+    window.addEventListener('resize', () => {
+      historyCar.updateSize();
+    });
   }
 }

@@ -13,6 +13,16 @@ export default class News {
         nextEl: '.js-news-next',
         prevEl: '.js-news-prev',
       },
+      breakpoints: {
+        670: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          autoHeight: true,
+        },
+        1600: {
+          spaceBetween: 30,
+        },
+      }
     });
   }
 }

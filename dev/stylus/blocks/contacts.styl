@@ -2,6 +2,18 @@
   pos relative
   bgc $dark
   padding 83px 0 133px
+  @media $lDesktopSmall
+    padding 55px 0 80px
+    .h-col1
+      dn()
+    .h-col3
+      flex 0 0 33.33333333333333%
+      max-width 33.33333333333333%
+  @media $PortraitMax
+    padding 0
+    h 50vh
+    .h-col3
+      dn()
   .h-wrapper
     align-items stretch
   &__scheme
@@ -12,19 +24,32 @@
       z-index 1
       size 65% 100%
       oh()
+      @media $PortraitMax
+        w 100%
   &__title
     c white
     fontify 20px 500 30px
     mb 12px
     text-align center
+    @media $lDesktopSmall
+      fontify 18px 500 24px
+    @media $LandscapeMedium
+      max-width 175px
+      margin 0 auto 12px
   &__spacer
     db()
     margin 0 auto 42px
     size 196px 11px
     background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAALCAQAAACKEeqBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYLGBGKKOZVAAAAvUlEQVRYw+2XMQrCQBBFX4yg2dJcRLAQtrT3tPbpDKQQPMmWmwQMSSFxI1iIAZcvvm62+stjmJmkR492Whi2XPHhYRU73kcsYgeYicGSYzGxg8xFW4TBktGR6atQFnHX4Chw+ip0RYwaKhoqfRVJf4wd4S1O06IFsOR0FDQArDmQ4ji/GNYSP0xkt6bQETeW7NlQU+JVtyZdEUHFhV3Q8BfxRR53xLg1pUGDqgjdYQ3gKamfNaii3RHwM5f1AOyDNSdWMlcyAAAAAElFTkSuQmCC') no-repeat center
+    @media $lDesktopSmall
+      mb 46px
   &__list
     max-width 160px
     margin 0 auto
+    @media $lDesktopSmall
+      max-width 220px
+    @media $LandscapeMedium
+      max-width 149px
   &__item
     pos relative
     &:not(&_title)
@@ -38,11 +63,15 @@
         bgc alpha(white, .3)
     & + &
       mt 19px
+      @media $lDesktopSmall
+        mt 18px
     &-address
       c alpha(white, .5)
       fontify 16px 400 18px
       border-bottom 1px dotted
       transition .7s border-color, .7s color
+      @media $lDesktopSmall
+        fontify 14px 400 16px
       &:hover
         c white
         border-color transparent
@@ -51,3 +80,8 @@
     c white
     fontify 16px 400 18px
     mt 38px
+    @media $lDesktopSmall
+      fontify 14px 400 22px
+      text-align left
+      mt 30px
+      mb -8px

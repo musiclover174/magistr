@@ -1,17 +1,23 @@
 .footer
   padding 46px 0 43px
   bgc #333644
+  @media $lDesktopSmall 
+    padding 48px 0 39px
+  .h-col3
+    @media $LandscapeMin
+      flex 0 0 100%
+      max-width 100%
+      & + .h-col3
+        mt 40px
   &__info
     & + &
       mt 19px
-      @media $lDesktopSmall
-        mt 6px
   &__copy
     c alpha(white, .5)
     fontify 16px 400 24px
     mt -2px
-    @media $lDesktopSmall
-      fontify 14px 500 19px
+    @media $lDesktopSmall 
+      fontify 14px 400 19px
     @media $PortraitMin
       mb 10px
   &__address
@@ -20,6 +26,12 @@
     fontify 14px 400 24px
     pl 24px
     max-width 220px
+    @media $lDesktopSmall 
+      fontify 14px 400 19px
+    @media $LandscapeMedium
+      pl 0
+    @media $LandscapeMin
+      max-width inherit
     &:before
       content ""
       pos absolute
@@ -27,10 +39,18 @@
       t 3px
       size 10px 16px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAQAAACFdibLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxUJKjbTY3zPAAAAmElEQVQY02XLu04CURSG0XUO8wQEC8AQWwqiFJTwADw2UoClGqcBChkI4dIRLMeCW45+xS5W/h1KePLiATufZoSSnq57uddMMyHaNplnsDMSDNTQiepg7GBvDKpRBZIbohMYaGnpg59QDj1K+45W/raO5v9wER0VCS0dI94T/CCisL7RRnFG3m444YpbOfiyheyymGoorx+/zhoni0+6Zl4AAAAASUVORK5CYII=') no-repeat center
+      @media $LandscapeMedium
+        dn()
   &__title
     c white
     fontify 20px 500 21px
     mb 22px
+    @media $lDesktopSmall 
+      fontify 14px 500 21px
+      mt -3px
+    @media $LandscapeMin
+      fontify 16px 500 21px
+      mb 19px
   &__contact
     dfv(flex-start, flex-start)
   &__phone
@@ -39,6 +59,8 @@
     c white
     fontify 16px 400 16px
     mb 13px
+    @media $lDesktopSmall 
+      fontify 14px 400 14px
     &:before
       content ""
       pos absolute
@@ -54,6 +76,8 @@
     fontify 16px 400 16px
     border-bottom 1px solid alpha(white, .3)
     transition .7s border-color
+    @media $lDesktopSmall 
+      fontify 14px 400 14px
     &:hover
       border-color transparent
     &:before

@@ -1,59 +1,65 @@
-.loader
-  pos absolute
-  l 240px
-  r 0
-  t 0
-  b 0
-  z-index 20
-  &__circle
+@media $LandscapeMinFrom
+  .loader
     pos absolute
-    size 20px
+    l 240px
+    r 0
+    t 0
+    b 0
+    z-index 20
+    oh()
+    @media $lDesktopSmall
+      l 200px
+    @media $desktopMin
+      l 0
+    &__circle
+      pos absolute
+      size 20px
+      l 50%
+      t 50%
+      mt -10px
+      ml -10px
+      bgc $red
+      border-radius 50%
+      animation circleLeft 1.4s 2.6s ease-in forwards
+
+  .orbit
+    pos absolute
     l 50%
     t 50%
-    mt -10px
-    ml -10px
-    bgc $red
-    border-radius 50%
-    animation circleLeft 1.4s 2.6s ease-in forwards
-
-.orbit
-  pos absolute
-  l 50%
-  t 50%
-  &_elem1
-    size 368px 273px
-    ml -368px
-    mt 2px
-  &__path1
-    stroke-dashoffset 483
-    stroke-dasharray 483
-    stroke-opacity .2
-    animation drawFirstLine 1.6s ease-in forwards
-  &_elem2
-    size 408px
-    mt -408px
-  &__path2
-    stroke-dashoffset 572
-    stroke-dasharray 572
-    stroke-opacity .2
-    animation drawSecondLine 1.6s .25s ease-in forwards
-  &_elem3
-    size 452px 321px
-    mt -219px
-  &__path3
-    stroke-dashoffset 626
-    stroke-dasharray 626
-    stroke-opacity .2
-    animation drawThirdLine 1.6s .5s ease-in forwards
-  &_elem4
-    size 462px 268px
-    mt -268px
-    ml -462px
-  &__path4
-    stroke-dashoffset 533
-    stroke-dasharray 533
-    stroke-opacity .2
-    animation drawFourthLine 1.6s .8s ease-in forwards
+    &_elem1
+      size 368px 273px
+      ml -368px
+      mt 2px
+    &__path1
+      stroke-dashoffset 483
+      stroke-dasharray 483
+      stroke-opacity .2
+      animation drawFirstLine 1.6s ease-in forwards
+    &_elem2
+      size 408px
+      mt -408px
+    &__path2
+      stroke-dashoffset 572
+      stroke-dasharray 572
+      stroke-opacity .2
+      animation drawSecondLine 1.6s .25s ease-in forwards
+    &_elem3
+      size 452px 321px
+      mt -219px
+    &__path3
+      stroke-dashoffset 626
+      stroke-dasharray 626
+      stroke-opacity .2
+      animation drawThirdLine 1.6s .5s ease-in forwards
+    &_elem4
+      size 462px 268px
+      mt -268px
+      ml -462px
+    &__path4
+      stroke-dashoffset 533
+      stroke-dasharray 533
+      stroke-opacity .2
+      animation drawFourthLine 1.6s .8s ease-in forwards
 
 @keyframes drawFirstLine {
   from {
@@ -99,17 +105,50 @@
   }
 }
 
-@keyframes circleLeft {
-  from {
-    left 50%
-    size 20px
-    mt -10px
-    ml -10px
-  }  
-  to {
-    left 18px
-    size 456px
-    mt -228px
-    ml 0
+@media $lDesktopSmallFrom
+  @keyframes circleLeft {
+    from {
+      left 50%
+      size 20px
+      mt -10px
+      ml -10px
+    }  
+    to {
+      left 18px
+      size 456px
+      mt -228px
+      ml 0
+    }
   }
-}
+
+@media (min-width:1171px) and (max-width:1600px)
+  @keyframes circleLeft {
+    from {
+      left 50%
+      size 20px
+      mt -10px
+      ml -10px
+    }  
+    to {
+      left 18px
+      size 353px
+      mt -176px
+      ml 0
+    }
+  }
+
+@media (max-width:1170px)
+  @keyframes circleLeft {
+    from {
+      left 50%
+      size 20px
+      mt -10px
+      ml -10px
+    }  
+    to {
+      left 18px
+      size 353px
+      mt -141px
+      ml 0
+    }
+  }

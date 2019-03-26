@@ -5,6 +5,8 @@
   color white
   padding 0 27px
   fontify 14px 400 44px
+  @media $lDesktopSmall
+    line-height 34px
   &:before
     content ""
     pos absolute
@@ -15,3 +17,6 @@
   &:hover:before
     t 7px
     b 7px
+    @media $lDesktopSmall
+      t 3px
+      b 3px

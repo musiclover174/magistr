@@ -2,6 +2,15 @@
   pos relative
   z-index 1
   padding 90px 0 54px
+  @media $lDesktopSmall
+    padding 100px 0 70px
+  @media $LandscapeMedium
+    padding 50px 0
+  .h-col5,
+  .h-col6
+    @media $PortraitMax
+      flex 0 0 100%
+      max-width 100%
   .decor_dec1
     l 356px
     t -60px
@@ -10,6 +19,11 @@
     b 30px
   .common__title
     mt -12px
+    @media $lDesktopSmall
+      mt -8px
+  .h-col5
+    @media $PortraitMax
+      mb 30px
   &__bg
     pos absolute
     z-index -1
@@ -21,6 +35,8 @@
     transition .7s width
     ^[0][visible] &
       w 35%
+    @media $LandscapeMedium
+      dn()
   &__item
     pos relative
     w 100%
@@ -28,6 +44,10 @@
     mb 36px
     bgc $dark
     oh()
+    @media $lDesktopSmall
+      mb 30px
+    @media $PortraitMax
+      mb 15px
     &-href
       pos absolute 
       z-index 3
@@ -47,9 +67,9 @@
     &-img
       pos absolute
       z-index 0
-      size 100%
-      t 0
-      l 0
+      size 101%
+      t -1px
+      l -1px
       object-fit cover
       will-change transform
     &-name

@@ -45,15 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const decors = new Decor();
   }
 
-  window.onload = () => {
-    document.body.classList.add('load');
-    setTimeout(() => {
-      document.body.classList.add('load-end');
-      if (qs('.js-contacts-map')) {
-        const contacts = new Contacts('.js-contacts-map', '.js-contacts-btn');
-      }
-    }, 5700);
-  };
+  if (document.body.classList.contains('index')) {
+    if (screen.width >= 768) {
+      window.onload = () => {
+        document.body.classList.add('load');
+        setTimeout(() => {
+          document.body.classList.add('load-end');
+          if (qs('.js-contacts-map')) {
+            const contacts = new Contacts('.js-contacts-map', '.js-contacts-btn');
+          }
+        }, 5700);
+      };
+    } else if (qs('.js-contacts-map')) {
+      const contacts = new Contacts('.js-contacts-map', '.js-contacts-btn');
+    }
+  }
 
   let eventScroll;
   try {

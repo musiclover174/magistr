@@ -2,30 +2,37 @@
   height 0
 
 .popup
+  display inline-block
+  vertical-align middle
   font-family $os
   pos absolute
+  t -1000%
   z-index 1
   width 90%
   max-width 522px
   bgc white
   padding 52px 49px 60px
   opacity 0
+  text-align left
   visibility hidden
   transform scale(.9)
   will-change transform
   transition .7s .7s transform, .7s .7s opacity
+  @media $PortraitMedium
+    padding 32px 31px 35px
   &_history
     max-width none
     .decor
       t 3%
       l 70%
   &.show
+    t 0
     pos relative
     opacity 1
     visibility visible
     transform scale(1)
   &__over
-    dfv(center, center)
+    // dfv(center, center)
     padding 30px 0
     t 0
     l 0
@@ -33,7 +40,17 @@
     b 0
     pos fixed
     overflow hidden
+    text-align center
     z-index -1
+    @media $PortraitMedium
+      padding 60px 0 30px
+    &:before
+      content ""
+      display inline-block
+      font-size 0
+      height 100%
+      vertical-align middle
+      width 0
   &__bg
     pos fixed
     z-index 0
@@ -43,12 +60,14 @@
     w 0
     bgc $dark
     opacity 0
-    transition .7s opacity, .7s width
   &-show
     oh()
     & ^[0]__bg
       w 100%
       opacity .85
+      transition .7s opacity, .7s width
+      @media $desktopMin
+        opacity 1
     & ^[0]__over
       overflow-y scroll
       z-index 1000
@@ -58,19 +77,32 @@
     c $dark
     fontify 48px 500 52px
     mb 27px
+    @media $lDesktopSmall
+      fontify 36px 500 42px
+      mb 20px
+    @media $desktopMedium
+      fontify 32px 400 36px
   &__subtitle
     c $dark
     fontify 16px 400 24px
+    @media $lDesktopSmall
+      fontify 14px 400 21px
   &__hint
     c $dark
     fontify 16px 400 24px
+    @media $lDesktopSmall
+      fontify 14px 400 21px
   &__close
     pos absolute
+    z-index 2
     t 40px
     r 40px
     size 23px 23px
     background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXBAMAAAASBMmTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXX2NrX2NrX2NrX2NrX2NrX2NrX2NrX2Nr///8iinRjAAAAB3RSTlMAKb8Y1zD+f3iUTgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYOGjIcsjdOAAAAYElEQVQY02MQMmCAAiMBBnVnKJvZXYHBpAQqBWIwuztDJZyhInAKIgRTABaDaQUJwiTAonAzgcKucAmgVBlcgoGBNT2VAasMih5k01DsQXYBituQXY3iHxSfooQBcugAAJttHGzEXMXxAAAAAElFTkSuQmCC') no-repeat center
     transition .7s background-image
+    @media $PortraitMedium
+      r 0
+      t -40px
     &:hover
       background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXBAMAAAASBMmTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXOAAzOAAzOAAzOAAzOAAzOAAzOAAzOAAz///80kJFDAAAAB3RSTlMAKb8Y1zD+f3iUTgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxYOGwtarI4HAAAAYElEQVQY02MQMmCAAiMBBnVnKJvZXYHBpAQqBWIwuztDJZyhInAKIgRTABaDaQUJwiTAonAzgcKucAmgVBlcgoGBNT2VAasMih5k01DsQXYBituQXY3iHxSfooQBcugAAJttHGzEXMXxAAAAAElFTkSuQmCC')
     &-btn
