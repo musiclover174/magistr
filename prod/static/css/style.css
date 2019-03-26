@@ -2606,6 +2606,12 @@ body.load-end {
     transition-delay: 1.4s;
   }
 }
+@media (max-width: 900px) {
+  .loader,
+  .orbit {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .loader {
     position: absolute;
