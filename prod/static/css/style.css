@@ -2503,6 +2503,8 @@ div[class^="table-scroller"] {
   }
   body.load-end .main {
     height: auto;
+    -webkit-transition: none;
+    transition: none;
   }
   body.load {
     padding-left: 240px;
@@ -2557,10 +2559,18 @@ div[class^="table-scroller"] {
   body.load {
     padding-left: 198px;
   }
+  body.load-end {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 @media (min-width: 0px) and (max-width: 1170px) {
   body.load {
     padding-left: 0;
+  }
+  body.load-end {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 @media (min-width: 671px) {
