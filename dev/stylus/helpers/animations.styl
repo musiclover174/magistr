@@ -23,7 +23,6 @@
     &.load-end
       .main
         height auto
-        transition none
     &.load
       pl 240px
       transition 1.3s 3.5s padding-left
@@ -59,14 +58,13 @@
 @media (min-width:1171px) and (max-width:1600px)
   body.load
     pl 198px
-  body.load-end
-    transition none
 
 @media (min-width:0px) and (max-width:1170px)
   body.load
     pl 0
-  body.load-end
-    transition none
+
+body.load-end
+  transition none !important
 
 @media $PortraitMaxFrom
   .h-anim

@@ -26,8 +26,10 @@
     w 173px
     mr 0
     ml auto
-    mt 59px
+    mt 65px
     @media $lDesktopSmall
+      mt 70px
+    @media $desktopMin
       mt 62px
     @media $LandscapeMax
       ml 69px
@@ -45,6 +47,8 @@
       pl 68px
     @media $PortraitMedium
       w calc(100% - 15px)
+    & + &
+      mt 59px
     &-title
       pos relative
       c white
@@ -124,29 +128,29 @@
     &-img
       max-width 100%
       transition .7s 1.4s margin
-  @media $PortraitMaxFrom
-    &[visible] 
+  &[visible] 
+    @media $PortraitMaxFrom
       & ^[0]__item-title
         r 0
         opacity 1
-      & ^[0]__slice 
-        &:before
-          transform scale(1)
-        &:after
-          w calc(100vw - 1346px)
-          @media $lDesktopSmall
-            w calc(100vw - 1216px)
-          @media $desktopMax
-            w calc(100vw - 1049px)
-          @media $desktopMin
-            w calc(100vw - 780px)
-          @media $LandscapeMax
-            w calc(100vw - 630px)
-        & + ^[0]__slice 
-          mt -151px
-        &:nth-child(1) ^[0]__slice-img
-          ml -3px
-        &:nth-child(2) ^[0]__slice-img
-          ml -15px
-        &:nth-child(3) ^[0]__slice-img
-          ml -30px
+    & ^[0]__slice 
+      &:before
+        transform scale(1)
+      &:after
+        w calc(100vw - 1346px)
+        @media $lDesktopSmall
+          w calc(100vw - 1216px)
+        @media $desktopMax
+          w calc(100vw - 1049px)
+        @media $desktopMin
+          w calc(100vw - 780px)
+        @media $LandscapeMax
+          w calc(100vw - 630px)
+      & + ^[0]__slice 
+        mt -151px
+      &:nth-child(1) ^[0]__slice-img
+        ml -3px
+      &:nth-child(2) ^[0]__slice-img
+        ml -15px
+      &:nth-child(3) ^[0]__slice-img
+        ml -30px
