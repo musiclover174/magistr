@@ -68,3 +68,12 @@
         font-style normal
         @media $lDesktopSmall
           t 2px
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .types__list
+    font-size 0
+    flex-wrap nowrap
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 670px)
+  .types__list
+    flex-wrap wrap

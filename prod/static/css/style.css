@@ -2793,6 +2793,12 @@ body.load-end {
     }
 }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .loader,
+  .orbit {
+    display: none;
+  }
+}
 @-webkit-keyframes drawFirstLine {
   from {
     stroke-dashoffset: 483;
@@ -5140,6 +5146,11 @@ body.burgeropen .menu {
 .features__item + .features__item {
   margin-top: 59px;
 }
+@media (max-width: 767px) {
+  .features__item + .features__item {
+    margin-top: 0;
+  }
+}
 .features__item-title {
   position: relative;
   color: #fff;
@@ -5436,6 +5447,19 @@ body.burgeropen .menu {
 @media (max-width: 1600px) {
   .types__item-name i {
     top: 2px;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .types__list {
+    font-size: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 670px) {
+  .types__list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 .objects {
