@@ -1,13 +1,16 @@
 .news
-  pos relative
-  z-index 2
-  padding 78px 0 84px
-  @media $lDesktopSmall
-    padding 93px 0 113px
-  @media $LandscapeMedium
-    padding 60px 0 60px
-  @media $PortraitMax
-    padding 50px 0
+  &_list
+    pb 60px
+  &__wrapper
+    pos relative
+    z-index 2
+    padding 78px 0 84px
+    @media $lDesktopSmall
+      padding 93px 0 113px
+    @media $LandscapeMedium
+      padding 60px 0 60px
+    @media $PortraitMax
+      padding 50px 0
   .decor
     l 40%
     t 93%
@@ -45,8 +48,32 @@
         margin 30px auto 0
         h 34px
         pos relative
+  &__list
+    df()
+    flex-wrap wrap
+    ml -36px
+    w calc(100% + 36px)
+    mb -57px
+    @media $lDesktopSmall
+      ml -30px
+      w calc(100% + 30px)
+    @media $LandscapeMin
+      mb -40px
+    @media $PortraitMax
+      flex-direction column
   &__item
     w 100%
+    &_col2
+      w calc(50% - 36px)
+      ml 36px
+      mb 57px
+      @media $lDesktopSmall
+        w calc(50% - 30px)
+        ml 30px
+      @media $LandscapeMin
+        mb 40px
+      @media $PortraitMax
+        w calc(100% - 30px)
     &-imgover
       pos relative
       db()

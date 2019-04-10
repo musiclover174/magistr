@@ -1,0 +1,64 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e.href(href="#") О компании
+          +e('span').delim 
+          +e('span').href Новости
+        h1 Новости
+        +b('section').news._list
+          +e('ul').list
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news1.jpg")
+              +e('p').item-date 19 / 02 / 2019
+              +e.item-href(href="#") График работы
+              +e('p').item-dsc График работы в праздничные дни
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news2.jpg")
+              +e('p').item-date 20 / 02 / 2019
+              +e.item-href(href="#") Ипотечная суббота с Банком ВТБ 16 февраля!
+              +e('p').item-dsc 16 февраля с 10:00 до 15:00 в Офисе продаж ЖК «Три Кита» специалисты Отдела ипотеки дадут консультацию любому желающему
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news3.jpg")
+              +e('p').item-date 21 / 02 / 2019
+              +e.item-href(href="#") Старт продаж дома 20.6!
+              +e('p').item-dsc Друзья, с радостью сообщаем о старте продаж дома 20.6! 
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news1.jpg")
+              +e('p').item-date 19 / 02 / 2019
+              +e.item-href(href="#") График работы
+              +e('p').item-dsc График работы в праздничные дни
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news2.jpg")
+              +e('p').item-date 20 / 02 / 2019
+              +e.item-href(href="#") Ипотечная суббота с Банком ВТБ 16 февраля!
+              +e('p').item-dsc 16 февраля с 10:00 до 15:00 в Офисе продаж ЖК «Три Кита» специалисты Отдела ипотеки дадут консультацию любому желающему
+            +e('li').item._col2
+              +e(href="#").item-imgover
+                +e.item-img(src="img/news3.jpg")
+              +e('p').item-date 21 / 02 / 2019
+              +e.item-href(href="#") Старт продаж дома 20.6!
+              +e('p').item-dsc Друзья, с радостью сообщаем о старте продаж дома 20.6! 
+
+          include layout/__pagination
+      
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

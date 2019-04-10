@@ -1,0 +1,82 @@
+.pagination
+  df()
+  mt 47px
+  @media $PortraitMax
+    justify-content center
+  &__prev,
+  &__next
+    ib()
+    pos relative
+    size 48px
+    outline none
+    transition .7s opacity
+    @media $PortraitMax
+      size 35px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 50%
+      mt -17px
+      opacity .2
+      size 19px 34px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAiBAMAAABPWP/3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEU3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+IZ3wwAAAAB3RSTlMACr7kISa/o5qoygAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBAoOFg2ujmFIAAAAOUlEQVQY02NggAJBGIOBUUkAxhQqdoAJqpsiBAMGhSCDGILJmA5XQB1hJGuQLCdZ2AEujAhUYFADAE4jE992D1lsAAAAAElFTkSuQmCC') no-repeat center
+      transition .7s opacity
+    &:not(.disabled):hover
+      &:before
+        opacity 1
+    &.disabled
+      opacity .1
+      border-bottom transparent
+  &__prev
+    mr 19px
+    @media $PortraitMax
+      mr 15px
+  &__next
+    transform scaleX(-1)
+    ml 19px
+    @media $PortraitMax
+      ml 15px
+  &__list
+    display flex
+  &__item
+    text-align center
+    c $dark
+    h 48px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 50%
+    fontify 22px 500 48px
+    @media $desktopMax
+      fontify 20px 500 40px
+    @media $PortraitMax
+      fontify 16px 500 40px
+    @media $PortraitMax
+      h 35px
+      line-height 35px
+    & + &
+      ml 28px
+      @media $desktopMax
+        ml 25px
+    &.active
+      c $red
+    &-href
+      pos relative
+      color inherit
+      fontify 22px 500 25px
+      transition .7s border
+      border-bottom 1px solid #cecece
+      transition .7s color, .7s border
+      @media $desktopMax
+        fontify 20px 500 20px
+      @media $PortraitMax
+        fontify 16px 500 18px
+      &:not(a):after
+        border-color transparent
+      &:hover
+        color $blue
+        border-color transparent
+      ^[-1].active &
+        color $blue
+        border-color transparent
