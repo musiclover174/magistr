@@ -7,19 +7,30 @@ html
   body
     include layout/__header
   
-    +b('main').content
-      .container
-        +b('section').text
-          h1 Разводящая
+    +b('main').main
+
+      section.container
+        +b('section').text._page
+          +e('span').grey
           +b('section').breadcrumbs
             +e.href(href="#") Главная
-            +e('span').delim / 
+            +e('span').delim 
+            +e.href(href="#") Типовые страницы
+            +e('span').delim 
+            +e.href(href="#") Разводящая
+          h1 Разводящая
           +e.content
             ul
-              li
+              li 
                 a(href="index") Главная
-              li
+              li 
                 a(href="text") Типовая текстовая
-       
-    include layout/__footer
+              li 
+                a(href="news") Новости
+              li 
+                a(href="news-one") Внутренняя новости
+      
+      include layout/__footer
+
+    include layout/__popups
     include layout/__scripts

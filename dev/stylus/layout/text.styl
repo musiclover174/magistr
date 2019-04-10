@@ -1,60 +1,117 @@
+.text
+  &_page
+    max-width 1194px
+    margin 0 auto
+    text-align center
+    @media $desktopMax
+      max-width 910px
+    @media $LandscapeMax
+      max-width none
+      text-align left
+    h1:not([class])
+      @media $LandscapeMaxFrom
+        max-width 810px
+        ml auto
+        mr auto
+  &__grey
+    pos absolute
+    z-index -1
+    l 0
+    t 0
+    size 100%
+    bgc $grey
+    @media $LandscapeMax
+      dn()
+  &__content
+    pos relative
+    text-align left
+    bgc white
+    padding 82px calc(11% - 9px) 94px
+    c $dark
+    fontify 17px 400 25px
+    mb 30px
+    @media $desktopMax
+      pt 57px
+      fontify 16px 400 24px
+    @media $LandscapeMax
+      padding 0 0 50px
+    .decor
+      @media $LandscapeMax
+        dn()
+    .decor_b1
+      l -30px
+      t -90px
+    .decor_b2
+      r -80px
+      t -200px
+      @media $desktopMax
+        r -30px
+        t 30%
+    .decor_b3
+      r -130px
+      t 50%
+      @media $desktopMax
+        dn()
+    .decor_b4
+      l -20px
+      b -40px
+
 .main
   oh()
+  /body:not(.index) &
+    pt 106px
+    pos relative
+    @media $LandscapeMax
+      pt 120px
   h1:not([class])
     color $dark
-    fontify 60px 900 66px
-    margin 63px 0 48px
-    text-align center
-    @media $desktopMedium
-      fontify 50px 700 50px
+    fontify 60px 500 64px
+    mt 63px 
+    mb 48px
+    @media $desktopMax
+      fontify 48px 500 52px
     @media $PortraitMax
-      fontify 36px 700 40px
+      fontify 36px 500 40px
   h2:not([class])
     color $dark
-    fontify 44px 700 50px
+    fontify 48px 500 52px
     margin 54px 0 -3px
-    @media $desktopMedium
-      fontify 40px 700 44px
+    @media $desktopMax
+      fontify 36px 500 40px
+      margin 57px 0 1px
     @media $PortraitMax
-      fontify 30px 700 34px
-  h3:not([class])
-    color $dark
-    fontify 32px 700 38px
-    margin 56px 0 -2px
-    @media $PortraitMax
-      fontify 24px 700 30px
+      fontify 30px 500 34px
+  h3:not([class]),
   h4:not([class])
     color $dark
-    fontify 24px 700 30px
-    margin 56px 0 20px
+    fontify 30px 500 38px
+    margin 56px 0 -2px
+    @media $desktopMax
+      fontify 24px 500 28px
   iframe:not([class]),
   img:not([class])
-    margin 7px 0
+    margin 4px 0
     max-width 100%
   ul:not([class])
     list-style  none
-    margin -10px 0 20px
+    margin -18px 0 20px
   ul:not([class]) li
-    pl 32px
+    pl 25px
     pos relative
-  ul:not([class]) li + li
-    mt 15px
   ul:not([class]) > li:before
     content ""
     pos absolute
     l 0
-    t 9px
-    size 7px
+    t 14px
+    size 15px 2px
     bgc $red
   ol:not([class])
     list-style none
     margin -11px 0 20px
     counter-reset myCounter
   ol:not([class]) li
-    pl 32px
+    pl 25px
     pos relative
-  ol:not([class]) li + li
-    mt 15px
   ol:not([class]) > li:before
     counter-increment myCounter
     content counter(myCounter)"."	
@@ -65,7 +122,7 @@
     pr 9px
     color $red
   p:not([class])
-    margin 18px 0
+    margin 26px 0
   a:not([class])
     c $red
     border-bottom 1px solid alpha($red, .4)
@@ -82,12 +139,21 @@
     tbody
       border-top 0
     th
+      bgc $red
       c white
-      fontify 16px 700 26px
-      padding 17px 24px
+      fontify 16px 400 24px
+      padding 14px 29px
       text-align left
     td
-      c black
-      padding 12px 24px
-      fontify 16px 400 26px
-      text-align center
+      c $dark
+      padding 14px 29px
+      fontify 16px 400 24px
+      border 1px solid #efefef
+
+div[class\^="table-scroller"]
+  overflow auto
+  pos relative
+  pl 1px
+  margin 33px 0 33px
+  @media $desktopMax
+    w 100%

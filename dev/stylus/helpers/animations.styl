@@ -55,6 +55,15 @@
         z-index -1
         transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
 
+  body:not(.index)
+    &.load
+      transition-delay 0s
+      .main
+        transition-delay 0s
+      .header,
+      .footer
+        transition-delay 1.3s
+
 @media (min-width:1171px) and (max-width:1600px)
   body.load
     pl 198px

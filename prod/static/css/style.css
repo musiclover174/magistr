@@ -2462,17 +2462,6 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
   color: rgba(0,0,0,0.5);
 }
-div[class^="table-scroller"] {
-  overflow: auto;
-  position: relative;
-  padding-left: 1px;
-  margin: -4px 0 33px;
-}
-@media (max-width: 1400px) {
-  div[class^="table-scroller"] {
-    width: 100%;
-  }
-}
 @media (min-width: 768px) {
   .main,
   .header,
@@ -2551,6 +2540,19 @@ div[class^="table-scroller"] {
     z-index: -1;
     -webkit-transition: 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index;
     transition: 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index;
+  }
+  body:not(.index).load {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  body:not(.index).load .main {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  body:not(.index).load .header,
+  body:not(.index).load .footer {
+    -webkit-transition-delay: 1.3s;
+    transition-delay: 1.3s;
   }
 }
 @media (min-width: 1171px) and (max-width: 1600px) {
@@ -2977,6 +2979,7 @@ body.load-end {
 .header {
   position: fixed;
   z-index: 10;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4120,39 +4123,6 @@ body.burgeropen .menu {
 .no-touchevents .popup-show {
   margin-right: 17px;
 }
-.breadcrumbs {
-  text-align: center;
-  padding-left: 18px;
-  color: #a9a9a9;
-  margin-bottom: 10px;
-  margin-left: -10px;
-  width: calc(100% + 10px);
-}
-.breadcrumbs__href {
-  color: #a9a9a9;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 1px solid;
-  -webkit-transition: 0.7s border;
-  transition: 0.7s border;
-}
-.breadcrumbs__href:hover {
-  border-color: transparent;
-}
-.breadcrumbs__delim {
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px 10px 0;
-  width: 7px;
-  height: 11px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAQAAAAZmV8jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARwNLCBxLNouAAAAT0lEQVQI103MIRZAUBRF0f1flBiRYkZMQzIKY5BkzURIsmD9t9y2T7hlbSwmFxAet01XyWivIfiHjxnKKnc4IzErxkj0Bnf88V0lCI22ghetuxYFLfnalAAAAABJRU5ErkJggg==") no-repeat center;
-}
-.breadcrumbs + h1:not([class]) {
-  margin-top: 0;
-}
 .fakecheckbox {
   display: inline-block;
   vertical-align: top;
@@ -4225,96 +4195,191 @@ body.burgeropen .menu {
 .fakecheckbox__truecheck.warning + .fakecheckbox__label:before {
   border-color: #ce000c;
 }
+.text_page {
+  max-width: 1194px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 1400px) {
+  .text_page {
+    max-width: 910px;
+  }
+}
+@media (max-width: 1000px) {
+  .text_page {
+    max-width: none;
+    text-align: left;
+  }
+}
+@media (min-width: 1001px) {
+  .text_page h1:not([class]) {
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.text__grey {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+@media (max-width: 1000px) {
+  .text__grey {
+    display: none;
+  }
+}
+.text__content {
+  position: relative;
+  text-align: left;
+  background-color: #fff;
+  padding: 82px calc(11% - 9px) 94px;
+  color: #373a48;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1400px) {
+  .text__content {
+    padding-top: 57px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .text__content {
+    padding: 0 0 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .text__content .decor {
+    display: none;
+  }
+}
+.text__content .decor_b1 {
+  left: -30px;
+  top: -90px;
+}
+.text__content .decor_b2 {
+  right: -80px;
+  top: -200px;
+}
+@media (max-width: 1400px) {
+  .text__content .decor_b2 {
+    right: -30px;
+    top: 30%;
+  }
+}
+.text__content .decor_b3 {
+  right: -130px;
+  top: 50%;
+}
+@media (max-width: 1400px) {
+  .text__content .decor_b3 {
+    display: none;
+  }
+}
+.text__content .decor_b4 {
+  left: -20px;
+  bottom: -40px;
+}
 .main {
   overflow: hidden;
+}
+body:not(.index) .main {
+  padding-top: 106px;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  body:not(.index) .main {
+    padding-top: 120px;
+  }
 }
 .main h1:not([class]) {
   color: #373a48;
   font-size: 60px;
-  font-weight: 900;
-  line-height: 66px;
-  margin: 63px 0 48px;
-  text-align: center;
+  font-weight: 500;
+  line-height: 64px;
+  margin-top: 63px;
+  margin-bottom: 48px;
 }
-@media (max-width: 1270px) {
+@media (max-width: 1400px) {
   .main h1:not([class]) {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 52px;
   }
 }
 @media (max-width: 670px) {
   .main h1:not([class]) {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 40px;
   }
 }
 .main h2:not([class]) {
   color: #373a48;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 50px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 52px;
   margin: 54px 0 -3px;
 }
-@media (max-width: 1270px) {
+@media (max-width: 1400px) {
   .main h2:not([class]) {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 44px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+    margin: 57px 0 1px;
   }
 }
 @media (max-width: 670px) {
   .main h2:not([class]) {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 34px;
   }
 }
-.main h3:not([class]) {
+.main h3:not([class]),
+.main h4:not([class]) {
   color: #373a48;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 38px;
   margin: 56px 0 -2px;
 }
-@media (max-width: 670px) {
-  .main h3:not([class]) {
+@media (max-width: 1400px) {
+  .main h3:not([class]),
+  .main h4:not([class]) {
     font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
+    font-weight: 500;
+    line-height: 28px;
   }
-}
-.main h4:not([class]) {
-  color: #373a48;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  margin: 56px 0 20px;
 }
 .main iframe:not([class]),
 .main img:not([class]) {
-  margin: 7px 0;
+  margin: 4px 0;
   max-width: 100%;
 }
 .main ul:not([class]) {
   list-style: none;
-  margin: -10px 0 20px;
+  margin: -18px 0 20px;
 }
 .main ul:not([class]) li {
-  padding-left: 32px;
+  padding-left: 25px;
   position: relative;
-}
-.main ul:not([class]) li + li {
-  margin-top: 15px;
 }
 .main ul:not([class]) > li:before {
   content: "";
   position: absolute;
   left: 0;
-  top: 9px;
-  width: 7px;
-  height: 7px;
+  top: 14px;
+  width: 15px;
+  height: 2px;
   background-color: #ce000c;
 }
 .main ol:not([class]) {
@@ -4323,11 +4388,8 @@ body.burgeropen .menu {
   counter-reset: myCounter;
 }
 .main ol:not([class]) li {
-  padding-left: 32px;
+  padding-left: 25px;
   position: relative;
-}
-.main ol:not([class]) li + li {
-  margin-top: 15px;
 }
 .main ol:not([class]) > li:before {
   counter-increment: myCounter;
@@ -4340,7 +4402,7 @@ body.burgeropen .menu {
   color: #ce000c;
 }
 .main p:not([class]) {
-  margin: 18px 0;
+  margin: 26px 0;
 }
 .main a:not([class]) {
   color: #ce000c;
@@ -4361,20 +4423,59 @@ body.burgeropen .menu {
   border-top: 0;
 }
 .main table th {
+  background-color: #ce000c;
   color: #fff;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 17px 24px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 14px 29px;
   text-align: left;
 }
 .main table td {
-  color: #000;
-  padding: 12px 24px;
+  color: #373a48;
+  padding: 14px 29px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
-  text-align: center;
+  line-height: 24px;
+  border: 1px solid #efefef;
+}
+div[class^="table-scroller"] {
+  overflow: auto;
+  position: relative;
+  padding-left: 1px;
+  margin: 33px 0 33px;
+}
+@media (max-width: 1400px) {
+  div[class^="table-scroller"] {
+    width: 100%;
+  }
+}
+.breadcrumbs {
+  color: #aeaeb2;
+  margin-bottom: 15px;
+}
+.breadcrumbs__href {
+  color: #aeaeb2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-bottom: 1px solid;
+  -webkit-transition: 0.7s border;
+  transition: 0.7s border;
+}
+.breadcrumbs__href:hover {
+  border-color: transparent;
+}
+.breadcrumbs__delim {
+  display: inline-block;
+  vertical-align: top;
+  margin: 9px 9px 11px;
+  width: 15px;
+  height: 2px;
+  background-color: #ce000c;
+}
+.breadcrumbs + h1:not([class]) {
+  margin-top: 0;
 }
 .banner {
   position: relative;
@@ -5043,6 +5144,7 @@ body.burgeropen .menu {
 .features {
   position: relative;
   background-color: #373a48;
+  top: 0;
   padding: 133px 0 30px;
 }
 @media (max-width: 1600px) {
