@@ -2623,8 +2623,8 @@ input:-ms-input-placeholder {
     transition-delay: 0s;
   }
   body:not(.index).load .main {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    -webkit-transition: 0.7s 0s opacity;
+    transition: 0.7s 0s opacity;
   }
   body:not(.index).load .header,
   body:not(.index).load .footer {
