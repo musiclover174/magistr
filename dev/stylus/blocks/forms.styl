@@ -20,8 +20,9 @@
     mb 20px
     @media $lDesktopSmall
       fontify 14px 400 21px
-  .h-col
-    flex 0 0 100% !important
-    max-width 100% !important
-    & + .h-col
-      mt 17px
+  @media $LandscapeMax
+    .h-col
+      flex 0 0 100% !important
+      max-width 100% !important
+      & + .h-col
+        mt 17px

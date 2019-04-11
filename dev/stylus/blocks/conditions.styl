@@ -1,0 +1,56 @@
+.conditions
+  &__bank,
+  &__installment,
+  &__tradein
+    pos relative
+    fontify 30px 500 38px
+    mb 33px
+    &:not(:first-child)
+      mt 48px
+    @media $desktopMax
+      fontify 24px 500 28px
+    @media $PortraitMaxFrom
+      pl 63px
+      &:before
+        content ""
+        pos absolute
+        l 7px
+        t 50%
+        transform translateY(-50%)
+  &__bank
+    &:before
+      size 41px 38px
+      background url('../i/i-bank.png')
+  &__installment
+    &:before
+      size 41px 31px
+      background url('../i/i-install.png')
+  &__tradein
+    &:before
+      size 53px 36px
+      background url('../i/i-tradein.png')
+  &__list
+    df()
+    flex-wrap wrap
+    ml -30px
+    w calc(100% + 30px)
+    mb -24px
+    @media $PortraitMax
+      ml -20px
+      w calc(100% + 20px)
+      mb -14px
+  &__item
+    dfv(center, center)
+    size calc(25% - 30px) 135px
+    border 1px solid #f7f7f7
+    ml 30px
+    mb 30px
+    @media $desktopMax
+      w calc(100% / 3 - 30px)
+    @media $PortraitMax
+      w calc(50% - 20px)
+      ml 20px
+      mb 20px
+  &__img
+    max-width 70%
+    max-height 70%

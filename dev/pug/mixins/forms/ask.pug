@@ -1,0 +1,30 @@
+mixin askForm(title)
+  +b('form').ask
+    section.container
+      +e('p').title= title
+      +e('p').subtitle Обратите внимание, все поля обязательны для заполнения.
+      .common__row
+        .h-wrapper
+          .h-col.h-col4
+            .common__row
+              label.common__label Тема вопроса
+              select.common__select.js-select(data-req="req", data-type="select")
+                option(value="-1", selected, disabled) &nbsp;
+                option(value="1") Странновато
+                option(value="1") Задавать список тем
+                option(value="1") Еще и в селекте
+            .common__row
+              label.common__label Электронная почта
+              input.common__input(type="text", data-req="req", data-type="email")
+          .h-col.h-col8
+            label.common__label Текст вопроса
+            textarea.common__textarea(data-req="req")
+      .common__row
+        .fakecheckbox
+          input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+          label(for="agreement").fakecheckbox__label Даю согласие на обработку 
+            a(href="#") персональных&nbsp;данных
+      .common__row
+        img(src="img/captcha.png", style="max-width: 100%;")
+      .common__row
+        button.common__submit.btn(type="submit") Отправить
