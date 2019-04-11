@@ -87,7 +87,7 @@
       size 100%
       object-fit cover
       font-family 'object-fit: cover;'
-      transition .7s transform
+      transition 1.5s transform
       will-change transform
       -webkit-backface-visibility hidden
       transform scale(1.017) translateZ(0)
@@ -114,3 +114,76 @@
       @media $lDesktopSmall
         fontify 14px 400 21px
         mt 15px
+  &__elem
+    &-date
+      c $red
+      fontify 14px 400 21px
+  &__other
+    pos absolute
+    z-index 1
+    r 40px
+    t 50vh
+    mt -16px
+    size 17px 32px
+    @media $lDesktopSmall
+      r 15px
+    @media $LandscapeMax
+      dn()
+    &_prev
+      l 40px
+      @media $lDesktopSmall
+        l 15px
+      & ^[-1]-href
+        transform scaleX(-1)
+      & ^[-1]-block
+        l 30px
+        r auto
+      &:hover ^[-1]-block
+        r auto
+        l 40px
+    &-href
+      db()
+      size 19px 34px
+      opacity .2
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAiBAMAAABPWP/3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEU3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+IZ3wwAAAAB3RSTlMACr4h5Sa/dK+IYgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBAsKBCwlps58AAAAMklEQVQY02NgFGCAASFFONOkCC7M6o4QDhmMwiFlAnAFidQSLEIIKpIuiBR8SIGKCGoA7e8Ur4PC3OcAAAAASUVORK5CYII=') no-repeat center
+      transition .7s background, .7s opacity
+      &:hover
+        opacity 1
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAiBAMAAABPWP/3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXOAAzOAAzOAAzOAAzOAAzOAAzOAAzOAAz///80kJFDAAAAB3RSTlMACr4h5Sa/dK+IYgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBAsKBRAT0oO6AAAAMklEQVQY02NgFGCAASFFONOkCC7M6o4QDhmMwiFlAnAFidQSLEIIKpIuiBR8SIGKCGoA7e8Ur4PC3OcAAAAASUVORK5CYII=') no-repeat center
+    &-block
+      pos absolute
+      t 50%
+      r 30px
+      w 335px
+      pointer-events none
+      bgc white
+      border 1px solid #f7f7f7
+      padding 20px
+      opacity 0
+      text-align left
+      visibility hidden
+      transform translateY(-50%)
+      transition .7s opacity, .7s visibility, .7s right, .7s left
+      @media $desktopMax
+        w 294px
+      &:before
+        content ""
+        pos absolute
+        w 30px
+        t 0
+        r -30px
+        h 100%
+      & ^[0]__item-imgover
+        @media $desktopMax
+          mb 16px
+      & ^[0]__item-href
+        fontify 24px 500 28px
+        @media $desktopMax
+          fontify 18px 500 20px
+      & ^[0]__item-dsc
+        font-weight 400
+      ^[-1]:hover &
+        opacity 1
+        visibility visible
+        r 40px
+        pointer-events all

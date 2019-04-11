@@ -79,11 +79,26 @@ body
       &:after
         w 40px
   &__back
+    pos relative
     ib()
-    c black
-    fontify 16px 700 20px
-    border-bottom 1px solid
+    c $dark
+    fontify 18px 500 21px
+    border-bottom 1px solid #cecece
+    ml 39px
+    mt 50px
     transition .7s border
+    @media $desktopMax
+      fontify 16px 700 18px
+      mt 34px
+    &:before
+      content ""
+      pos absolute
+      l -39px
+      t 3px
+      size 31px 18px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAASBAMAAABRHhjUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEXOAAzOAAzOAAzOAAzOAAzOAAzOAAzOAAz///80kJFDAAAAB3RSTlMACr7kISa/o5qoygAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBAoPLDdM6Qy0AAAAQUlEQVQY02NgAAJBBlTAqCSAKiBU7ICqQN0UXUEApQrKUUABgxi6AGM6mhYGMTRDsSgRwlCijqnEAU0JuvdRAggARlkWJQZG4HMAAAAASUVORK5CYII=') no-repeat center
+      @media $desktopMax
+        t 5px
     &:hover
       border-color transparent
   &__label
