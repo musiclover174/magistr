@@ -101,6 +101,15 @@ body
         t 5px
     &:hover
       border-color transparent
+  &__grey
+    pos absolute
+    z-index -1
+    l 0
+    t 0
+    size 100%
+    bgc $grey
+    @media $LandscapeMax
+      dn()
   &__label
     db()
     c #aeaeb2
@@ -127,6 +136,23 @@ body
       border-color $dark
     &.warning + ^[0]__inperror
       db()
+  &__textarea
+    padding 7px 20px
+    w 100%
+    h 125px
+    border 1px solid #efefef
+    bgc transparent
+    color black
+    font-family $os
+    font-size 16px
+    line-height 500
+    line-height 25px
+    transition .7s border
+    resize none
+    oh()
+    @media $lDesktopSmall
+      font-size 14px
+      line-height 24px
   &__inperror
     dn()
     c $red

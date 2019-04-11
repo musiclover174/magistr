@@ -1,0 +1,67 @@
+.faq
+  pb 50px
+  .decor
+    @media $LandscapeMax
+      dn()
+  .decor_b1
+    t -10px
+    r 60px
+  .decor_b2
+    l 30px
+    t 50%
+    @media $desktopMax
+      l 15px
+  &__item
+    pos relative
+    z-index 1
+    padding 32px calc(9% - 7px) 38px
+    @media $desktopMax
+      padding 35px calc(9% - 2px) 39px
+    @media $LandscapeMax
+      padding 0
+    &:before
+      content ""
+      bgc white
+      pos absolute
+      z-index -1
+      l 0
+      t 0
+      size 100%
+      transition .7s width
+      @media $desktopMax
+        w calc(100% - 30px)
+    &:hover:before
+      w calc(100% + 40px)
+      @media $desktopMax
+        w 100%
+    & + &
+      mt 30px
+      @media $LandscapeMax
+        mt 60px
+    &-name
+      display inline
+      cursor pointer
+      fontify 24px 500 28px
+      border-bottom 1px dotted #c3c4c8
+      transition .7s border-color, .7s color
+      &:hover
+        border-color transparent
+        c $red
+      @media $desktopMax
+        fontify 20px 500 24px
+    &-text
+      fontify 17px 400 25px
+      opacity 0
+      h 0
+      mt 0
+      oh()
+      transition .7s opacity, .7s margin-top
+      -webkit-transition .7s opacity, .7s margin-top
+      ^[-1]-name.open + &
+        opacity 1
+        h auto
+        mt 24px
+        @media $desktopMax
+          mt 20px
+      @media $desktopMax
+        fontify 16px 400 24px

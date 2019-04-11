@@ -120,6 +120,12 @@ export default class Form {
                 checkResult = false;
               }
               break;
+            case 'select':
+              if (elem.nextSibling.querySelector('.choices__item').getAttribute('data-value') === '-1') {
+                elem.parentNode.classList.add('warning');
+                checkResult = false;
+              }
+              break;
             default:
               if (elem.value.trim() === '') {
                 elem.classList.add('warning');

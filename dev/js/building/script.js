@@ -11,6 +11,7 @@ import Contacts from './modules/contacts';
 import News from './modules/news';
 import History from './modules/history';
 import Decor from './modules/decor';
+import Faq from './modules/faq';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -43,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-decor')) {
     const decors = new Decor();
+  }
+
+  if (qs('.js-faq-opener')) {
+    const faq = new Faq('.js-faq-opener');
   }
 
   if (screen.width >= 768) {

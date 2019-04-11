@@ -68,15 +68,20 @@
 .choices[data-type*="select-one"]:after {
   content: "";
   size 16px 10px
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKBAMAAABPkMOvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAKQM48Kk3NvV16uIAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAARUlEQVQI12NgVGAAAiYBBpMgEEPVjSGlFSjEFOHOwOYBFFJtKWAACYEEGEBCqi0JIIUprRFuIJqB3QMiwMBQAhEACoEEABl3C7YMtMY5AAAAAElFTkSuQmCC") no-repeat center;
+  background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAMAAAAmGUT3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEU3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///9JaU31AAAAF3RSTlMAKr8WFynB1BXAGtrR2Rkc2/sbHd8gH45liUAAAAABYktHRBibaYUeAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wQLDSUB6amRbwAAADpJREFUCNcdykkSgCAAxMCAsimrovP/n0qZQ5+CsRuwW4dXiMSgxHEqm6xSoXUN9Wst3FOz8fekd/kBNyQB+dSvPOUAAAAASUVORK5CYII=') no-repeat center
   position: absolute;
   right: 11.5px;
   top: 50%;
+  opacity: .2;
   margin-top: -5px;
   pointer-events: none;
-  transition .5s transform
-  will-change transform
+  transition .5s transform, .7s opacity;
+  will-change transform;
 }
+.choices[data-type*="select-one"]:hover:after{
+  opacity: 1;
+}
+
 
 .choices[data-type*="select-one"].is-open:after {
   transform rotate(180deg)
@@ -124,11 +129,24 @@
   width: 100%;
   bgc #fff
   font-size: 16px;
-  h 40px
-  border 1px solid #e3e3e3
+  h 44px
+  border 1px solid #efefef
   overflow: hidden;
   transition .7s border-color
+  &:focus {
+    border-color: #373a48;
+  }
+  &.warning {
+    border-color: $red;
+  }
 }
+
+@media $lDesktopSmall {
+  .choices__inner{
+    font-size: 15px;
+  }
+}
+
 
 .is-focused .choices__inner, .is-open .choices__inner {
   border-color: $dark;
@@ -144,7 +162,7 @@
   display: inline-block;
   padding: 0 34px 0 17px;
   width: 100%;
-  line-height: 38px;
+  line-height: 42px;
 }
 
 [dir="rtl"] .choices__list--single {
@@ -302,6 +320,7 @@
       -ms-user-select: none;
           user-select: none;
   opacity: .5;
+  dn();
 }
 
 .choices__heading {

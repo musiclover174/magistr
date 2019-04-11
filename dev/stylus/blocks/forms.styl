@@ -1,0 +1,27 @@
+.ask
+  bgc white
+  padding 61px 0 70px
+  @media $LandscapeMax
+    pt 0
+  &__title
+    pos relative
+    z-index 1
+    c $dark
+    fontify 48px 500 52px
+    mb 27px
+    @media $lDesktopSmall
+      fontify 36px 500 42px
+      mb 20px
+    @media $desktopMedium
+      fontify 32px 400 36px
+  &__subtitle
+    c $dark
+    fontify 16px 400 24px
+    mb 20px
+    @media $lDesktopSmall
+      fontify 14px 400 21px
+  .h-col
+    flex 0 0 100% !important
+    max-width 100% !important
+    & + .h-col
+      mt 17px
