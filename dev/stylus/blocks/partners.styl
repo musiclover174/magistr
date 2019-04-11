@@ -1,0 +1,51 @@
+.partners
+  &__grey
+    pos absolute
+    z-index -1
+    l 0
+    t 0
+    size 100%
+    bgc $grey
+    @media $LandscapeMax
+      dn()
+  &__list
+    pb 100px
+  &__item
+    & + &
+      mt 30px
+      @media $LandscapeMax
+        mt 80px
+
+.partner
+  df(flex-start, space-between)
+  bgc white
+  padding 32px calc(9% - 7px) 38px
+  @media $LandscapeMax
+    padding 0
+  @media $PortraitMax
+    flex-direction column-reverse
+  &__content
+    w 80%
+    @media $desktopMax
+      w calc(100% - 160px)
+    @media $PortraitMax
+      w 100%
+  &__imgover
+    mt 10px
+    w 120px
+    text-align center
+    @media $PortraitMax
+      mb 30px
+      text-align left
+  &__img
+    max-width 120px
+  &__name
+    fontify 30px 500 38px
+    @media $desktopMax
+      fontify 24px 500 28px
+  &__text
+    fontify 17px 400 25px
+    mt 24px
+    @media $desktopMax
+      fontify 16px 400 24px
+      mt 30px
