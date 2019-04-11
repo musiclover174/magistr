@@ -1,0 +1,57 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').text._page
+          +e('span').grey
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim 
+            +e.href(href="#") Акции
+            +e('span').delim 
+            +e('span').href Ипотечная суббота с Банком ВТБ 16 февраля
+          h1 Ипотечная суббота с Банком ВТБ 16 февраля
+          aside.news__other
+            a(href="#").news__other-href 
+            .news__other-block
+              article.news__item
+                a(href="#").news__item-imgover
+                  img(src="img/news1.jpg").news__item-img
+                p.news__item-date 19 / 02 / 2019
+                a(href="#").news__item-href График работы
+                p.news__item-dsc График работы в праздничные дни
+          aside.news__other.news__other_prev
+            a(href="#").news__other-href 
+            .news__other-block
+              article.news__item
+                a(href="#").news__item-imgover
+                  img(src="img/news1.jpg").news__item-img
+                p.news__item-date 19 / 02 / 2019
+                a(href="#").news__item-href График работы
+                p.news__item-dsc График работы в праздничные дни
+          +e.content
+            .decor.decor_b1.js-decor(data-type="red", data-height="234", style="width: 33px; height: 234px;")
+            .decor.decor_b2.js-decor(data-type="red", data-height="134", style="width: 34px; height: 134px;")
+            .decor.decor_b3.js-decor(data-type="white", data-height="140", style="width: 30px; height: 140px;")
+            .decor.decor_b4.js-decor(data-type="red", data-height="115", style="width: 29px; height: 115px;")
+            p Город – живой организм, имеющий тело, душу и мысли. Архитектурная среда, кроме природной и географической, образует Физическое тело города. А его Душу и Мысли формируют жители города – среди которых, несомненно, и градостроители. Своим сознанием, трудом и  вкладом в развитие они формируют статус мегаполиса.
+            p Строительная компания «Магистр» – компания с именем и историей, неустанно работает на повышение статуса Челябинска. Основана 17 мая 1999 года. Более 20 лет предприятие занимает уверенную позицию на строительном рынке Челябинска и входит в десятку лучших застройщиков области. СК «Магистр» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и материалов. За годы работы построено более 230 тысяч квадратных метров жилой и коммерческой недвижимости.
+            img(src="img/text.jpg")
+            p ООО СК «Магистр» состоит в Челябинском Межрегиональном Союзе Строителей и в Некоммерческом партнерстве «Саморегулируемая организация Союз Строительных компаний Урала и Сибири».
+            p Команда профессионалов одержима заботой о родном городе, а главное любовью и верой в дело, которому служит. Объекты, построенные СК «Магистр», останутся людям на долгие десятилетия. На всех возведенных зданиях градостроитель ставит свой фирменный знак: «Магистр», ответственно подписываясь под каждым построенным объектом и символично заявляя о надежности, качестве и стабильности в своей дальнейшей работе на благо Челябинска.
+
+            p.news__elem-date Акция действует до 31 / 03 / 2019
+            a(href="#").common__back Вернуться к списку всех акций
+      
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts
