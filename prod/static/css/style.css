@@ -2618,6 +2618,9 @@ input:-ms-input-placeholder {
     -webkit-transition: 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index;
     transition: 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index;
   }
+  body:not(.index) .main {
+    height: auto;
+  }
   body:not(.index).load {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
@@ -2673,6 +2676,22 @@ body.load-end {
   }
   50% {
     margin-top: 8px;
+  }
+}
+@-webkit-keyframes upDown {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 15px;
+  }
+}
+@keyframes upDown {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 15px;
   }
 }
 @media (min-width: 671px) and (min-width: 768px) {
@@ -4290,6 +4309,21 @@ body.burgeropen .menu {
 }
 @media (min-width: 1001px) {
   .text_page h1:not([class]) {
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.text_center {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .text_center {
+    text-align: left;
+  }
+}
+@media (min-width: 1001px) {
+  .text_center h1:not([class]) {
     max-width: 810px;
     margin-left: auto;
     margin-right: auto;
@@ -6239,7 +6273,6 @@ div[class^="table-scroller"] {
   transition: 1.5s transform;
   transition: 1.5s transform, 1.5s -webkit-transform;
   will-change: transform;
-  -webkit-backface-visibility: hidden;
   -webkit-transform: scale(1.017) translateZ(0);
   transform: scale(1.017) translateZ(0);
 }
@@ -7020,4 +7053,143 @@ div[class^="table-scroller"] {
 .conditions__img {
   max-width: 70%;
   max-height: 70%;
+}
+.financial {
+  position: relative;
+}
+.financial__files {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+.financial__files_b1 {
+  top: 0;
+  right: 20%;
+}
+.financial__files_b2 {
+  left: 10%;
+  bottom: 10%;
+}
+.financial__files i,
+.financial__files:before,
+.financial__files:after {
+  content: "";
+  position: absolute;
+  background: url("../i/doc.png") no-repeat center #fff;
+  background-size: cover;
+  -webkit-animation: line 2s ease-in-out infinite;
+  animation: line 2s ease-in-out infinite;
+}
+.financial__files:before {
+  left: -76px;
+  top: -161px;
+  width: 130px;
+  height: 191px;
+  z-index: 2;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.financial__files:after {
+  left: 0;
+  top: -31px;
+  width: 84px;
+  height: 125px;
+  z-index: 1;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.financial__files i {
+  left: -34px;
+  top: 49px;
+  width: 46px;
+  height: 67px;
+  z-index: 0;
+}
+.financial .decor {
+  bottom: -45px;
+  left: 60%;
+}
+@media (max-width: 1400px) {
+  .financial .decor {
+    display: none;
+  }
+}
+.financial__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -36px;
+  margin-top: -5px;
+  width: calc(100% + 36px);
+  padding-bottom: 47px;
+  text-align: left;
+}
+@media (max-width: 670px) {
+  .financial__list {
+    margin-left: -30px;
+    padding-bottom: 30px;
+  }
+}
+.financial__item {
+  position: relative;
+  padding-left: 61px;
+  width: calc(100% / 3 - 36px);
+  margin-left: 36px;
+  margin-bottom: 50px;
+}
+@media (max-width: 670px) {
+  .financial__item {
+    margin-left: 30px;
+    width: calc(50% - 30px);
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .financial__item {
+    width: calc(100% - 30px);
+  }
+}
+.financial__item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 26px;
+  height: 37px;
+  background: url("../i/file.png") no-repeat center;
+}
+.financial__item-href {
+  color: #373a48;
+  border-bottom: 1px solid rgba(55,58,72,0.25);
+  -webkit-transition: 0.7s border-color;
+  transition: 0.7s border-color;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.financial__item-href:hover {
+  border-color: transparent;
+}
+@media (max-width: 1400px) {
+  .financial__item-href {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+.financial__item-dsc {
+  margin-top: 6px;
+  color: #aeaeb2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }

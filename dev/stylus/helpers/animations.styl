@@ -56,6 +56,8 @@
         transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
 
   body:not(.index)
+    .main
+      h auto
     &.load
       transition-delay 0s
       .main
@@ -96,5 +98,14 @@ body.load-end
   }
   50% { 
     mt 8px 
+  }
+}
+
+@keyframes upDown {
+  0%, 100% { 
+    mt 0 
+  }
+  50% { 
+    mt 15px 
   }
 }

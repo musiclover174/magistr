@@ -1,0 +1,82 @@
+.financial
+  pos relative
+  &__files
+    pos absolute
+    z-index -1
+    size 0
+    &_b1
+      t 0
+      r 20%
+    &_b2
+      l 10%
+      b 10%
+    i,
+    &:before,
+    &:after
+      content ""
+      pos absolute
+      background url('../i/doc.png') no-repeat center white
+      background-size cover
+      animation line 2s ease-in-out infinite
+    &:before
+      l -76px
+      t -161px
+      size 130px 191px
+      z-index 2
+      animation-delay .7s
+    &:after
+      l 0
+      t -31px
+      size 84px 125px
+      z-index 1
+      animation-delay 1.4s
+    i
+      l -34px
+      t 49px
+      size 46px 67px
+      z-index 0
+  .decor
+    b -45px
+    l 60%
+    @media $desktopMax
+      dn()
+  &__list
+    df()
+    flex-wrap wrap
+    ml -36px
+    mt -5px
+    w calc(100% + 36px)
+    pb 47px
+    text-align left
+    @media $PortraitMax
+      ml -30px
+      pb 30px
+  &__item
+    pos relative
+    pl 61px
+    w calc(100% / 3 - 36px)
+    ml 36px
+    mb 50px
+    @media $PortraitMax
+      ml 30px
+      w calc(50% - 30px)
+      mb 40px
+    @media $PortraitMedium
+      w calc(100% - 30px)
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 7px
+      size 26px 37px
+      background url('../i/file.png') no-repeat center
+    &-href
+      c $dark
+      bb()
+      fontify 17px 400 25px
+      @media $desktopMax
+        fontify 16px 400 24px
+    &-dsc
+      mt 6px
+      c #aeaeb2
+      fontify 14px 400 16px

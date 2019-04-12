@@ -13,6 +13,15 @@
         max-width 810px
         ml auto
         mr auto
+  &_center
+    text-align center
+    @media $LandscapeMax
+      text-align left
+    h1:not([class])
+      @media $LandscapeMaxFrom
+        max-width 810px
+        ml auto
+        mr auto
   &__grey
     pos absolute
     z-index -1

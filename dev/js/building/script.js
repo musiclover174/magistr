@@ -3,6 +3,8 @@ import {
   elemVisCheck,
   qs,
   qsAll,
+  getStyle,
+  eventsDispatcher,
 } from './modules/helpers';
 import Popup from './modules/popup';
 import Forms from './modules/forms';
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (screen.width >= 768) {
     window.onload = () => {
       document.body.classList.add('load');
+      eventsDispatcher();
       let timeout = 2000;
       if (document.body.classList.contains('index')) timeout = 5700;
       setTimeout(() => {
@@ -66,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contacts = new Contacts('.js-contacts-map', '.js-contacts-btn');
   }
 
-  let eventScroll;
-  try {
-    eventScroll = new Event('scroll');
-  } catch (e) {
-    eventScroll = document.createEvent('Event');
-    eventScroll.initEvent('scroll', false, false);
-  }
-  window.dispatchEvent(eventScroll);
+  window.addEventListener('resize', () => {
+    const mainEl = qs('.main');
+    const footerEl = qs('.footer');
+    footerEl.removeAttribute('style');
+    const hMain = parseInt(getStyle(mainEl).height, 10);
+
+    if (hMain < window.innerHeight) footerEl.style.marginTop = `${window.innerHeight - hMain}px`;
+  });
 });

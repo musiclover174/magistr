@@ -120,12 +120,34 @@ function scrollToInit() {
       const toElem = qs(`[data-scrollId="${elem.getAttribute('data-to')}"]`);
       const { top } = toElem.getBoundingClientRect();
       const duration = elem.getAttribute('data-duration') || 1000;
-      
+
       scrollTo(top, duration);
       e.preventDefault();
     })
   });
 }
+
+function eventsDispatcher() {
+  let eventScroll;
+  try {
+    eventScroll = new Event('scroll');
+  } catch (e) {
+    eventScroll = document.createEvent('Event');
+    eventScroll.initEvent('scroll', false, false);
+  }
+  window.dispatchEvent(eventScroll);
+
+  let resizeScroll;
+  try {
+    resizeScroll = new Event('resize');
+  } catch (e) {
+    resizeScroll = document.createEvent('Event');
+    resizeScroll.initEvent('scroll', false, false);
+  }
+  window.dispatchEvent(resizeScroll);
+}
+
+const getStyle = elem => getComputedStyle(elem);
 
 export {
   fadeIn,
@@ -137,6 +159,8 @@ export {
   scrollToInit,
   qs,
   qsAll,
+  getStyle,
   compareRandom,
   getRandomArbitrary,
+  eventsDispatcher,
 };
