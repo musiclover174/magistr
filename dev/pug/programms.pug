@@ -1,0 +1,86 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e('span').href Социально-образовательные программы
+        h1 Социально-образовательные программы
+        +b('section').programms
+          .decor.decor_b1.js-decor(data-type="red", data-height="234", style="width: 33px; height: 234px;")
+          .decor.decor_b2.js-decor(data-type="red", data-height="134", style="width: 34px; height: 134px;")
+          span.common__grey
+          +e('ul').list
+            +e.item
+              +e.item-name(href="#") Название социально-образовательной программы в две строчки
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ социально-образовательной программы №1
+                    +e('p').item-dsc doc, 200Кб
+            +e.item
+              +e.item-name(href="#") Короткое название программы
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ социально-образовательной программы №1
+                    +e('p').item-dsc doc, 200Кб
+            +e.item
+              +e.item-name(href="#") Социально-образовательная программа на 2023 год в две строчки
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ социально-образовательной программы №1
+                    +e('p').item-dsc doc, 200Кб
+            +e.item
+              +e.item-name(href="#") Очень-очень длинное название социально-образовательной программы в несколько строк, чтобы показать межстрочный интервал
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ социально-образовательной программы №1
+                    +e('p').item-dsc doc, 200Кб
+            +e.item
+              +e.item-name(href="#") Название социально-образовательной программы в две строчки
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ социально-образовательной программы №1
+                    +e('p').item-dsc doc, 200Кб
+            +e.item
+              +e.item-name(href="#") Короткое название программы
+              +e.item-text
+                p Длинное описание социально-образовательной программы в несколько строк, чтобы показать краткий объем текстового блока и межстрочный интервал.
+              +b('section').financial._inner
+                +e('ul').list
+                  +e.item
+                    +e.item-href(href="#") Документ №1 на декабрь 2021
+                    +e('p').item-dsc doc, 343Кб
+                  +e.item
+                    +e.item-href(href="#") Документ №1 на февраль 2021
+                    +e('p').item-dsc doc, 343Кб
+
+          include layout/__pagination
+
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

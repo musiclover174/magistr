@@ -1,5 +1,7 @@
 .financial
   pos relative
+  &_inner
+    mt 26px
   &__files
     pos absolute
     z-index -1
@@ -51,6 +53,10 @@
     @media $PortraitMax
       ml -30px
       pb 30px
+    ^[0]_inner &
+      flex-direction column
+      mt 0
+      pb 0
   &__item
     pos relative
     pl 61px
@@ -63,6 +69,11 @@
       mb 40px
     @media $PortraitMedium
       w calc(100% - 30px)
+    ^[0]_inner &
+      w calc(100% - 30px)
+      mb 0
+    ^[0]_inner & + &
+      mt 20px
     &:before
       content ""
       pos absolute

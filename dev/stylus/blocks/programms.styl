@@ -1,4 +1,4 @@
-.faq
+.programms
   pb 50px
   .decor
     @media $LandscapeMax
@@ -14,9 +14,9 @@
   &__item
     pos relative
     z-index 1
-    padding 32px calc(9% - 7px) 38px
+    padding 42px calc(9% - 7px) 47px
     @media $desktopMax
-      padding 35px calc(9% - 2px) 39px
+      padding 45px calc(9% - 2px) 48px
     @media $LandscapeMax
       padding 0
     &:before
@@ -41,11 +41,13 @@
     &-name
       display inline
       cursor pointer
-      border-bottom 1px dotted #c3c4c8
-      transition .7s border-color, .7s color
+      c $dark
       fontify 30px 500 38px
+      bb()
+      transition .7s border-color, .7s color
       @media $desktopMax
         fontify 24px 500 28px
+      &:not([href]),
       &:hover
         border-color transparent
         c $red
@@ -53,17 +55,6 @@
         fontify 20px 500 24px
     &-text
       fontify 17px 400 25px
-      opacity 0
-      h 0
-      mt 0
-      oh()
-      transition .7s opacity, .7s margin-top
-      -webkit-transition .7s opacity, .7s margin-top
-      ^[-1]-name.open + &
-        opacity 1
-        h auto
-        mt 24px
-        @media $desktopMax
-          mt 20px
+      mt 11px
       @media $desktopMax
         fontify 16px 400 24px
