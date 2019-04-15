@@ -14,6 +14,7 @@ import News from './modules/news';
 import History from './modules/history';
 import Decor from './modules/decor';
 import Faq from './modules/faq';
+import Gallery from './modules/gallery';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -38,18 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const forms = new Forms();
   }
 
-  if (qs('.glightbox')) {
-    const lightBox = GLightbox({
-      selector: 'glightbox',
-    });
-  }
-
   if (qs('.js-decor')) {
     const decors = new Decor();
   }
 
   if (qs('.js-faq-opener')) {
     const faq = new Faq('.js-faq-opener');
+  }
+
+  if (qs('.js-gallery')) {
+    const gallery = new Gallery('.js-gallery', '.projects__elem-href', '.js-gallery-filter');
   }
 
   if (screen.width >= 768) {

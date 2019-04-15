@@ -1,11 +1,32 @@
 .projects
   pos relative
   z-index 1
-  padding 90px 0 54px
-  @media $lDesktopSmall
-    padding 100px 0 70px
-  @media $LandscapeMedium
-    padding 50px 0
+  &_inner
+    pb 25px
+    .decor
+      @media $LandscapeMax
+        dn()
+    .decor_b1
+      t -130px
+      r 60px
+      z-index 4
+    .decor_b2
+      r 20%
+      b -30px
+  &_elem
+    pb 82px
+    .decor
+      @media $LandscapeMax
+        dn()
+    .decor_b1
+      r 20%
+      b -30px
+  &__wrapper
+    padding 90px 0 54px
+    @media $lDesktopSmall
+      padding 100px 0 70px
+    @media $LandscapeMedium
+      padding 50px 0
   .h-col5,
   .h-col6
     @media $PortraitMax
@@ -41,13 +62,14 @@
     pos relative
     w 100%
     pt 64%
-    mb 36px
     bgc $dark
     oh()
-    @media $lDesktopSmall
-      mb 30px
-    @media $PortraitMax
-      mb 15px
+    &:last-child
+      mb 36px
+      @media $lDesktopSmall
+        mb 30px
+      @media $PortraitMax
+        mb 15px
     &-href
       pos absolute 
       z-index 3
@@ -95,3 +117,121 @@
         bgc $red
         &:after
           w 30px
+    &-address
+      pos relative
+      c $dark
+      fontify 16px 400 24px
+      mb 54px
+      pl 19px
+      mt 9px
+      @media $desktopMax
+        fontify 14px 400 22px
+      @media $LandscapeMedium
+        mb 34px
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 4px
+        size 10px 15px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAMAAADqIa48AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+lKga5AAAAF3RSTlMAABMwPSFALgY8PjUtBzYnETQVOxI/HhLKfx8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wQMDScq6vQyFAAAAF1JREFUCNc1zUcOgDAMBdFJ4ceU0MP9jwoBMgvryZJlwIcYg+ep01v37PTnCVIyS1IgSgYmRfrGgVGaLE/SzNLOFtbGFbd92hzsH/f6LlWlKvIhHfklZyknf9dV5w0SswOY3/NZagAAAABJRU5ErkJggg==') no-repeat center
+  &__elems
+    df()
+    flex-wrap wrap
+    w calc(100% + 36px)
+    ml -36px
+    mb -36px
+    @media $lDesktopSmall
+      w calc(100% + 32px)
+      ml -32px
+      mb -32px
+    @media $LandscapeMin
+      w calc(100% + 16px)
+      ml -16px
+      mb -16px
+  &__elem
+    ml 36px
+    mb 36px
+    w calc(25% - 36px)
+    opacity 1
+    transition .7s opacity
+    @media $ie
+      mr -1px
+    @media $lDesktopSmall
+      ml 32px
+      mb 32px
+      w calc(25% - 32px)
+    @media $LandscapeMax
+      w calc(100% / 3 - 32px)
+    @media $LandscapeMin
+      w calc(50% - 16px)
+      ml 16px
+      mb 16px
+    @media $PortraitMin
+      w calc(100% - 16px)
+    &.hide
+      w 0
+      ml 0
+      opacity 0
+    &-href
+      pos relative
+      z-index 1
+      oh()
+      db()
+      w 100%
+      pt 63%
+      &:before
+        content ""
+        pos absolute
+        z-index 1
+        l 0
+        t 0
+        size 0 100%
+        opacity .56
+        bgc #373a48
+        transition .7s width
+      ^[-1]:hover &:before
+        w 100%
+      &:after
+        content ""
+        pos absolute
+        z-index 2
+        t 50%
+        l 50%
+        size 34px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAQAAACQTsNJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBAwOLDj4/yTOAAACC0lEQVRIx6XWPU8UURSA4RciDhIMH1sYkw2JjW6MfFRQ6VIZC0gMP0NiYQUNrdiDCYQfYKtWxoKCBYKJBVj41WxBQSgWQ7XvUuy1WMBlZ2aZrOcUk9w78+TO5NxzpytwEbXG5T7PecpDckCF73zmPb8BIlIjXKZYdMuQkFsWbbqzNf8Rva5ZN3jiqrOOeNPbFpx11RODddfsvQZx2F2DVZfsl5bsd8mqwV2H2yD2uWew7FgMuMhRywb37EtHNgwemk8lEPMeGtxIQSxat+pUWwJxyqp1i8lIyeByuI4g4BuDpTjS5Tj7/OFedFqjfUTUBigzxER0cHWmmzngY3RKhohOeQfMtY538xj4kIUA4BPwJI4UgK+ZkX3gQRzJAceZkWMgF0ca3+y/opsKcDfz/XeAShz5CTzKjEwAv+JICZjNjDwDSrFRxw1WHMhUsQOeGBxvrdju6IBthlnMtI5FhthurVeaNuDktRtw0qp1p9NawXrmVrCe1AoadfKKL+QpMZb6IqOUyAM/EmfP22POPYNVlx2MrWHQ11YNlq1b90W7Rn2rqVHPOGKPPY4409So+5xPZlqPjJ3EI2PH6caRkcxcRRALLrjpkWeeeeSmCxYu6iSNiSNtii2N6QCJMx0hrUyHyFWmY+SSmQ/cyNwEYhG9rcEKK7Xzsu+Y4SWBnq7YT076I4mjtbHo219vZCPk3IOxxAAAAABJRU5ErkJggg==') no-repeat center
+        ml -17px
+        mt -17px
+        transform scale(0)
+        will-change transform
+        transition .7s transform
+      ^[-1]:hover &:after
+        transform scale(1)
+        transition-delay .4s
+    &-img
+      pos absolute
+      z-index -2
+      size 100%
+      t 0
+      l 0
+      b 0
+      r 0
+      object-fit cover
+  &__filters
+    df()
+    flex-wrap wrap
+    ml -30px
+    w calc(100% + 30px)
+    mb 23px
+    &-elem
+      ml 30px
+      mb 10px
+    &-btn
+      c $dark
+      fontify 18px 500 22px
+      border-bottom 1px dashed alpha($dark, .25)
+      transition .7s border-color, .7s color
+      &.active,
+      &:hover
+        c $red
+        border-color transparent

@@ -24,31 +24,32 @@ html
                   +e('p').subtitle Все квартиры готовы – заезжай и живи.
 
       +b('section').projects.h-anim
-        .decor.decor_dec2.js-decor(data-type="white", data-height="140", style="width: 30px; height: 140px;")
-        +e('aside').bg
-        section.container
-          .h-wrapper
-            .h-col5.h-col_rel.h-anim(data-delay="1")
-              .decor.decor_dec1.js-decor(data-type="red", data-height="108", style="width: 28px; height: 108px;")
-              p.common__title Наши <br>проекты
-              .common__subtitle 
-                p Жилые дома со встроенными объектами инфраструктуры. Дома сданы записывайтесь на экскурсию.
-              a(href="#").common__toall Все проекты
-            .h-col6
-              +e('figure').item.h-anim(data-delay="2")
-                +e.item-href(href="#")
-                  +e.item-img(src="img/gk1.jpg")
-                  +e('figcaption').item-name ЖК «Три Кита»
-            .h-col6
-              +e('figure').item.h-anim
-                +e.item-href(href="#")
-                  +e.item-img(src="img/gk2.jpg")
-                  +e('figcaption').item-name ЖК «Яблочкина 10»
-            .h-col6
-              +e('figure').item.h-anim
-                +e.item-href(href="#")
-                  +e.item-img(src="img/gk3.jpg")
-                  +e('figcaption').item-name ЖК «Престиж»
+        +e.wrapper
+          .decor.decor_dec2.js-decor(data-type="white", data-height="140", style="width: 30px; height: 140px;")
+          +e('aside').bg
+          section.container
+            .h-wrapper
+              .h-col5.h-col_rel.h-anim(data-delay="1")
+                .decor.decor_dec1.js-decor(data-type="red", data-height="108", style="width: 28px; height: 108px;")
+                p.common__title Наши <br>проекты
+                .common__subtitle 
+                  p Жилые дома со встроенными объектами инфраструктуры. Дома сданы записывайтесь на экскурсию.
+                a(href="#").common__toall Все проекты
+              .h-col6
+                +e('figure').item.h-anim(data-delay="2")
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk1.jpg")
+                    +e('figcaption').item-name ЖК «Три Кита»
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk2.jpg")
+                    +e('figcaption').item-name ЖК «Яблочкина 10»
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk3.jpg")
+                    +e('figcaption').item-name ЖК «Престиж»
 
       +b('section').about
         section.container

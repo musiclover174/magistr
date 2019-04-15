@@ -1,0 +1,92 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e.href(href="#") О компании
+          +e('span').delim 
+          +e.href(href="#") Фотогалерея
+          +e('span').delim 
+          +e('span').href Фотоотчёт ЖК «Три кита»
+        h1 Фотоотчёт ЖК «Три кита»
+        +b('section').projects._elem
+          .decor.decor_b1.js-decor(data-type="red", data-height="182", style="width: 28px; height: 182px;")
+          +e('ul').filters
+            +e.filters-elem
+              +e.filters-btn.active.js-gallery-filter(type="button", data-day="") Все
+            +e.filters-elem
+              +e.filters-btn.js-gallery-filter(type="button", data-day="25.03.19") 25 марта 2019
+            +e.filters-elem
+              +e.filters-btn.js-gallery-filter(type="button", data-day="18.03.19") 18 марта 2019
+            +e.filters-elem
+              +e.filters-btn.js-gallery-filter(type="button", data-day="05.03.19") 5 марта 2019
+            +e.filters-elem
+              +e.filters-btn.js-gallery-filter(type="button", data-day="22.02.19") 22 февраля 2019
+            +e.filters-elem
+              +e.filters-btn.js-gallery-filter(type="button", data-day="02.02.19") 2 февраля 2019
+          +e('ul').elems.js-gallery
+            +e.elem
+              +e.elem-href(href="img/gallery1.jpg", data-day="25.03.19")
+                +e.elem-img(src="img/gallery1-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery2.jpg", data-day="18.03.19")
+                +e.elem-img(src="img/gallery2-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery3.jpg", data-day="05.03.19")
+                +e.elem-img(src="img/gallery3-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery4.jpg", data-day="22.02.19")
+                +e.elem-img(src="img/gallery4-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery5.jpg", data-day="02.02.19")
+                +e.elem-img(src="img/gallery5-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery1.jpg", data-day="25.03.19")
+                +e.elem-img(src="img/gallery1-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery2.jpg", data-day="18.03.19")
+                +e.elem-img(src="img/gallery2-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery3.jpg", data-day="05.03.19")
+                +e.elem-img(src="img/gallery3-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery4.jpg", data-day="22.02.19")
+                +e.elem-img(src="img/gallery4-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery5.jpg", data-day="02.02.19")
+                +e.elem-img(src="img/gallery5-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery1.jpg", data-day="25.03.19")
+                +e.elem-img(src="img/gallery1-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery2.jpg", data-day="18.03.19")
+                +e.elem-img(src="img/gallery2-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery3.jpg", data-day="05.03.19")
+                +e.elem-img(src="img/gallery3-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery4.jpg", data-day="22.02.19")
+                +e.elem-img(src="img/gallery4-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery5.jpg", data-day="02.02.19")
+                +e.elem-img(src="img/gallery5-thumbs.jpg")
+            +e.elem
+              +e.elem-href(href="img/gallery4.jpg", data-day="22.02.19")
+                +e.elem-img(src="img/gallery4-thumbs.jpg")
+
+          a(href="#").common__back Вернуться к списку всех объектов
+
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts
