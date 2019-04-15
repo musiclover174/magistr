@@ -101,8 +101,7 @@ export default class Form {
         if (elem.getAttribute('data-req')) {
           switch (elem.getAttribute('data-type')) {
             case 'tel':
-              re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-              if (!re.test(elem.value)) {
+              if (elem.value.length !== 16) {
                 elem.classList.add('warning');
                 checkResult = false;
               }

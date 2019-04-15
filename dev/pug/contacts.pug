@@ -1,0 +1,63 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e('span').href Контакты
+        h1 Контакты
+        +b('section').contacts
+          +e('ul').officies
+            +e.office
+              +e('p').office-title Отдел продаж
+              +e('p').office-phone +7 (351) 281 42 42<br>+7 (351) 281 42 24
+              +e.office-mail(href="mailto:op@magistrchel.ru") op@magistrchel.ru
+            +e.office
+              +e('p').office-title Отдел маркетинга и рекламы
+              +e('p').office-phone +7 (351) 281 42 24<br>+7 (351) 281 42 02
+              +e.office-mail(href="mailto:op@magistrchel.ru") op@magistrchel.ru
+            +e.office
+              +e('p').office-title Производственно- технический отдел
+              +e('p').office-phone +7 (351) 281 42 02
+              +e.office-mail(href="mailto:magistr99@inbox.ru") magistr99@inbox.ru
+            +e.office
+              +e('p').office-title Юридический отдел
+              +e('p').office-phone +7 (351) 281 42 13<br>+7 (351) 281 42 14
+              +e.office-mail(href="mailto:magistr99@inbox.ru") magistr99@inbox.ru
+            +e.office
+              +e('p').office-title Приемная
+              +e('p').office-phone +7 (351) 281 42 02
+              +e.office-mail(href="mailto:mail@magistrchel.ru") mail@magistrchel.ru
+            +e.office
+              +e('p').office-title Бухгалтерия
+              +e('p').office-phone +7 (351) 281 42 04
+              +e.office-mail(href="mailto:buh@magistrchel.ru") buh@magistrchel.ru
+            +e.office
+              +e('p').office-title Сметный отдел
+              +e('p').office-phone +7 (351) 281 42 08
+              +e.office-mail(href="mailto:magistr99@inbox.ru") magistr99@inbox.ru
+      +b('section').contacts
+        +e.map-wrapper
+          script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+          +e.map#map.js-contacts-map.h-anim(data-delay="1", data-office="55.154419:61.393750", data-center="55.147363:61.390008" data-locations="55.144871:61.380814, 55.144027:61.381623, 55.144212:61.381344, 55.132062:61.370457, 55.153745:61.409569, 55.152917:61.397873, 55.157104:61.418885, 55.157593:61.418301")
+          +e.map-info
+            +e('p').map-title Адрес офиса и&nbsp;часы работы
+            +e('span').spacer
+            +e('p').map-address 454092, Челябинск, ул.&nbsp;Воровского, 15 «Г», 3 этаж
+            +e('p').map-time Понедельник – четверг: с&nbsp;08:30 до 17:30, пятница: до 17:00. Перерыв с 12:00 до 13:00
+
+      +reqForm('Заявка на просмотр')    
+      
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

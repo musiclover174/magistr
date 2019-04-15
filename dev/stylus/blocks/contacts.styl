@@ -1,21 +1,22 @@
 .contacts
-  pos relative
-  bgc $dark
-  padding 83px 0 133px
-  @media $lDesktopSmall
-    padding 55px 0 80px
-    .h-col1
-      dn()
-    .h-col3
-      flex 0 0 33.33333333333333%
-      max-width 33.33333333333333%
-  @media $PortraitMax
-    padding 0
-    h 50vh
-    .h-col3
-      dn()
-  .h-wrapper
-    align-items stretch
+  &_main
+    pos relative
+    bgc $dark
+    padding 83px 0 133px
+    @media $lDesktopSmall
+      padding 55px 0 80px
+      .h-col1
+        dn()
+      .h-col3
+        flex 0 0 33.33333333333333%
+        max-width 33.33333333333333%
+    @media $PortraitMax
+      padding 0
+      h 50vh
+      .h-col3
+        dn()
+    .h-wrapper
+      align-items stretch
   &__scheme
     &-map
       pos absolute
@@ -85,3 +86,98 @@
       text-align left
       mt 30px
       mb -8px
+  &__officies
+    df()
+    flex-wrap wrap
+    ml -36px
+    w calc(100% + 36px)
+    mb 16px
+    @media $lDesktopSmall
+      ml -30px
+      w calc(100% + 30px)
+  &__office
+    w calc(25% - 36px)
+    ml 36px
+    mb 50px
+    @media $lDesktopSmall
+      w calc(25% - 30px)
+      ml 30px
+    @media $desktopMax
+      w calc(100% / 3 - 30px)
+    @media $LandscapeMedium
+      w calc(50% - 30px)
+    @media $PortraitMedium
+      w calc(100% - 30px)
+    &-title
+      c $dark
+      max-width 230px
+      fontify 24px 500 28px
+      mb 14px
+      @media $desktopMax
+        fontify 21px 500 24px
+      @media $PortraitMedium
+        max-width inherit
+    &-phone
+      pos relative
+      c $dark
+      fontify 16px 400 24px
+      pl 27px
+      &:before
+        content ""
+        pos absolute
+        l 2px
+        t 6px
+        size 12px 12px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj////5x1e5AAAAG3RSTlMAAC9AOQY/FjUnJSsOOAUxPgsfBywoFyY6DS47lijnAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MEDwwSEwS3vXMAAABWSURBVAjXTc3bEoAgCARQbI3MLNPu/f+HhlM48XZgZ6EGsC19wwA6hRP0Ci8YFAEYJwVFzKkiMMZaR1mCaVm3vazMAfApPbacTC7PZN7kFX+QGu/4fgCVtQJdYKWRpQAAAABJRU5ErkJggg==') no-repeat center
+    &-mail
+      ib()
+      pos relative
+      mt 3px
+      ml 28px
+      c $dark
+      fontify 16px 400 18px
+      bb()
+      &:before
+        content ""
+        pos absolute
+        l -26px
+        t 7px
+        size 14px 9px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAMAAAA1k+1bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEU3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///8xAw9oAAAAFXRSTlMPPkAOBDUNOhQBHysGCjE8GRowPx7b9nVxAAAAAWJLR0QV5dj5owAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MEDwwSLyvYwfQAAABMSURBVAjXVc1JCoAwFAPQNL+18+z9z6pUlJpVHgQCKH5RAi3mlTk0rPNhDVTwzoKMKRey5BTJm6zN9+5b5UNyiIxVwF8wd02E/fe8AJpLAk1to3JKAAAAAElFTkSuQmCC') no-repeat center
+  &__map
+    size 65% 100%
+    @media $LandscapeMedium
+      size 100% 70vh
+      max-height 500px
+    &-wrapper
+      max-height 500px
+      h 70vh
+      bgc $dark
+      df()
+      @media $LandscapeMax
+        mb 60px
+      @media $LandscapeMedium
+        flex-direction column
+        h auto
+        max-height inherit
+    &-info
+      dfv(center, center)
+      size 35% 100%
+      text-align center
+      @media $LandscapeMedium
+        size 100% auto
+        padding 40px 20px
+    &-title
+      c white
+      fontify 24px 500 28px
+      max-width 180px
+      mb 10px
+    &-address
+      c alpha(white, .5)
+      max-width 235px
+      fontify 16px 400 24px
+    &-time
+      mt 30px
+      c alpha(white, .5)
+      max-width 250px
+      fontify 16px 400 24px

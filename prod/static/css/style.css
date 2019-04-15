@@ -7672,19 +7672,19 @@ div[class^="table-scroller"] {
   right: 40px;
   pointer-events: all;
 }
-.contacts {
+.contacts_main {
   position: relative;
   background-color: #373a48;
   padding: 83px 0 133px;
 }
 @media (max-width: 1600px) {
-  .contacts {
+  .contacts_main {
     padding: 55px 0 80px;
   }
-  .contacts .h-col1 {
+  .contacts_main .h-col1 {
     display: none;
   }
-  .contacts .h-col3 {
+  .contacts_main .h-col3 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.33333333333333%;
     flex: 0 0 33.33333333333333%;
@@ -7692,15 +7692,15 @@ div[class^="table-scroller"] {
   }
 }
 @media (max-width: 670px) {
-  .contacts {
+  .contacts_main {
     padding: 0;
     height: 50vh;
   }
-  .contacts .h-col3 {
+  .contacts_main .h-col3 {
     display: none;
   }
 }
-.contacts .h-wrapper {
+.contacts_main .h-wrapper {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
@@ -7826,6 +7826,205 @@ div[class^="table-scroller"] {
     margin-top: 30px;
     margin-bottom: -8px;
   }
+}
+.contacts__officies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -36px;
+  width: calc(100% + 36px);
+  margin-bottom: 16px;
+}
+@media (max-width: 1600px) {
+  .contacts__officies {
+    margin-left: -30px;
+    width: calc(100% + 30px);
+  }
+}
+.contacts__office {
+  width: calc(25% - 36px);
+  margin-left: 36px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1600px) {
+  .contacts__office {
+    width: calc(25% - 30px);
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .contacts__office {
+    width: calc(100% / 3 - 30px);
+  }
+}
+@media (max-width: 900px) {
+  .contacts__office {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 500px) {
+  .contacts__office {
+    width: calc(100% - 30px);
+  }
+}
+.contacts__office-title {
+  color: #373a48;
+  max-width: 230px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+@media (max-width: 1400px) {
+  .contacts__office-title {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .contacts__office-title {
+    max-width: inherit;
+  }
+}
+.contacts__office-phone {
+  position: relative;
+  color: #373a48;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 27px;
+}
+.contacts__office-phone:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj////5x1e5AAAAG3RSTlMAAC9AOQY/FjUnJSsOOAUxPgsfBywoFyY6DS47lijnAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MEDwwSEwS3vXMAAABWSURBVAjXTc3bEoAgCARQbI3MLNPu/f+HhlM48XZgZ6EGsC19wwA6hRP0Ci8YFAEYJwVFzKkiMMZaR1mCaVm3vazMAfApPbacTC7PZN7kFX+QGu/4fgCVtQJdYKWRpQAAAABJRU5ErkJggg==") no-repeat center;
+}
+.contacts__office-mail {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-top: 3px;
+  margin-left: 28px;
+  color: #373a48;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  border-bottom: 1px solid rgba(55,58,72,0.25);
+  -webkit-transition: 0.7s border-color;
+  transition: 0.7s border-color;
+}
+.contacts__office-mail:hover {
+  border-color: transparent;
+}
+.contacts__office-mail:before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 7px;
+  width: 14px;
+  height: 9px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAMAAAA1k+1bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEU3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///8xAw9oAAAAFXRSTlMPPkAOBDUNOhQBHysGCjE8GRowPx7b9nVxAAAAAWJLR0QV5dj5owAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MEDwwSLyvYwfQAAABMSURBVAjXVc1JCoAwFAPQNL+18+z9z6pUlJpVHgQCKH5RAi3mlTk0rPNhDVTwzoKMKRey5BTJm6zN9+5b5UNyiIxVwF8wd02E/fe8AJpLAk1to3JKAAAAAElFTkSuQmCC") no-repeat center;
+}
+.contacts__map {
+  width: 65%;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .contacts__map {
+    width: 100%;
+    height: 70vh;
+    max-height: 500px;
+  }
+}
+.contacts__map-wrapper {
+  max-height: 500px;
+  height: 70vh;
+  background-color: #373a48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+@media (max-width: 1000px) {
+  .contacts__map-wrapper {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 900px) {
+  .contacts__map-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    max-height: inherit;
+  }
+}
+.contacts__map-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .contacts__map-info {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+}
+.contacts__map-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 180px;
+  margin-bottom: 10px;
+}
+.contacts__map-address {
+  color: rgba(255,255,255,0.5);
+  max-width: 235px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contacts__map-time {
+  margin-top: 30px;
+  color: rgba(255,255,255,0.5);
+  max-width: 250px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .history__carover {
   position: relative;
