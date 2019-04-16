@@ -6087,7 +6087,6 @@ div[class^="table-scroller"] {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 54px;
   padding-left: 19px;
   margin-top: 9px;
 }
@@ -6098,8 +6097,11 @@ div[class^="table-scroller"] {
     line-height: 22px;
   }
 }
+.projects__item-address:last-child {
+  margin-bottom: 54px;
+}
 @media (max-width: 900px) {
-  .projects__item-address {
+  .projects__item-address:last-child {
     margin-bottom: 34px;
   }
 }
@@ -6111,6 +6113,111 @@ div[class^="table-scroller"] {
   width: 10px;
   height: 15px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAMAAADqIa48AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+lKga5AAAAF3RSTlMAABMwPSFALgY8PjUtBzYnETQVOxI/HhLKfx8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wQMDScq6vQyFAAAAF1JREFUCNc1zUcOgDAMBdFJ4ceU0MP9jwoBMgvryZJlwIcYg+ep01v37PTnCVIyS1IgSgYmRfrGgVGaLE/SzNLOFtbGFbd92hzsH/f6LlWlKvIhHfklZyknf9dV5w0SswOY3/NZagAAAABJRU5ErkJggg==") no-repeat center;
+}
+.projects__item-action {
+  color: #ce000c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: 12px;
+}
+@media (max-width: 1400px) {
+  .projects__item-action {
+    font-size: 15px;
+  }
+}
+.projects__item-actiontext {
+  color: #373a48;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+}
+@media (max-width: 1400px) {
+  .projects__item-actiontext {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+.projects__item-feats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px solid #f8f8f8;
+  padding-top: 16px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 534px;
+  margin-bottom: 32px;
+  margin-top: 15px;
+}
+@media (max-width: 900px) {
+  .projects__item-feats {
+    margin-bottom: 22px;
+  }
+}
+.projects__item-feat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: calc(50% - 18px);
+  margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  .projects__item-feat {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 1400px) {
+  .projects__item-feat {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 390px) {
+  .projects__item-feat {
+    width: 100%;
+  }
+}
+.projects__item-icon {
+  max-width: 80%;
+}
+.projects__item-iconover {
+  width: 50px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.projects__item-feattext {
+  color: #aeaeb2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media (max-width: 1400px) {
+  .projects__item-feattext {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 10px;
+  }
 }
 .projects__elems {
   display: -webkit-box;
@@ -9290,5 +9397,55 @@ div[class^="table-scroller"] {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+  }
+}
+.catalog {
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .catalog .decor {
+    display: none;
+  }
+}
+.catalog .decor_b1 {
+  right: 10%;
+  top: -200px;
+}
+.catalog .decor_b2 {
+  right: 20%;
+  bottom: -30px;
+}
+.catalog__docs {
+  max-width: 1070px;
+  margin-bottom: 10px;
+}
+.catalog__docs .financial__list {
+  padding-bottom: 0;
+}
+.catalog__docs-text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 950px;
+  margin-bottom: 47px;
+}
+@media (max-width: 1400px) {
+  .catalog__docs-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+.catalog__docs-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 31px;
+}
+@media (max-width: 670px) {
+  .catalog__docs-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
   }
 }

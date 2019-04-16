@@ -121,13 +121,14 @@
       pos relative
       c $dark
       fontify 16px 400 24px
-      mb 54px
       pl 19px
       mt 9px
       @media $desktopMax
         fontify 14px 400 22px
-      @media $LandscapeMedium
-        mb 34px
+      &:last-child
+        mb 54px
+        @media $LandscapeMedium
+          mb 34px
       &:before
         content ""
         pos absolute
@@ -135,6 +136,50 @@
         t 4px
         size 10px 15px
         background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAMAAADqIa48AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+lKga5AAAAF3RSTlMAABMwPSFALgY8PjUtBzYnETQVOxI/HhLKfx8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wQMDScq6vQyFAAAAF1JREFUCNc1zUcOgDAMBdFJ4ceU0MP9jwoBMgvryZJlwIcYg+ep01v37PTnCVIyS1IgSgYmRfrGgVGaLE/SzNLOFtbGFbd92hzsH/f6LlWlKvIhHfklZyknf9dV5w0SswOY3/NZagAAAABJRU5ErkJggg==') no-repeat center
+    &-action
+      c $red
+      fontify 16px 500 22px
+      mt 12px
+      @media $desktopMax
+        font-size 15px
+    &-actiontext
+      c $dark
+      fontify 17px 500 22px
+      @media $desktopMax
+        fontify 16px 500 24px
+    &-feats
+      df(flex-start, space-between)
+      border-top 1px solid $grey
+      pt 16px
+      flex-wrap wrap
+      w 90%
+      max-width 534px
+      mb 32px
+      mt 15px
+      @media $LandscapeMedium
+        mb 22px
+    &-feat
+      df(center, flex-start)
+      w calc(50% - 18px)
+      mb 20px
+      @media $lDesktopSmall
+        w calc(50% - 15px)
+      @media $desktopMax
+        flex-direction column
+        align-items flex-start
+      @media $PortraitMin
+        w 100%
+    &-icon
+      max-width 80%
+      &over
+        w 50px
+        flex-shrink 0
+    &-feattext
+      c #aeaeb2
+      fontify 16px 400 24px
+      @media $desktopMax
+        fontify 15px 400 22px
+        mt 10px
   &__elems
     df()
     flex-wrap wrap

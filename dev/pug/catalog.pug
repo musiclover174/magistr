@@ -1,0 +1,138 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e('span').href Продажа квартир
+        h1 Продажа квартир
+        +b('section').catalog
+          .decor.decor_b1.js-decor(data-type="red", data-height="234", style="width: 33px; height: 234px;")
+          .decor.decor_b2.js-decor(data-type="red", data-height="134", style="width: 34px; height: 134px;")
+          +e('section').docs
+            +e.docs-text
+              p Жилые дома со встроенными объектами инфраструктуры по ул. Яблочкина в границах ул. Воровского — Доватора — Яблочкина — Омская.1 и 2-х-комнатные квартиры по цене 56 т.р./кв.м. 3-х комнатные по цене  54 т.р./кв.м. Квартиры c частичной отделкой. Ипотека. Выгодная рассрочка. Любые формы оплаты.
+            +e('p').docs-title Документы:
+            +b('section').financial
+              +e('ul').list
+                +e.item
+                  +e.item-href(href="#") Реквизиты ООО СК «Магистр»
+                  +e('p').item-dsc doc, 200Кб
+                +e.item
+                  +e.item-href(href="#") Бухгалтерский баланс за 3 квартал 2018 года
+                  +e('p').item-dsc pdf, 1,4Мб
+                +e.item
+                  +e.item-href(href="#") Бухгалтерский баланс за 2 квартал 2018 года
+                  +e('p').item-dsc pdf, 1,4Мб
+                +e.item
+                  +e.item-href(href="#") Бухгалтерский баланс за 1 квартал 2018 года
+                  +e('p').item-dsc pdf, 1,4Мб
+                +e.item
+                  +e.item-href(href="#") Бухгалтерский баланс за 4 квартал 2017 года
+                  +e('p').item-dsc pdf, 1,4Мб
+                +e.item
+                  +e.item-href(href="#") Бухгалтерский баланс за 3 квартал 2017 года
+                  +e('p').item-dsc pdf, 1,4Мб
+          +b('section').projects._inner
+            .h-wrapper
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk1.jpg")
+                    +e('figcaption').item-name ЖК «Три Кита»
+                +e('p').item-address Воровского, 61 Б
+                +e('p').item-action Акция
+                +e('p').item-actiontext При покупке квартиры – кладовка в подарок
+                +e('ul').item-feats
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon1.png")
+                    +e.item-feattext 3 минуты до цента города
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon2.png")
+                    +e.item-feattext Комфортабельное жилье + чистый воздух
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk2.jpg")
+                    +e('figcaption').item-name ЖК «Яблочкина 10»
+                +e('p').item-address Воровского, 61 Б
+                +e('p').item-action Акция
+                +e('p').item-actiontext При покупке квартиры – кладовка в подарок
+                +e('ul').item-feats
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon1.png")
+                    +e.item-feattext 3 минуты до цента города
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon2.png")
+                    +e.item-feattext Комфортабельное жилье + чистый воздух
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk3.jpg")
+                    +e('figcaption').item-name ЖК «Престиж»
+                +e('p').item-address Воровского, 61 Б
+                +e('p').item-action Акция
+                +e('p').item-actiontext При покупке квартиры – кладовка в подарок
+                +e('ul').item-feats
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon1.png")
+                    +e.item-feattext 3 минуты до цента города
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon2.png")
+                    +e.item-feattext Комфортабельное жилье + чистый воздух
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk4.jpg")
+                    +e('figcaption').item-name Название комплекса
+                +e('p').item-address ул. Ленина, 45
+                +e('p').item-action Акция
+                +e('p').item-actiontext При покупке квартиры – кладовка в подарок
+                +e('ul').item-feats
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon1.png")
+                    +e.item-feattext 3 минуты до цента города
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon2.png")
+                    +e.item-feattext Комфортабельное жилье + чистый воздух
+              .h-col6
+                +e('figure').item.h-anim
+                  +e.item-href(href="#")
+                    +e.item-img(src="img/gk5.jpg")
+                    +e('figcaption').item-name ЖК «Nord»
+                +e('p').item-address ул. Ленина, 2Б
+                +e('p').item-action Акция
+                +e('p').item-actiontext При покупке квартиры – кладовка в подарок
+                +e('ul').item-feats
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon1.png")
+                    +e.item-feattext 3 минуты до цента города
+                  +e.item-feat
+                    +e.item-iconover
+                      +e.item-icon(src="img/feat-icon2.png")
+                    +e.item-feattext Комфортабельное жилье + чистый воздух
+
+          
+      
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts
