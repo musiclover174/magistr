@@ -40,46 +40,48 @@
     z-index 1
     color $dark
     fontify 16px 400 19px
+    transition .7s color
     @media $lDesktopSmall
       fontify 14px 400 15px
     @media $desktopMin
       transition .7s color
       fontify 24px 600 32px
       c white
-    span,
-    &:before,
-    &:after
-      pos absolute
-      z-index -1
-      l 50%
-      t 50%
-      bgc $red
-      opacity 0
-      transition .7s margin-top, .7s opacity
-    span
-      size 10px 33px
-      ml -5px
-      mt -16px
-    &:before
-      content ""
-      size 2px 51px
-      ml -14px
-      mt -25px
-    &:after
-      content ""
-      size 4px 35px
-      ml 11px
-      mt -17px
-    &:not(&_active):hover
-      span
-        mt -12px
-        opacity 1
-      &:before
-        mt -27px
-        opacity 1
-      &:after
-        mt -20px
-        opacity 1
+    // span,
+    // &:before,
+    // &:after
+    //   pos absolute
+    //   z-index -1
+    //   l 50%
+    //   t 50%
+    //   bgc $red
+    //   opacity 0
+    //   transition .7s margin-top, .7s opacity
+    // span
+    //   size 10px 33px
+    //   ml -5px
+    //   mt -16px
+    // &:before
+    //   content ""
+    //   size 2px 51px
+    //   ml -14px
+    //   mt -25px
+    // &:after
+    //   content ""
+    //   size 4px 35px
+    //   ml 11px
+    //   mt -17px
+    // &:not(&_active):hover
+    //   span
+    //     mt -12px
+    //     opacity 1
+    //   &:before
+    //     mt -27px
+    //     opacity 1
+    //   &:after
+    //     mt -20px
+    //     opacity 1
+    &:hover,
     &_active
       c $red
       @media $desktopMin

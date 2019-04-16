@@ -1,0 +1,143 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      section.container
+        +b('section').about._inner
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim 
+            +e('span').href О компании
+          h1 О компании
+          +e('p').pre Город – живой организм, имеющий тело, душу и мысли. Архитектурная среда, кроме природной и географической, образует Физическое тело города. А его Душу и Мысли формируют жители города – среди которых, несомненно, и градостроители. Своим сознанием, трудом и вкладом в развитие они формируют статус мегаполиса.
+
+      +b('section').about
+        +e.spacer(style="background-image: url('img/spacer.jpg')")
+          .decor.decor_b1.js-decor(data-type="red", data-height="115", style="width: 30px; height: 115px;")
+          .decor.decor_b2.js-decor(data-type="white", data-height="125", style="width: 32px; height: 125px;")
+
+      +b('section').about
+        section.container
+          +e('section').start
+            +e('aside').start-info
+              +e('p').start-feat Надежность.
+              +e('p').start-feat Качество.
+              +e('p').start-feat Репутация.
+              +e('p').start-from C 1999 года.
+            +e.start-text
+              p Строительная компания «Магистр» – компания с именем и историей неустанно работает на повышение статуса Челябинска. Основана 17 мая 1999 года.  «Надежность. Качество. Репутация.» – принцип, по которому работает СК «Магистр». Более 20 лет предприятие занимает уверенную позицию на строительном рынке Челябинска и входит в десятку лучших застройщиков области.
+              p СК «Магистр» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и материалов.
+
+      +b('section').about
+        +e('section').mover
+          section.container
+            +e.mover-inner.js-about-mover
+              +e.mover-elem
+                +e.mover-img(src="img/gk1.jpg")
+                .decor.decor_b1.js-decor(data-type="red", data-height="134", style="width: 30px; height: 134px;")
+              +e.mover-elem
+                +e.mover-img(src="img/gk3.jpg")
+                .decor.decor_b2.js-decor(data-type="white", data-height="85", style="width: 32px; height: 85px;")
+              +e.mover-elem
+                +e.mover-img(src="img/gk2.jpg")
+              +e.mover-elem
+                +e.mover-img(src="img/gk4.jpg")
+
+            +e('section').fixer.js-about-stickyParent
+              +e.fixer-window.js-about-sticky
+                +e.fixer-bar-wrapper
+                  +e('span').fixer-bar
+                    +e('i').fixer-progress.js-fixer-progress
+                +e.fixer-content-wrapper
+                  +e.fixer-content
+                    +e('p').fixer-mainsq.hide
+                      span.js-fixer-counter 45,6
+                      |  тыс.м²
+                    +e.fixer-text
+                      p Команда профессионалов одержима заботой о родном городе, а главное любовью и верой в дело, которому служит. 
+                      p За годы работы построено более 230 тысяч квадратных метров жилой и коммерческой недвижимости.
+              +e('ul').fixer-list
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«Три кита»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="45.6") 45,6 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«31 микрорайон»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="38.8") 38,8 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>Котина – Горького
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="16.5") 16,5 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«Три кита»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="45.6") 45,6 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«31 микрорайон»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="38.8") 38,8 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>Котина – Горького
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="16.5") 16,5 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«Три кита»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="45.6") 45,6 тыс. м²
+                +e.fixer-item
+                  +e('p').fixer-name Жилой квартал<br>«31 микрорайон»
+                  +e('p').fixer-sq.js-fixer-sq(data-sq="38.8") 38,8 тыс. м²
+
+      +b('section').contacts._main
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        +e.scheme-map#map.js-contacts-map(data-office="55.154419:61.393750", data-center="55.147363:61.390008" data-locations="55.144871:61.380814, 55.144027:61.381623, 55.144212:61.381344, 55.132062:61.370457, 55.153745:61.409569, 55.152917:61.397873, 55.157104:61.418885, 55.157593:61.418301")
+        section.container
+          .h-wrapper
+            .h-col8
+            .h-col1
+            .h-col3.h-anim
+              +e('p').title Расположение <br>возведенных объектов
+              +e('span').spacer
+              +e('ul').list
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144871:61.380814") Воровского 61 Б
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144027:61.381623") Яблочкина 10
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.144212:61.381344") Яблочкина 10 А
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.132062:61.370457") Блюхера 53
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.153745:61.409569") Цвиллинга 47 В
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.152917:61.397873") Елькина 84
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.157104:61.418885") Российская 271
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.157593:61.418301") Российская 269
+                +e.item._title
+                  +e('p').subtitle Центральный офис
+                +e.item
+                  +e.item-address.js-contacts-btn(type="button", data-coords="55.154419:61.393750") Воровского, 15 Г
+
+      +b('section').about
+        .container
+          +e.bottom-inner
+            +e.bottom-row
+              +e('aside').bottom-left
+                +e('p').bottom-title Объекты, построенные СК&nbsp;«Магистр», останутся людям на долгие десятилетия.
+              +e.bottom-right
+                p Мы гордимся нашими, по-настоящему эксклюзивными и дизайнерскими объектами, которые достойно украшают родной город и в целом повышают уровень жизни Челябинцев.
+                p На всех возведенных зданиях градостроитель ставит свой фирменный знак: «Магистр», ответственно подписываясь под каждым построенным объектом и символично заявляя о надежности, качестве и стабильности в своей дальнейшей работе на благо Челябинска.
+            +e.bottom-row
+              +e('aside').bottom-left
+                +e.bottom-logo(src="img/b-logo1.png")
+                +e.bottom-logo(src="img/b-logo2.png")
+              +e.bottom-right
+                +e('p').bottom-title ООО СК «Магистр» состоит в Челябинском Межрегиональном Союзе Строителей и в Некоммерческом партнерстве «Саморегулируемая организация Союз Строительных компаний Урала и Сибири».
+
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

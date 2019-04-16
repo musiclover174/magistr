@@ -1,14 +1,17 @@
 .about
-  pos relative
-  z-index 1
-  padding 90px 0 64px
-  @media $lDesktopSmall
-    padding 99px 0 74px
-  @media $LandscapeMedium
-    padding 0 0 70px
-  .decor
-    l 25%
-    b -20%
+  &_inner
+    text-align center
+  &__wrapper
+    pos relative
+    z-index 1
+    padding 90px 0 64px
+    @media $lDesktopSmall
+      padding 99px 0 74px
+    @media $LandscapeMedium
+      padding 0 0 70px
+    .decor
+      l 25%
+      b -20%
   .common__title
     mt -12px
     @media $lDesktopSmall
@@ -164,3 +167,288 @@
         size 139px
     &:hover span
       size 181px
+  &__pre
+    c $dark
+    fontify 24px 500 30px
+    max-width 960px
+    margin -5px auto 84px
+    text-align center
+    @media $PortraitMax
+      fontify 20px 500 26px
+      mb 50px
+  &__spacer
+    pos relative
+    h 80vh
+    max-height 500px
+    background-size cover
+    background-repeat no-repeat
+    background-position center
+    mb 90px
+    @media $PortraitMax
+      mb 50px
+    &:after
+      content ""
+      pos absolute
+      r 40%
+      b -14%
+      size 40px 196px
+      background url('../i/objects-decor2.png') no-repeat center
+      @media $LandscapeMedium
+        dn()
+    .decor
+      @media $desktopMax
+        dn()
+      &_b1
+        l 10%
+        t -13%
+      &_b2
+        r 20%
+        b -13%
+  &__start
+    df()
+    max-width 948px
+    margin 0 auto 90px
+    @media $LandscapeMedium
+      flex-direction column
+    @media $PortraitMax
+      mb 50px
+    &-info
+      w 333px
+      mt -10px
+      @media $LandscapeMedium
+        w 100%
+        mt 0
+    &-feat
+      c $dark
+      fontify 48px 500 52px
+      @media $LandscapeMedium
+        fontify 50px 700 56px
+      @media $PortraitMedium
+        fontify 36px 500 40px
+    &-from
+      c $red
+      fontify 72px 700 76px
+      mt 12px
+      @media $LandscapeMedium
+        fontify 50px 700 56px
+      @media $PortraitMedium
+        fontify 36px 500 40px
+    &-text
+      w calc(100% - 369px)
+      ml 36px
+      max-width 440px
+      fontify 17px 400 25px
+      @media $lDesktopSmall
+        ml 30px
+        w calc(100% - 363px)
+      @media $desktopMax
+        fontify 16px 400 24px
+      @media $LandscapeMedium
+        w 100%
+        max-width none
+        ml 0
+        mt 40px
+  &__mover
+    oh()
+    pb 50px
+    &-inner
+      df()
+      pos relative
+    &-elem
+      pos relative
+      size 579px 368px
+      flex-shrink 0
+      .decor
+        @media $desktopMax
+          dn()
+        &_b1
+          l 10%
+          b -50px
+        &_b2
+          r 20%
+          b -30px
+      &:nth-child(2)
+        &:after
+          content ""
+          pos absolute
+          r 48%
+          b -50px
+          size 40px 196px
+          background url('../i/objects-decor3.png') no-repeat center
+          @media $LandscapeMedium
+            dn()
+      & + &
+        ml 36px
+        @media $lDesktopSmall
+          ml 30px
+    &-img
+      db()
+      size 100%
+      object-fit cover
+  &__fixer
+    pos relative
+    padding 130px 0
+    max-width 948px
+    margin 0 auto
+    @media $PortraitMax
+      padding 60px 0 30px
+    &-window
+      @media $PortraitMaxFrom
+        pos absolute
+        t 0
+        l 0
+        size 0 100vh
+        &.fixed
+          pos fixed
+        &:before
+          content ""
+          pos absolute
+          l 0
+          t 0
+          size 333px 130px
+          bgc white
+        &:after
+          content ""
+          pos absolute
+          l 0
+          t calc(100vh - 130px)
+          size 333px 130px
+          bgc white
+    &-bar
+      pos relative
+      size 2px 248px
+      bgc alpha($dark, .2)
+      @media $desktopTablet
+        dn()
+      &-wrapper
+        pos absolute
+        df(center, flex-start)
+        size 2px 100vh
+        t 0
+        l -123px
+        @media $lDesktopSmall
+          l -73px
+        @media $desktopMax
+          l -45px
+        @media $desktopMedium
+          l -35px
+    &-progress
+      pos absolute
+      l 0
+      w 5px
+      h 0
+      bgc $red
+    &-content
+      &-wrapper
+        @media $PortraitMaxFrom
+          pos absolute
+          df(center, flex-start)
+          size 456px 100vh
+          t 0
+          l 369px
+          @media $lDesktopSmall
+            l 363px
+          @media $LandscapeMedium
+            w calc(100vw - 443px)
+    &-mainsq
+      c $red
+      fontify 72px 700 76px
+      mb 32px
+      transition .7s opacity
+      @media $LandscapeMedium
+        fontify 52px 700 56px
+      @media $PortraitMaxFrom
+        &.hide
+          opacity 0
+    &-text
+      fontify 17px 400 25px
+      @media $desktopMax
+        fontify 16px 400 24px
+    &-list
+      w 333px
+      padding 20vh 0
+      @media $PortraitMax
+        padding 0
+        df()
+        flex-wrap wrap
+        ml -30px
+        w calc(100% + 30px)
+        mt 50px
+        mb -40px
+    &-item
+      @media $PortraitMax
+        w calc(50% - 30px)
+        ml 30px
+        mb 40px
+      @media $PortraitMedium
+        w calc(100% - 30px)
+      @media $PortraitMaxFrom
+        & + &
+          mt 43px
+    &-name
+      c $dark
+      fontify 24px 500 30px
+    &-sq
+      c $red
+      mt 5px
+      fontify 24px 500 30px
+  &__bottom
+    &-inner
+      max-width 948px
+      margin 0 auto
+      padding 84px 0 94px
+      @media $PortraitMax
+        padding 60px 0
+    &-row
+      df()
+      @media $LandscapeMedium
+        flex-direction column
+      & + &
+        mt 80px
+        @media $LandscapeMedium
+          mt 40px
+    &-left
+      w 333px
+      @media $LandscapeMedium
+        w 100%
+    &-right
+      w calc(100% - 369px)
+      ml 36px
+      max-width 440px
+      fontify 17px 400 25px
+      @media $lDesktopSmall
+        ml 30px
+        w calc(100% - 363px)
+      @media $desktopMax
+        fontify 16px 400 24px
+      @media $LandscapeMedium
+        w 100%
+        ml 0
+        mt 40px
+        max-width none
+      @media $PortraitMax
+        mt 30px
+    &-title
+      c $dark
+      fontify 24px 500 30px
+      mt -2px
+      @media $PortraitMax
+        fontify 20px 500 26px
+    &-logo
+      db()
+      opacity .35
+      transition .7s opacity
+      @media $LandscapeMedium
+        ib()
+      @media $PortraitMedium
+        db()
+      &:hover
+        opacity 1
+      & + &
+        mt 30px
+        @media $LandscapeMedium
+          mt 0
+          ml 30px
+        @media $PortraitMedium
+          ml 0
+          mt 30px

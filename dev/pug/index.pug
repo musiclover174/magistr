@@ -52,35 +52,36 @@ html
                     +e('figcaption').item-name ЖК «Престиж»
 
       +b('section').about
-        section.container
-          .h-wrapper
-            .h-col4.h-col_rel.h-anim
-              .decor.js-decor(data-type="red", data-height="117", style="width: 30px; height: 117px;")
-              p.common__title О компании
-              .common__subtitle 
-                p Строительная компания «МАГИСТР» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и&nbsp;материалов.
-                p Компания основана 17 мая 1999 года. 
-              a(href="#").common__toall Читать подробнее о Магистре
-            .h-col4.h-col_rel.h-anim(data-delay="1")
-              +e('span').line._line1
-              +e('span').line._line2
-              +e('span').line._line3
-              +e('span').line._line4
-              +e('span').line._line5
-              +e('span').line._line6
-              //- +e('video').bg(preload="", autoplay, muted, loop, poster="img/about-bg.jpg")
-              //-   source(src="video/about.mp4" type="video/mp4")
-              +e.bg(src="img/about-bg.jpg")
-            .h-col4.h-col_rel.h-anim(data-delay="2")
-              +e.info
-                +e('p').info-title >20
-                  span лет
-                +e('p').info-value осуществляем строительство
-              +e.info
-                +e('p').info-title 15
-                +e('p').info-value построенных объектов
-              +e.history(type="button", data-popup, data-src="#history") История проектов
-                span
+        +e.wrapper
+          section.container
+            .h-wrapper
+              .h-col4.h-col_rel.h-anim
+                .decor.js-decor(data-type="red", data-height="117", style="width: 30px; height: 117px;")
+                p.common__title О компании
+                .common__subtitle 
+                  p Строительная компания «МАГИСТР» осуществляет строительство объектов жилищного и гражданского назначения, отвечающих современным требованиям, и построенных с использованием новейших строительных технологий и&nbsp;материалов.
+                  p Компания основана 17 мая 1999 года. 
+                a(href="#").common__toall Читать подробнее о Магистре
+              .h-col4.h-col_rel.h-anim(data-delay="1")
+                +e('span').line._line1
+                +e('span').line._line2
+                +e('span').line._line3
+                +e('span').line._line4
+                +e('span').line._line5
+                +e('span').line._line6
+                //- +e('video').bg(preload="", autoplay, muted, loop, poster="img/about-bg.jpg")
+                //-   source(src="video/about.mp4" type="video/mp4")
+                +e.bg(src="img/about-bg.jpg")
+              .h-col4.h-col_rel.h-anim(data-delay="2")
+                +e.info
+                  +e('p').info-title >20
+                    span лет
+                  +e('p').info-value осуществляем строительство
+                +e.info
+                  +e('p').info-title 15
+                  +e('p').info-value построенных объектов
+                +e.history(type="button", data-popup, data-src="#history") История проектов
+                  span
           
       +b('section').features.h-anim
         .decor.js-decor(data-type="red", data-height="148", style="width: 32px; height: 148px;")

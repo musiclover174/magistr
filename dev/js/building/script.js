@@ -15,6 +15,7 @@ import History from './modules/history';
 import Decor from './modules/decor';
 import Faq from './modules/faq';
 import Gallery from './modules/gallery';
+import Company from './modules/company';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -49,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-gallery')) {
     const gallery = new Gallery('.js-gallery', '.projects__elem-href', '.js-gallery-filter');
+  }
+
+  if (qs('.js-about-mover')) {
+    const company = new Company('.js-about-mover', '.js-about-sticky');
   }
 
   if (screen.width >= 768) {
