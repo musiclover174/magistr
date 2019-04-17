@@ -1,8 +1,13 @@
 .ask
   bgc white
   padding 61px 0 70px
+  &_grey
+    bgc #f8f8f8
+    @media $LandscapeMax
+      padding 41px 0 50px
   @media $LandscapeMax
-    pt 0
+    &:not(&_grey)
+      pt 0
   &__title
     pos relative
     z-index 1

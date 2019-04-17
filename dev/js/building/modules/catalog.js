@@ -1,9 +1,12 @@
-import { qs } from './helpers';
+import { qs, qsAll } from './helpers';
 
 export default class Catalog {
-  constructor(rangeEl) {
+  constructor(rangeEl, sliderEl) {
     this.rangeEl = rangeEl;
     if (qs(this.rangeEl)) this.rangeInit();
+
+    this.sliderEl = sliderEl;
+    if (qs(this.sliderEl)) this.sliderInit();
   }
 
   rangeInit() {
@@ -40,6 +43,29 @@ export default class Catalog {
     slider.noUiSlider.on('update', (values, handle) => {
       nodes[handle].value = (+values[handle]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
       nativeInput.value = values.map(num => +num).join(':');
+    });
+  }
+
+  sliderInit() {
+    lightGallery(qs(this.sliderEl), {
+      selector: '.catalog__slide',
+    });
+
+    const sliderCarousel = new Swiper(this.sliderEl, {
+      speed: 700,
+      slidesPerView: 'auto',
+      spaceBetween: 36,
+      loop: true,
+      loopedSlides: qsAll('.swiper-slide', qs(this.sliderEl)).length,
+      navigation: {
+        nextEl: `${this.sliderEl} ~ .swiper-buttons .swiper-button-next`,
+        prevEl: `${this.sliderEl} ~ .swiper-buttons .swiper-button-prev`,
+      },
+      breakpoints: {
+        1600: {
+          spaceBetween: 30,
+        },
+      },
     });
   }
 }

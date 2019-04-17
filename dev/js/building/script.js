@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const company = new Company('.js-about-mover', '.js-about-sticky');
   }
 
-  if (qs('.js-range')) {
-    const catalog = new Catalog('.js-range');
+  if (qs('.js-range') || qs('.js-cat-slider')) {
+    const catalog = new Catalog('.js-range', '.js-cat-slider');
   }
 
   if (screen.width >= 768) {

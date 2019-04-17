@@ -1,5 +1,5 @@
-mixin askForm(title)
-  +b('form').ask
+mixin askForm(title, dark = '')
+  +b('form').ask(class=dark)
     section.container
       +e('p').title= title
       +e('p').subtitle Обратите внимание, все поля обязательны для заполнения.

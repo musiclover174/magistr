@@ -6,6 +6,15 @@
       @media $PortraitMax
         flex 0 0 100%
         max-width 100%
+  &_others
+    mt 60px
+  &_corner
+    df(center, flex-start)
+    pos absolute
+    t 25px
+    r 25px
+    @media $desktopMin
+      dn()
   &__top
     pos relative
     z-index 1
@@ -113,3 +122,145 @@
       w 115px
     &-value
       c $dark
+  &__others
+    fontify 48px 500 52px
+    mb 32px
+    @media $desktopMax
+      fontify 36px 500 40px
+    @media $PortraitMax
+      fontify 30px 500 34px
+  &__feats
+    df()
+    flex-wrap wrap
+    ml -40px
+    w calc(100% + 40px)
+    mt -10px
+  &__feat
+    df(center, flex-start)
+    mb 15px
+    ml 40px
+    &-iconover
+      w 57px
+      flex-shrink 0
+    &-icon
+      max-width 90%
+    &-text
+      fontify 24px 500 30px
+      @media $PortraitMax
+        fontify 20px 500 26px
+  &__elem
+    &-imgover
+      mt 80px
+      text-align center
+      mb 100px
+      @media $PortraitMax
+        mt 50px
+        mb 60px
+    &-img
+      max-width 100%
+      transition 1.5s 1s transform
+      will-change transform
+      transform rotate3d(2, .5, -1.3, 70deg) scale(.9)
+    &-imgover[visible] &-img
+      transform rotate3d(0, 0, 0, 70deg) scale(1)
+    &-text
+      max-width 585px
+      fontify 17px 400 25px
+      @media $desktopMax
+        fontify 16px 400 24px
+    &-cost
+      mt 20px
+      fontify 48px 500 40px
+      @media $lDesktopSmall
+        fontify 36px 500 30px
+      @media $PortraitMax
+        fontify 30px 500 30px
+  &__carover
+    pos relative
+    mt 40px
+    mb 60px
+    .swiper-slide
+      size 579px 370px
+      @media $desktopMax
+        size 440px 280px
+      @media $PortraitMax
+        size 80vw 51vw
+    .swiper-container
+      overflow visible
+    .swiper-buttons
+      pos absolute
+      r 0
+      t -67px
+      @media $lDesktopSmall
+        t -70px
+      @media $PortraitMax
+        dn()
+  &__slide
+    db()
+    size 100%
+    &-img
+      db()
+      size 100%
+      object-fit cover
+  &__current
+    w calc(100% - 80px)
+    max-width 170px
+    &-imgover
+      db()
+      size 60px
+      border-radius 50%
+      flex-shrink 0
+      ml 20px
+      oh()
+    &-img
+      db()
+      size 100%
+      object-fit cover
+    &-name
+      fontify 18px 500 21px
+      border-bottom 1px dotted alpha($dark, .25)
+      transition .7s border-color
+      &:hover
+        border-color transparent
+    &-href
+      c $dark
+      fontify 18px 500 21px
+      border-bottom 1px solid transparent
+      transition .7s border-color
+      &:hover
+        border-color alpha($dark, .25)
+    &-hover
+      pos relative
+      &:hover
+        border-color transparent
+        & ^[-2]-list
+          visibility visible
+          opacity 1
+          pointer-events all
+    &-address
+      pos relative
+      fontify 16px 400 22px
+      pl 20px
+      mt 6px
+      &:before
+        content ""
+        pos absolute
+        l 1px
+        t 4px
+        size 10px 15px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAMAAADqIa48AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEX///83Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okg3Okj///+lKga5AAAAF3RSTlMAABMwPSFALgY8PjUtBzYnETQVOxI/HhLKfx8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wQRDRctCaUeBgAAAF1JREFUCNc1zUcOgDAMBdFJ4ceU0MP9jwoBMgvryZJlwIcYg+ep01v37PTnCVIyS1IgSgYmRfrGgVGaLE/SzNLOFtbGFbd92hzsH/f6LlWlKvIhHfklZyknf9dV5w0SswOY3/NZagAAAABJRU5ErkJggg==') no-repeat center
+    &-list
+      visibility hidden
+      opacity 0
+      pos absolute
+      z-index 1
+      bgc #f8f8f8
+      w 226px
+      padding 30px 25px 30px 30px
+      l -30px
+      t -30px
+      pointer-events none
+      transition .7s opacity, .7s visibility
+    &-item
+      & + &
+        mt 23px

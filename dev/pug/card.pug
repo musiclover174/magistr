@@ -1,0 +1,137 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      section.container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim 
+          +e.href(href="#") Коммерческая недвижимость
+          +e('span').delim 
+          +e.href(href="#") ОЦ «Магистр» на Воровского, 15 «Г»
+          +e('span').delim 
+          +e('span').href Угловая северо-западная
+        h1 Угловая северо-западная
+        +b('section').catalog._corner
+          +e.current
+            +e.current-hover
+              +e('span').current-name ОЦ «Магистр»
+              +e('ul').current-list
+                +e.current-item
+                  +e.current-href(href="#") ЖК «Три Кита»
+                  +e('p').current-address Воровского, 61 Б
+                +e.current-item
+                  +e.current-href(href="#") ЖК «Яблочкина 10»
+                  +e('p').current-address Яблочкина, 10
+                +e.current-item
+                  +e.current-href(href="#") ЖК «Престиж»
+                  +e('p').current-address Воровского, 15 «Г»
+                +e.current-item
+                  +e.current-href(href="#") ЖК «Nord» 
+                  +e('p').current-address ул. Ленина, 2Б
+                +e.current-item
+                  +e.current-href(href="#") Название комплекса
+                  +e('p').current-address ул. Ленина, 45
+            +e('p').current-address Воровского, 15 «Г»
+          +e('aside').current-imgover
+            +e.current-img(src="img/cat-small.jpg")
+        +b('section').catalog
+          +e('ul').feats
+            +e.feat
+              +e.feat-iconover
+                +e.feat-icon(src="img/feat-icon3.png")
+              +e.feat-text 3 этаж из 16
+            +e.feat
+              +e.feat-iconover
+                +e.feat-icon(src="img/feat-icon4.png")
+              +e.feat-text Площадь 140м²
+            +e.feat
+              +e.feat-iconover
+                +e.feat-icon(src="img/feat-icon5.png")
+              +e.feat-text Парковка на 200 машин
+
+          +e.elem-imgover.h-anim
+            +e.elem-img(src="img/plan2.png")
+
+          +e.elem-text
+            p Светлое и просторное 3х-комнатное помещение. Отлично подойдет в качестве офиса для компании численностью от 50 до 100 сотрудников. Панорамные окна выходят на северную и западную стороны.
+          
+          +e('p').elem-cost от 120000 руб/мес
+
+      +b('section').catalog
+        section.container
+          +e.carover
+            +e.car.swiper-container.js-cat-slider
+              .swiper-wrapper
+                .swiper-slide
+                  +e(href="img/card1.jpg").slide
+                    +e.slide-img(src="img/card1.jpg")
+                .swiper-slide
+                  +e(href="img/card2.jpg").slide
+                    +e.slide-img(src="img/card2.jpg")
+                .swiper-slide
+                  +e(href="img/card1.jpg").slide
+                    +e.slide-img(src="img/card1.jpg")
+                .swiper-slide
+                  +e(href="img/card2.jpg").slide
+                    +e.slide-img(src="img/card2.jpg")
+            .swiper-buttons
+              .swiper-button-prev.js-news-prev
+              .swiper-button-next.js-news-next
+
+      +askForm('Связаться с менеджером', '_grey')
+
+      +b('section').catalog._others._list
+        section.container
+          +e('p').others Похожие планировки
+          +e.items
+            .h-wrapper
+              .h-col6
+                +e.item
+                  +e(href="#").item-imgover
+                    +e.item-img(src="img/plan1.png")
+                  +e.item-href(href="#") Угловая северо-западная
+                  +e('ul').item-chars
+                    +e.item-char
+                      +e('p').item-feat Площадь
+                      +e('p').item-value 120м²
+                    +e.item-char
+                      +e('p').item-feat Комнат:
+                      +e('p').item-value 3
+                    +e.item-char
+                      +e('p').item-feat Выход окон:
+                      +e('p').item-value север, запад
+                    +e.item-char
+                      +e('p').item-feat Стоимость:
+                      +e('p').item-value 3 500 000 руб
+              .h-col6
+                +e.item
+                  +e(href="#").item-imgover
+                    +e.item-img(src="img/plan1.png")
+                  +e.item-href(href="#") Угловая юго-западная
+                  +e('ul').item-chars
+                    +e.item-char
+                      +e('p').item-feat Площадь
+                      +e('p').item-value 160м²
+                    +e.item-char
+                      +e('p').item-feat Комнат:
+                      +e('p').item-value 4
+                    +e.item-char
+                      +e('p').item-feat Выход окон:
+                      +e('p').item-value юг, запад
+                    +e.item-char
+                      +e('p').item-feat Стоимость:
+                      +e('p').item-value 4 100 000 руб
+
+          a(href="#").common__back Вернуться к списку всех планировок
+
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts
