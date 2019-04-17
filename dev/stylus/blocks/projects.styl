@@ -13,6 +13,13 @@
     .decor_b2
       r 20%
       b -30px
+  &_others
+    mt 12px
+    @media $PortraitMaxFrom
+      & ^[0]__item-address:last-child
+        mb 0
+    @media $PortraitMax
+      mb -20px
   &_elem
     pb 82px
     .decor
@@ -280,3 +287,10 @@
       &:hover
         c $red
         border-color transparent
+  &__others
+    fontify 48px 500 52px
+    mb 32px
+    @media $desktopMax
+      fontify 36px 500 40px
+    @media $PortraitMax
+      fontify 30px 500 34px

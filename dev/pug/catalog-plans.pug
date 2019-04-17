@@ -1,0 +1,218 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      section.catalog__top
+        span.catalog__top-bg(style="background-image: url('img/cat-bg.jpg')")
+        .decor.decor_b1.js-decor(data-type="white", data-height="115", style="width: 33px; height: 115px;")
+        .decor.decor_b2.js-decor(data-type="white", data-height="134", style="width: 30px; height: 134px;")
+        section.container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim 
+            +e.href(href="#") Главная
+            +e('span').delim 
+            +e('span').href ОЦ «Магистр» на Воровского, 15 «Г»
+          h1 ОЦ «Магистр»<br>на Воровского, 15 «Г»
+          +b('section').filter
+            +e.col
+              label.common__label Диапазон цен (руб)
+              +e.range-wrapper
+                +e.range-fromto
+                  +e('input').range-from.common__input.js-range-from(type="text")
+                  +e('input').range-to.common__input.js-range-to(type="text")
+                +e('input').range-input(value="1800000:13000000")
+                +e.range-elem.js-range(data-from="1800000", data-to="13000000", data-min="0", data-max="18000000")
+            +e.col
+              label.common__label Этажи (от, до)
+              +e.selects-wrapper
+                select.common__select.js-select
+                  option(value="1", selected) 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+                  option(value="6") 6
+                  option(value="7") 7
+                  option(value="8") 8
+                  option(value="9") 9
+                  option(value="10") 10
+                  option(value="11") 11
+                select.common__select.js-select
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+                  option(value="6") 6
+                  option(value="7") 7
+                  option(value="8") 8
+                  option(value="9") 9
+                  option(value="10") 10
+                  option(value="11", selected) 11
+            +e.col
+              label.common__label Выход окон
+              +e.selects-wrapper
+                select.common__select.js-select
+                  option(value="1", selected) Любая сторона
+                  option(value="2") Юг
+                  option(value="3") Восток
+                  option(value="4") Запад
+                  option(value="5") Север
+            +e.col
+              label.common__label Количество комнат
+              +e.checkbox-wrapper
+                .fakecheckbox
+                  input(type="checkbox", value="", name="ch1", checked)#ch1.fakecheckbox__truecheck
+                  label(for="ch1").fakecheckbox__label 1
+                .fakecheckbox
+                  input(type="checkbox", value="", name="ch2", checked)#ch2.fakecheckbox__truecheck
+                  label(for="ch2").fakecheckbox__label 2
+            +e.col
+              button.common__submit.btn(type="submit") Отправить
+                  
+      section.catalog__bottom
+        section.container
+          +b('section').catalog._list
+            .decor.decor_b1.js-decor(data-type="red", data-height="234", style="width: 33px; height: 234px;")
+            .decor.decor_b2.js-decor(data-type="red", data-height="134", style="width: 34px; height: 134px;")
+            
+            +e.items
+              .h-wrapper
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Угловая северо-западная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 120м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 3
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value север, запад
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 3 500 000 руб
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Угловая юго-западная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 160м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 4
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value юг, запад
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 4 100 000 руб
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Центральная южная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 160м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 4
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value юг
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 4 100 000 руб
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Угловая северо-западная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 120м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 3
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value север, запад
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 3 500 000 руб
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Угловая юго-западная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 160м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 4
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value юг, запад
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 4 100 000 руб
+                .h-col6
+                  +e.item
+                    +e(href="#").item-imgover
+                      +e.item-img(src="img/plan1.png")
+                    +e.item-href(href="#") Центральная южная
+                    +e('ul').item-chars
+                      +e.item-char
+                        +e('p').item-feat Площадь
+                        +e('p').item-value 160м²
+                      +e.item-char
+                        +e('p').item-feat Комнат:
+                        +e('p').item-value 4
+                      +e.item-char
+                        +e('p').item-feat Выход окон:
+                        +e('p').item-value юг
+                      +e.item-char
+                        +e('p').item-feat Стоимость:
+                        +e('p').item-value 4 100 000 руб
+              
+            +b('section').projects._others
+              +e('p').others Похожие объекты
+              .h-wrapper
+                .h-col6
+                  +e('figure').item.h-anim
+                    +e.item-href(href="#")
+                      +e.item-img(src="img/gk4.jpg")
+                      +e('figcaption').item-name Название комплекса
+                  +e('p').item-address ул. Ленина, 45
+                .h-col6
+                  +e('figure').item.h-anim
+                    +e.item-href(href="#")
+                      +e.item-img(src="img/gk5.jpg")
+                      +e('figcaption').item-name ЖК «Nord»
+                  +e('p').item-address ул. Ленина, 2Б
+
+            a(href="#").common__back Вернуться к списку всех объектов
+      
+      include layout/__footer
+
+    include layout/__popups
+    include layout/__scripts

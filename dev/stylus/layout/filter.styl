@@ -1,0 +1,54 @@
+.filter
+  df(flex-start, space-between)
+  flex-wrap wrap
+  max-width 622px
+  mb -40px
+  @media $desktopMax
+    max-width 534px
+  .common__label
+    c alpha(white, .65)
+  .common__input
+    border 0
+    font-size 14px
+  .choices__inner
+    font-size 14px
+  .fakecheckbox__label
+    c white
+    pl 29px
+    &:before
+      bgc white
+  &__col
+    w calc(50% - 15px)
+    max-width 253px
+    mb 40px
+    @media $PortraitMedium
+      w 100%
+      max-width 300px
+  &__range
+    &-wrapper
+      pos relative
+    &-input
+      pos absolute
+      l -100vw
+      t -100vh
+    &-fromto
+      df(flex-start, space-between)
+    &-from,
+    &-to
+      bgc white
+      w calc(50% - 5px)
+    &-elem
+      mt 19px
+  &__selects
+    &-wrapper
+      df(flex-start, space-between)
+      .choices
+        w 100%
+      .choices + .choices
+        ml 10px
+  &__checkbox
+    &-wrapper
+      .fakecheckbox
+        mt 7px
+      .fakecheckbox + .fakecheckbox
+        ml 24px

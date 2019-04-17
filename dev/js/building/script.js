@@ -16,6 +16,7 @@ import Decor from './modules/decor';
 import Faq from './modules/faq';
 import Gallery from './modules/gallery';
 import Company from './modules/company';
+import Catalog from './modules/catalog';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -54,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-about-mover')) {
     const company = new Company('.js-about-mover', '.js-about-sticky');
+  }
+
+  if (qs('.js-range')) {
+    const catalog = new Catalog('.js-range');
   }
 
   if (screen.width >= 768) {
