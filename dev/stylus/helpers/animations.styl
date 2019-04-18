@@ -55,7 +55,8 @@
         z-index -1
         transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
 
-  body:not(.index)
+  body:not(.index),
+  /html.no-smil body
     transition none
     .main
       h auto
@@ -66,6 +67,22 @@
       .header,
       .footer
         transition-delay .3s
+
+  /html.no-smil body
+    .banner
+      w 100%
+      &__vertical
+        opacity 1
+        transition 0s opacity
+      &__title
+        l 0
+        opacity 1
+        transition .7s opacity, .7s left
+      &__subtitle
+        l 0
+        opacity 1
+        transition .7s .2s opacity, .7s .2s left
+
 
 @media (min-width:1171px) and (max-width:1600px)
   body.load
