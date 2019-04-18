@@ -705,3 +705,4 @@ this.arg=undefined}return ContinueSentinel}}}(// Among the various tricks for ob
 // object, this seems to be the most reliable technique that does not
 // use indirect eval (which violates Content Security Policy).
 (typeof global==="undefined"?"undefined":_typeof(global))==="object"?global:(typeof window==="undefined"?"undefined":_typeof(window))==="object"?window:(typeof self==="undefined"?"undefined":_typeof(self))==="object"?self:this)}).call(this,typeof global!=="undefined"?global:typeof self!=="undefined"?self:typeof window!=="undefined"?window:{})},{}]},{},[1]);
+if (window.NodeList && !NodeList.prototype.forEach) {NodeList.prototype.forEach = Array.prototype.forEach;}

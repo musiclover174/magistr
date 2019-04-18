@@ -4,18 +4,20 @@
     z-index 11
     t 0
     visibility hidden
-    l -100%
+    l 0
     opacity 0
-    padding 45px 15px
+    padding 45px 15px 0
     w 100%
     h 100%
-    transition .7s visibility, .7s left, .7s opacity
+    transition .7s visibility, .7s opacity
     overflow-y auto
+    pointer-events none
   @media $PortraitMin
     padding 40px 30px
   &__list
     dfv(center, flex-start)
     w 100%
+    pb 45px
   &__item
     pos relative
     w 100%
@@ -316,5 +318,5 @@ body.burgeropen
   .menu
     visibility visible
     opacity 1
-    l 0
+    pointer-events all
     transition-delay .7s

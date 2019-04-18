@@ -80,6 +80,18 @@
       pt 63%
       overflow hidden
       mb 25px
+      &:before
+        content ""
+        pos absolute
+        z-index 1
+        l -100%
+        t 0
+        bgc alpha($red, 1)
+        size 100%
+        transition .5s left
+      ^[-1]:hover &
+        &:before
+          l 100%
     &-img
       pos absolute
       l 0
@@ -87,11 +99,6 @@
       size 100%
       object-fit cover
       font-family 'object-fit: cover;'
-      transition 1.5s transform
-      will-change transform
-      transform scale(1.017) translateZ(0)
-    &:hover &-img
-      transform scale(1) translateZ(0)
     &-date
       c $red
       fontify 14px 400 21px
@@ -101,11 +108,12 @@
       color $dark
       fontify 30px 500 36px
       border-bottom 1px solid alpha($dark, .2)
-      transition .7s border
+      transition .7s border, .7s color
       @media $lDesktopSmall
         fontify 22px 500 28px
       &:hover
         border-color transparent
+        c $red
     &-dsc
       color $dark
       fontify 16px 500 24px

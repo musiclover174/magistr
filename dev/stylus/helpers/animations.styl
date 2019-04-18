@@ -56,6 +56,7 @@
         transition 0s 4.8s visibility, 0s 4.8s opacity, 0s 4.8s z-index
 
   body:not(.index)
+    transition none
     .main
       h auto
     &.load
@@ -64,7 +65,7 @@
         transition .7s 0s opacity
       .header,
       .footer
-        transition-delay 1.3s
+        transition-delay .3s
 
 @media (min-width:1171px) and (max-width:1600px)
   body.load
