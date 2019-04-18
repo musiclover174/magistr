@@ -52,7 +52,7 @@
       size 452px 321px
       mt -219px
     &__path3
-      stroke-dashoffset 626
+      stroke-dashoffset -626
       stroke-dasharray 626
       stroke-opacity .2
       animation drawThirdLine 1.6s .5s ease-in forwards
@@ -61,54 +61,94 @@
       mt -268px
       ml -462px
     &__path4
-      stroke-dashoffset 533
+      stroke-dashoffset -533
       stroke-dasharray 533
       stroke-opacity .2
       animation drawFourthLine 1.6s .8s ease-in forwards
 
-@keyframes drawFirstLine {
-  from {
+@media $LandscapeMinFrom
+  body.ios
+    .orbit
+      &__path1
+        stroke-dashoffset 483
+        transform rotate(180deg)
+        transform-origin center
+        animation drawFirstLineIos 1.6s ease-in forwards
+      &__path2
+        transform rotate(180deg)
+        transform-origin center
+        stroke-dashoffset 572
+        animation drawSecondLineIos 1.6s .25s ease-in forwards
+      &__path3
+        stroke-dashoffset 626
+        animation drawThirdLineIos 1.6s .5s ease-in forwards
+      &__path4
+        stroke-dashoffset 533
+        animation drawFourthLineIos 1.6s .8s ease-in forwards
+
+@keyframes drawFirstLine
+  from
     stroke-dashoffset 483
     stroke-opacity .2
-  }
-  to {
+  to
     stroke-opacity 1
     stroke-dashoffset -483
-  }
-}
 
-@keyframes drawSecondLine {
-  from {
+@keyframes drawFirstLineIos
+  from
+    stroke-dashoffset 483
+    stroke-opacity .2
+  to
+    stroke-opacity 1
+    stroke-dashoffset 1449
+
+@keyframes drawSecondLine
+  from
     stroke-dashoffset 572
     stroke-opacity .2
-  }
-  to {
+  to
     stroke-opacity 1
     stroke-dashoffset -572
-  }
-}
 
-@keyframes drawThirdLine {
-  from {
+@keyframes drawSecondLineIos
+  from
+    stroke-dashoffset 572
+    stroke-opacity .2
+  to
+    stroke-opacity 1
+    stroke-dashoffset 1716
+
+@keyframes drawThirdLine
+  from
     stroke-dashoffset -626
     stroke-opacity .2
-  }
-  to {
+  to
     stroke-opacity 1
     stroke-dashoffset 626
-  }
-}
 
-@keyframes drawFourthLine {
-  from {
+@keyframes drawThirdLineIos
+  from
+    stroke-dashoffset 626
+    stroke-opacity .2
+  to
+    stroke-opacity 1
+    stroke-dashoffset 1878
+
+@keyframes drawFourthLine
+  from
     stroke-dashoffset -533
     stroke-opacity .2
-  }
-  to {
+  to
     stroke-opacity 1
     stroke-dashoffset 533
-  }
-}
+
+@keyframes drawFourthLineIos
+  from
+    stroke-dashoffset 533
+    stroke-opacity .2
+  to
+    stroke-opacity 1
+    stroke-dashoffset 1599
 
 @media $lDesktopSmallFrom
   @keyframes circleLeft {

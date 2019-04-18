@@ -86,4 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hMain < window.innerHeight) footerEl.style.marginTop = `${window.innerHeight - hMain}px`;
   });
+
+  if (!!navigator.userAgent.match(/safari/i)
+    && !navigator.userAgent.match(/chrome/i)
+    && typeof document.body.style.webkitFilter !== 'undefined'
+    && !window.chrome) document.body.classList.add('ios');
 });

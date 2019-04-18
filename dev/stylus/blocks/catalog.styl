@@ -13,6 +13,8 @@
     pos absolute
     t 25px
     r 25px
+    max-width 250px
+    w 100%
     @media $desktopMin
       dn()
   &__top
@@ -206,7 +208,6 @@
       object-fit cover
   &__current
     w calc(100% - 80px)
-    max-width 170px
     &-imgover
       db()
       size 60px
@@ -244,6 +245,10 @@
       fontify 16px 400 22px
       pl 20px
       mt 6px
+      white-space nowrap
+      max-width 170px
+      oh()
+      text-overflow ellipsis
       &:before
         content ""
         pos absolute
