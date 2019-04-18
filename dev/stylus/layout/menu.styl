@@ -1,4 +1,6 @@
 .menu
+  @media $ie
+    w 100%
   @media $desktopMin
     pos fixed
     z-index 11
@@ -313,7 +315,8 @@ html:not(.touchevents)
 
 body.burgeropen
   overflow hidden
-  position fixed
+  @media $ios
+    position fixed
   w 100%
   .menu
     visibility visible
