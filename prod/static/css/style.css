@@ -6196,6 +6196,7 @@ div[class^="table-scroller"] {
 }
 .filter__selects-wrapper .choices {
   width: 100%;
+  z-index: 2;
 }
 .filter__selects-wrapper .choices + .choices {
   margin-left: 10px;

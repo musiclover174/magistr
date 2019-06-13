@@ -25,7 +25,7 @@ html
               label.common__label Диапазон цен (руб)
               +e.range-wrapper
                 +e.range-fromto
-                  +e('input').range-from.common__input.js-range-from(type="text")
+                  +e('input').range-from.common__input.js-range-from(type="text", onkeyup="console.log(1)")
                   +e('input').range-to.common__input.js-range-to(type="text")
                 +e('input').range-input(value="1800000:13000000")
                 +e.range-elem.js-range(data-from="1800000", data-to="13000000", data-min="0", data-max="18000000")
