@@ -13,6 +13,8 @@ export default class Contacts {
   }
 
   init() {
+    const officePinIcon = this.el.getAttribute('data-officepin');
+    const housePinIcon = this.el.getAttribute('data-housepin');
     const pinCoord = this.el.getAttribute('data-center').split(':');
     const officeCoord = this.el.getAttribute('data-office').split(':');
 
@@ -32,7 +34,7 @@ export default class Contacts {
         [parseFloat(coords[0]), parseFloat(coords[1])], {}, {
           iconLayout: 'default#image',
           iconImageSize: [31, 34],
-          iconImageHref: './img/pin.png',
+          iconImageHref: housePinIcon,
           iconImageOffset: [-32, -42],
         },
       );
@@ -43,7 +45,7 @@ export default class Contacts {
       [parseFloat(officeCoord[0]), parseFloat(officeCoord[1])], {}, {
         iconLayout: 'default#image',
         iconImageSize: [31, 34],
-        iconImageHref: './img/office-pin.png',
+        iconImageHref: officePinIcon,
         iconImageOffset: [-32, -42],
       },
     );
