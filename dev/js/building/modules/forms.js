@@ -9,7 +9,7 @@ export default class Form {
     this.files = qsAll('.js-common-file');
     this.phones = qsAll('.js-phone');
 
-    window.checkForm = this.constructor.checkForm();
+    window.checkForm = this.constructor.checkForm;
 
     this.eventBinder();
   }
