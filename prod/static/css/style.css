@@ -6298,26 +6298,27 @@ div[class^="table-scroller"] {
 }
 @media (max-width: 500px) {
   .banner__circle {
-    width: 240px;
-    height: 240px;
-    margin-top: -85px;
+    width: 260px;
+    height: 260px;
+    margin-top: -95px;
     left: 15px;
   }
 }
 .banner__title {
   max-width: 380px;
   color: #fff;
-  font-size: 80px;
+  font-size: 64px;
   font-weight: 500;
-  line-height: 84px;
+  line-height: 64px;
   margin-bottom: 29px;
   margin-left: -4px;
 }
 @media (max-width: 1600px) {
   .banner__title {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
-    line-height: 64px;
+    line-height: 52px;
+    max-width: 320px;
     margin-bottom: 21px;
   }
 }
@@ -6326,7 +6327,6 @@ div[class^="table-scroller"] {
     font-size: 48px;
     font-weight: 500;
     line-height: 52px;
-    max-width: 320px;
   }
 }
 @media (max-width: 767px) {
@@ -6334,6 +6334,7 @@ div[class^="table-scroller"] {
     font-size: 38px;
     font-weight: 500;
     line-height: 42px;
+    max-width: 250px;
   }
 }
 @media (max-width: 390px) {
