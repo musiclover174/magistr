@@ -9421,10 +9421,6 @@ div[class^="table-scroller"] {
 }
 .faq__item-name {
   display: inline;
-  cursor: pointer;
-  border-bottom: 1px dotted #c3c4c8;
-  -webkit-transition: 0.7s border-color, 0.7s color;
-  transition: 0.7s border-color, 0.7s color;
   font-size: 30px;
   font-weight: 500;
   line-height: 38px;
@@ -9436,16 +9432,22 @@ div[class^="table-scroller"] {
     line-height: 28px;
   }
 }
-.faq__item-name:hover {
-  border-color: transparent;
-  color: #ce000c;
-}
 @media (max-width: 1400px) {
   .faq__item-name {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
   }
+}
+.faq__item-name:not(.faq__item-name_noanswer) {
+  cursor: pointer;
+  border-bottom: 1px dotted #c3c4c8;
+  -webkit-transition: 0.7s border-color, 0.7s color;
+  transition: 0.7s border-color, 0.7s color;
+}
+.faq__item-name:not(.faq__item-name_noanswer):hover {
+  border-color: transparent;
+  color: #ce000c;
 }
 .faq__item-text {
   font-size: 17px;

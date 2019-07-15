@@ -1,4 +1,4 @@
-import { qsAll } from './helpers';
+import { qsAll, qs } from './helpers';
 
 export default class Form {
   constructor() {
@@ -16,7 +16,15 @@ export default class Form {
 
   eventBinder() {
     this.forms.forEach((form) => {
-      form.addEventListener('submit', e => !this.constructor.checkForm(form) && e.preventDefault() && e.stopPropagation());
+      form.addEventListener('submit', (e) => {
+        const loader = qs(`#wait_comp_${qs('input[name="bxajaxid"]', form).value}`);
+        if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+        if (!window.checkForm(form)) {
+          e.preventDefault();
+          e.stopPropagation();
+          form.classList.add('warning');
+        }
+      });
     });
 
     const phoneMasks = [];

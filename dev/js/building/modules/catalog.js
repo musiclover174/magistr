@@ -17,8 +17,6 @@ export default class Catalog {
     const slideFrom = +slider.getAttribute('data-from') || slideMin;
     const slideTo = +slider.getAttribute('data-to') || slideMax;
 
-    let firstFire = 0;
-
     noUiSlider.create(slider, {
       start: [slideFrom, slideTo],
       connect: true,
@@ -46,11 +44,8 @@ export default class Catalog {
       nodes[handle].value = (+values[handle]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
       nativeInput.value = values.map(num => +num).join(':');
 
-      if (firstFire < 2) {
-        firstFire += 1;
-        const event = new Event('keyup');
-        nodes[handle].dispatchEvent(event);
-      }
+      const event = new Event('keyup');
+      nodes[handle].dispatchEvent(event);
     });
   }
 
