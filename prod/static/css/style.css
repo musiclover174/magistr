@@ -5996,6 +5996,8 @@ div[class^="table-scroller"] {
 }
 .pagination__prev.disabled,
 .pagination__next.disabled {
+  cursor: default;
+  pointer-events: none;
   opacity: 0.1;
   border-bottom: transparent;
 }
